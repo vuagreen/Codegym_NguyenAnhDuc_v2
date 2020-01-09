@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you Love Me</title>
+
+</head>
+<body>
+<form>
+    <p>Do you love me</p>
+    <input type="button" id="yes" value="yes" onclick="yes1();"/>
+    <input type="button" id="no" value="no" onmouseover="right1()">
+</form>
+<script>
+
+    function yes1() {
+        alert(' Metoo');
+    }
+
+    let imgObj = null;
+    imgObj = document.getElementById('no');
+
+    function init() {
+        imgObj = document.getElementById('no');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+        imgObj.style.top = '0px';
+
+
+    }
+
+    function right1() {
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        console.log()
+
+        imgObj.style.left = x + 'px';
+        imgObj.style.top = y + 'px';
+
+    }
+
+
+    //Lấy chiều rộng của trình duyệt
+    var width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+    //Lấy chiều cao của trình duyệt
+    var height = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+    window.onload = init;
+
+
+</script>
+</body>
+</html>

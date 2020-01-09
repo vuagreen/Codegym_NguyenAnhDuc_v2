@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>btap 1</title>
+</head>
+<body>
+<input type="text" id="day">
+<input type="button" value="Tính số ngày" onclick="click1()">
+<script>
+    function click1() {
+        var day = parseInt(document.getElementById('day').value);
+        switch (day) {
+            case 1 :
+            case 3:
+            case 10:
+            case 8:
+            case 5:
+            case 12:
+                alert('Tháng ' + day + ' có 31 ngày ');
+                break;
+            case 2:
+                alert(' Tháng 2 có 28 hoặc 29 ngày');
+                break;
+            case 4:
+            case 6:
+            case 7:
+            case 9:
+            case 11:
+                alert(' Tháng' + day + ' có 30 ngày');
+                break;
+
+
+        }
+    }
+</script>
+
+</body>
+</html>

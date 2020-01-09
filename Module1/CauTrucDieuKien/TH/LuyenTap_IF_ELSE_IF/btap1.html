@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện Tập IF ELSE IF</title>
+</head>
+<body>
+<script>
+    let username=prompt('UserName');
+     if(username=='Admin'){
+         let pass=prompt('PassWord');
+         if (pass=='TheMaster'){
+             alert('Login Thanh Cong');
+         }else if (pass==null){
+             alert('Canceled');
+         }else {
+             alert('Wrong password');
+         }
+     }else if (username==null){
+         alert('canceled');
+     }else{
+         alert('I don’t know you');
+     }
+</script>
+</body>
+</html>

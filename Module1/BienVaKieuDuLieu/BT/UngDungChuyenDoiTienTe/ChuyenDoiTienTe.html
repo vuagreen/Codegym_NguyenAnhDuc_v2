@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChuyenDoiTien</title>
+</head>
+<body>
+    Input &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    Nation1 &emsp;&emsp;&emsp;
+    Nation2 <br>
+    <input type="text" id="nhap"> &emsp;
+    <select id="Nation1">
+        <option value="VN1">VietNam</option>
+        <option value="USA1">USA</option>
+        <option value="MALAY1">Malaysia</option>
+    </select>&emsp;
+    <select id="Nation2">
+        <option value="VN2">VietNam</option>
+        <option value="USA2">USA</option>
+        <option value="MALAY2">Malaysia</option>
+    </select>
+    <input type="button" value="convert" onclick="Onclick()">
+<p id="messageDiv" style="color: cornflowerblue"></p>
+<script>
+    function Onclick() {
+        var nhap=document.getElementById('nhap').value;
+        var Nation1=document.getElementById('Nation1').value;
+        var Nation2=document.getElementById('Nation2').value;
+        var Nhap=parseFloat(nhap);
+        var u;
+        switch(Nation1) {
+            case "VN1":
+                switch(Nation2) {
+                    case "VN2":
+                        u=nhap;
+                        break;
+                    case "USA2":
+                        u=nhap/23000;
+                        break;
+                    default:
+                    u=nhap*1000/0.18;
+                }
+                break;
+            case "USA1":
+                switch(Nation2) {
+                    case "VN2":
+                        u=nhap*23000;
+                        break;
+                    case "USA2":
+                        u=nhap;
+                        break;
+                    default:
+                        u=nhap*4.1;
+                }
+                break;
+            default:
+                switch(Nation2) {
+                    case "VN2":
+                        u = nhap*5600;
+                        break;
+                    case "USA2":
+                        u = nhap*0.24;
+                        break;
+                    default:
+                        u = nhap ;
+                }
+        }
+
+        document.getElementById("messageDiv").innerText=(' ='+u);
+
+    }
+
+</script>
+
+</body>
+</html>
