@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SinhBangCuuChuong</title>
+    <link rel="stylesheet" href="BangCuuChuong.css">
+</head>
+<body>
+<h2 class="box1">BẢNG CỬU CHƯƠNG</h2>
+<script>
+
+    let sout, i, j;
+    sout = "<table class='box' border='2' width='300' cellspacing='1' cellpadding='3' id='info'>";
+    i = 2;
+    j = 1;
+    while (i < 10) {
+        sout = sout + "<tr>";
+        while (j < 10) {
+            sout = sout + "<td>" + i + 'x' + j + '=' + i * j + "</td>";
+            j++;
+        }
+        sout = sout + "</tr>";
+        j = 1;
+        i++;
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>

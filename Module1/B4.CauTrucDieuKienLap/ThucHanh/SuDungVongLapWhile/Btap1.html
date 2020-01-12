@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Btap1</title>
+</head>
+<body>
+<p id="mes">
+    <script>
+        let number = 0;
+        let total = 0;
+        while (number != -1) {
+            number = parseInt(prompt("Enter a number: "));
+
+            alert(number);
+
+            total += number;
+        }
+        document.getElementById('mes').innerText = 'Tổng :'+total
+    </script>
+</body>
+</html>
