@@ -5,6 +5,276 @@
     <title>YeuCau2</title>
 </head>
 <body>
+<script>
+    var dem; // biến đếm số lượng khách hàng tồn tại trên hệ thống
+    var a = 0;// biến tính toán
+    var array = new Array(); // khai báo mảng
+    var i = 1; // biến số dòng của mảng
+    var j; // biến cố cột của mảng
+    var id_customer; // biến tính toán
+    var id_typeOfService;// biến tính toán
+    var id_kindOfRoom;// biến tính toán
+    var name;//0
+    var idCard;//1
+    var brithday;//2
+    var email;//3
+    var address;//4
+    var promotion;//5
+    var numberPeople;//6
+    var rentDays;//7
+    var customer;//8
+    var typeOfService;//9
+    var kindOfRoom;//10
+    var giaTien;//11
+    var money_typeOfService;//12- biến tính toán
+
+    do {
+
+        menu();
+
+    } while (true)
+
+
+    function menu() {
+        let number1 = parseInt(prompt(" MENU \n" +            // menu
+            "\n1.ADD" +
+            "\n2.SHOW" +
+            "\n3.EDIT" +
+            "\n5.EXIT" +
+            "" +
+            ""));
+        switch (number1) {
+            case 1:
+                add();
+                dem++;
+                i++;
+                break;
+            case 2:
+                show();
+                break;
+            case 3:
+                edit();
+                break;
+            case 4:
+            case 5:
+                ondragexit;
+        }
+
+    }// Menu
+
+    function add() {// hàm nhập thông tin
+
+        name = prompt('name :');
+        idCard = parseInt(prompt('idCard'));
+        brithday = prompt('brithday');
+        email = prompt('email');
+        address = prompt('address');
+        promotion = parseFloat(prompt('promotion'));
+        numberPeople = prompt('numberPeople');
+        rentDays = parseInt(prompt('rentDays'));
+        kindOfRoom1();
+        customer1();
+        typeOfService1();
+        giaTien1();
+        array[i] = new Array(name, idCard, brithday, email, address, promotion, numberPeople, rentDays, customer, typeOfService, kindOfRoom, giaTien,money_typeOfService);
+
+    }// Hàm ADD
+
+    function show() {// Hàng hiển thị thông tin
+
+
+        a = parseInt(prompt("Số Khách Hiện Tại :" + dem +
+            "\n1. Xem List Khách Hàng : " +
+            "\n.2 Xem Chi Tiết Khách hàng" +
+            "\n.3 Quay Lại Menu"
+        ));
+        switch (a) {
+            case 1:
+                showmini1();
+                break;
+            case 2:
+                showmini2();
+                break;
+            case 3:
+                return menu;
+            default:
+                alert("ERROR");
+                return show();
+
+        }
+    }//Hàm Hiển Thị
+
+
+    function showmini1() { // show List khách hàng đang tồn tại
+        let result = "";
+        for (let k = 1; k < array.length; k++) {//
+            result += k + ". Tên Khách Hàng : " + array[k][0] + " Số cmnd : " + array[k][1] + "\n";//truy xuất tên khách hàng và số cmnd
+        }
+        alert(result);
+        return show();
+
+    }// Hàm Hiển thị list khách hiện có
+
+    function showmini2() {// xuất thông tin chi tiết của khách hàng
+        i = parseInt(prompt("Xem Thông Tin Khách Hàng Thứ :"
+        ));
+        alert("1. Tên: " + array[i][0] + "\n2. CMND: " + array[i][1] + "\n3.Ngày Tháng Năm Sinh: " + array[i][2] + "\n4.Email: " + array[i][3] +
+            "\n5.Địa Chỉ: " + array[i][4] + "\n6.Giảm Giá: " + array[i][5] + "\n7.Số Người Đi Kèm: " + array[i][6] +
+            "\n8.Số Ngày Thuê: " + array[i][7] + "\n9.Customer: " + array[i][8] + "\n10. Loại Dịch Vụ: " + array[i][9] +
+            "\n11. Loại Phòng Thuê: " + array[i][10] + "\n12.Giá Tiền :" + array[i][11] + ' $');
+
+    }// Hàm hiển thị chi tiết khách hàng
+
+
+    function edit() {
+        let edit_i = parseInt(prompt("Chỉnh sửa thông tin khách hàng thứ : "
+        ));
+        let edit_j = parseInt(prompt("Bạn Muốn Chỉnh Sửa :" +
+            "\n0. Tên Khách hàng : " +
+            "\n.1 Số Cmnd" +
+            "\n.2 Brithday" +
+            "\n.3 Email " +
+            "\n.4 Địa Chỉ" +
+            "\n.5 Giảm Giá" +
+            "\n.6 Số Người Đi Kèm" +
+            "\n.7 Ngày thuê" +
+            "\n.8 Loại dịch Vụ" +
+            "\n.9 loại phòng thuê" +
+            "\n.10 Quay lại" +
+            "" +
+            "" +
+            ""
+        ));
+        let save1=array[edit_i][edit_j];
+        switch (edit_j) {
+            case 0:
+                array[edit_i][edit_j] = prompt(" Name : ");
+                break;
+            case 1:
+                array[edit_i][edit_j] = prompt(" idCard : ");
+                break;
+            case 2:
+                array[edit_i][edit_j] = prompt(" brithday : ");
+                break;
+            case 3:
+                array[edit_i][edit_j] = prompt(" email : ");
+                break;
+            case 4:
+                array[edit_i][edit_j] = prompt(" address : ");
+                break;
+            case 5:
+                array[edit_i][edit_j] = prompt(" promotion : ");
+                break;
+            case 6:
+                array[edit_i][edit_j] = prompt(" numberPeople : ");
+                break;
+            case 7:
+                array[edit_i][edit_j] = prompt(" rentDays : ");
+                break;
+            case 8:
+                customer1()
+                array[edit_i][edit_j] = customer;
+                break;
+            case 9:
+                typeOfService1()
+                array[edit_i][12]= money_typeOfService;// thay đổi giá tiền theo typeofservicce
+                array[edit_i][edit_j] =typeOfService;
+                break;
+            case 10:
+                kindOfRoom1()
+                array[edit_i][edit_j] =  kindOfRoom;
+                break;
+            default:
+                alert("ERROR");
+                return edit()
+
+
+        }
+    }
+
+    function customer1() {// hàm nhập customer
+        id_customer = parseInt(prompt("CUSTOMER" +
+            "\n1.Diamond" +
+            "\n2.Platinum" +
+            "\n3.Gold" +
+            "\n4.Silver" +
+            "\n5.Member"));
+        switch (id_customer) {
+            case 1 :
+                customer = "Diamond";
+                break;
+            case 2 :
+                customer = "Platinum";
+                break;
+            case 3 :
+                customer = "Gold";
+                break;
+            case 4:
+                customer = "Silver";
+                break;
+            case 5:
+                customer = "Member";
+
+            default:
+                alert("ERROR");
+                return customer1();
+        }
+
+
+    }// Hàm Nhập Customer
+
+    function typeOfService1() {
+        id_typeOfService = parseInt(prompt("TypeOfService" +
+            "\n1.Villa" +
+            "\n2.House" +
+            "\n3.Room"));
+        switch (id_typeOfService) {
+            case 1 :
+                typeOfService = "Villa";
+                money_typeOfService = 500;
+                break;
+            case 2 :
+                typeOfService = "House";
+                money_typeOfService = 300;
+                break;
+            case 3 :
+                typeOfService = "Room";
+                money_typeOfService = 100;
+                break;
+
+            default:
+                alert("ERROR");
+                return typeOfService1();
+        }
+
+    } // Hàm Nhập typeOfService
+
+    function kindOfRoom1() {
+        id_kindOfRoom = parseInt(prompt("KindOfRoom" +
+            "\n1.Vip" +
+            "\n2.Business" +
+            "\n3.Normal"));
+        switch (id_kindOfRoom) {
+            case 1 :
+                kindOfRoom = "Vip";
+                break;
+            case 2 :
+                kindOfRoom = "Business";
+                break;
+            case 3 :
+                kindOfRoom = "Normal";
+                break;
+
+            default:
+                alert("ERROR");
+                return kindOfRoom1();
+        }
+    }// Hàm Nhập kindOfRoom
+
+    function giaTien1() {
+        giaTien = rentDays * money_typeOfService * (1 - promotion / 100);
+    }// Hàm Tính Giá Tiền
+</script>
 
 </body>
 </html>
