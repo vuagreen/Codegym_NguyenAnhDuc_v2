@@ -28,7 +28,11 @@
     var kindOfRoom;//10
     var giaTien;//11
     var money_typeOfService;//12- biến tính toán
-    var age;//13-biến tuổi
+    var age=0;//13-biến tuổi
+    var fix_customer=0;//14 - biến fix giá theo customer
+    var fix_rentday =0;//15-Biến fix giá theo rentday
+    var fix_ageandadr=0;//16 Biến fix theo địa chỉ và age
+    var fix_adr = 0;//17 biến fix theo địa chỉ
 
     do {
 
@@ -71,15 +75,18 @@
         idCard = parseInt(prompt('Nhập số cmnd ', "195411269"));
         birthday1();
         email = prompt('Nhập Email: ', "mirinda@gmail.com");
-        address = prompt('Nhập địa chỉ : ', "Đà Nẵng");
+        address = prompt('Nhập địa chỉ : ', "295 Nguyễn Tất Thành, Đà Nẵng");
         promotion = parseFloat(prompt('Giảm giá (%) :', "20"));
         numberPeople = prompt('Số người đi cùng : ', "3");
         rentDays = parseInt(prompt('Ngày Thuê :', "3"));
         kindOfRoom1();
         customer1();
         typeOfService1();
-        giaTien1();
         age1();
+        fix_adr1();
+        fix_ageandadr1();
+        fix_rentday1();
+        giaTien1();
         array[i] = new Array(name, idCard, birthday, email, address, promotion, numberPeople, rentDays, customer, typeOfService, kindOfRoom, giaTien, money_typeOfService, age);
 
     }// Hàm ADD
@@ -128,7 +135,6 @@
             "\n11. Loại Phòng Thuê: " + array[i][10] + "\n12.Giá Tiền :" + array[i][11] + ' $');
 
     }// Hàm hiển thị chi tiết khách hàng
-
 
     function edit() {
         let edit_i = parseInt(prompt("Chỉnh sửa thông tin khách hàng thứ : "
@@ -197,7 +203,7 @@
 
 
         }
-    }
+    }// Hàm Chỉnh Sửa
 
     function customer1() {// hàm nhập customer
         id_customer = parseInt(prompt("CUSTOMER" +
@@ -209,25 +215,30 @@
         switch (id_customer) {
             case 1 :
                 customer = "Diamond";
+                fix_customer=15;
                 break;
             case 2 :
                 customer = "Platinum";
+                fix_customer=10;
                 break;
             case 3 :
                 customer = "Gold";
+                fix_customer=5;
                 break;
             case 4:
                 customer = "Silver";
+                fix_customer=2;
                 break;
             case 5:
                 customer = "Member";
+                fix_customer=0;
 
             default:
                 alert("ERROR");
                 return customer1();
         }
         ;
-        ;
+
 
 
     }// Hàm Nhập Customer
@@ -281,10 +292,11 @@
     }// Hàm Nhập kindOfRoom
 
     function giaTien1() {
-        giaTien = rentDays * money_typeOfService * (1 - promotion / 100);
+        int_rentDays = parseInt(rentDays);
+        giaTien = rentDays * money_typeOfService * (1 - promotion / 100) - (int_rentDays * (fix_rentday+fix_adr+fix_customer+fix_ageandadr));
     }// Hàm Tính Giá Tiền
     function birthday1() {
-        birthday = prompt("Nhập vào ngày tháng năm sinh theo định dạng 'MM/dd/yyyy':", "12/01/1998");
+        birthday = prompt("Nhập vào ngày tháng năm sinh theo định dạng 'MM/dd/yyyy':", "10/01/1998");
 
         var rebirthday = /\b\d{1,2}\/\d{1,2}\/(\d{4}|\d{2})\b/g;
         let boo = rebirthday.test(birthday);
@@ -314,17 +326,58 @@
     function age1() {
         current = new Date().getFullYear();
         current_day = new Date().getDate();
-        current_month = new Date().getMonth();
-        birthday2 = new Date(birthday).getFullYear();//cover về định dạng year
-        age = parseInt(current - birthday2);
-        if (parseInt(birthday.substring(3, 5) === parseInt(current_month))) {
-            if (parseInt(birthday.substring(0, 2)) > parseInt(current_day)) {
-                age-=1;
-            } if (parseInt(birthday.substring(3, 5) > parseInt(current_month))){
-                age-=1;
-            }
+        current_month = new Date().getMonth() + 1;
+        let month1 = parseInt(birthday.substring(3, 5));
+        let day2 = parseInt(birthday.substring(0, 2));
+        birthday2 = parseInt(birthday.substring(6,10));//cover về định dạng year
+        var age2 = parseInt(current - birthday2);
+
+        if (month1 == current_month) {
+            if (day2 > current_day) {
+                age =age2- 1;
+            }else {
+                age = age2;}
         }
-    }
+        if (month1 > current_month) {
+            age =age2- 1;
+        }
+        alert(age)
+
+    }// Hàm Tính tuổi
+    function fix_adr1() {
+        if (address.indexOf("Đà Nẵng") > 0) {
+            fix_adr = 20;}else
+        if ((address.indexOf("Huế")) > 0){
+            fix_adr = 10;
+        }else if ((address.indexOf("Quảng Nam")) > 0){
+            fix_adr = 5;
+        }else {fix_adr=0}
+
+
+    }// Hàm Fix giá theo địa chỉ
+    function fix_rentday1() {
+
+        if (parseInt(rentDays) >7) {
+            fix_rentday=30;
+
+        }else if (parseInt(rentDays) >=5) {
+            fix_rentday=20;
+
+        }else if (parseInt(rentDays) >=2) {
+            fix_rentday=10;
+
+        }
+    }// Hàm Fix giá theo ngày thuê
+    function fix_ageandadr1() {
+let fix_adr2=fix_adr;
+        if (fix_adr2=20&&age>=30) {
+            fix_ageandadr=2;
+        }else
+        if (fix_adr2=20&&age>=20) {
+            fix_ageandadr=1;
+        }
+
+    }// hàm Fix giá theo địa chỉ và độ tuổi
 </script>
 
 </body>
