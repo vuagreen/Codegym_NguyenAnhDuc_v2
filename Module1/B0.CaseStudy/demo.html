@@ -6,47 +6,70 @@
 </head>
 <body>
 <script>
-    var Student = {
-        data : [],
-        viewStudent : function(){
-            // Lấy danh sách sinh viên
-            var listStudent = this.data;
+    var birthday
+    birthday1()
+    //   var beasts = " đà  1 2 3 2 5 678 2 2 3";
+    //   var x= 0;
+    // let c= beasts.indexOf('1');
+    //   let b = beasts.lastIndexOf('1');
+    //  // console.log(beasts.indexOf('1'));
+    //  //
+    //  //  console.log(beasts.lastIndexOf()('1'));
+    //   if (c==b){
+    //       alert("True")
+    //   }else {alert("fall")}
+    // expected output: 1
 
-            // Lặp và hiển thị sinh viên
-            for(var i = 0; i < listStudent.length; i++){
-                document.write("<div>" + listStudent[i].id + "|" + listStudent[i].name + "|" + listStudent[i].email + "</div>");
-            }
-        },
-        addStudent : function(id, name, email){
-            // Tạo thông tin sinh viên
-            var item = {
-                id : id,
-                name : name,
-                email : email
-            };
+    // // start from index 2
+    // console.log(beasts.indexOf('bison', 2));
+    // // expected output: 4
+    //
+    // console.log(beasts.indexOf('giraffe'));
+    // // expected output: -1
 
-            //Thêm sinh viên
-            this.data.push(item);
-        },
-        removeStudent : function(id){
-            // Lặp qua sinh viên để tìm kiếm và xóa
-            for(var i = 0; i < this.data.length; i++){
-                if (this.data[i].id === id) { // nếu là sinh viên cần xóa
-                    this.data.splice(i, 1); // thì xóa
-                }
-            }
-        },
-        editStudent : function(id, name, email){
-            // Tìm sinh viên cần edit
-            for(var i = 0; i < this.data.length; i++){
-                // nếu là sinh viên cần edit thì thực hiện edit
-                if (this.data[i].id === id) {
-                    this.data[i].name = name;
-                    this.data[i].email = email;
-                }
-            }
-        }
-    };
+    // var dateOne="28/12";
+    //
+    // var day=dateOne.substring(0,2)
+    // day=parseInt(day);
+    // alert(day)
+    //
+    // var re = /\b\d{1,2}\/\d{1,2}\/(\d{4}|\d{2})\b/g;
+    // let email1 = "30/91/1998";
+    // let boo = re.test(email1);
+    // alert(boo)
+
+function birthday1 () {
+   birthday = prompt("Nhập vào ngày tháng năm sinh theo định dạng 'MM/dd/yyyy':", "12/01/1998");
+
+    // var re = /\b\d{1,2}\/\d{1,2}\/(\d{4}|\d{2})\b/g;
+    // let boo = re.test(birthday);
+    // //alert(boo);
+    // if (boo === true) {
+    //
+    //     var day1 = parseInt(birthday.substring(0, 2));
+    //     var month1 = parseInt(birthday.substring(3, 5));
+    //     var year1 = parseInt(birthday.substring(6, 10));
+    //     if (day1 > 31) {
+    //         alert("Lỗi Ngày Sinh!");
+    //         birthday1();
+    //     } else if (month1 > 12) {
+    //         alert("Lỗi Tháng Sinh :");
+    //         birthday1();
+    //     } else if (year1 > 2003) {
+    //         alert("Lỗi năm Sinh :");
+    //         birthday1();
+    //     }
+    //
+    // } else {
+    //     alert("ERRO");
+    //     birthday1();
+    // }
+    current = new Date().getFullYear();
+    birthday = new Date(birthday).getFullYear();//cover về định dạng time
+    age = current - birthday;
+    alert(age);
+}
+
 </script>
 </body>
 </html>
