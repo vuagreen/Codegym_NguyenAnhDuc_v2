@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>FootToMeter</label> <br>
+    <input type="text" id="input"
+           oninput="footToMeter(this.value)"
+           onchange="footToMeter(this.value)"> :
+    <span id="output"> </span>
+</form>
+
+<label>MeterToFoot</label>
+<form>
+    <input type="text" id="input2"
+           oninput="meterToFoot(this.value)"
+           onchange="meterToFoot(this.value)"> :
+    <span id="output2"> </span>
+</form>
+<script>
+    function footToMeter(foot) {
+        foot = parseFloat(foot).toFixed(4);
+        var meter = 0.305 * foot;
+        document.getElementById("output").innerHTML = meter;
+
+    }
+
+    function meterToFoot(meter) {
+        meter = parseFloat(meter).toFixed(1);
+        var foot = (3.279 * meter).toFixed(4);
+        document.getElementById("output2").innerHTML = foot;
+    }
+
+
+</script>
+</body>
+</html>

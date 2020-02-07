@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var A = [1,2,3]
+    var b;
+    // for (i = 0; i < 3; i++) {
+    //     A[i] = parseInt(prompt("Input : "))
+    // }
+    checknumber();
+
+    function checknumber() {
+        for (j = 0; j < A.length; j++) {
+            if (A[j] < A[j + 1]) {
+                b = A[j + 1];
+                A[j + 1] = A[j];
+                A[j] = b;
+            }
+        }
+        alert(A[0])
+
+    }
+</script>
+</body>
+</html>

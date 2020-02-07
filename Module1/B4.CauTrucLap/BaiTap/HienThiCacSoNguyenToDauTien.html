@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var max=parseInt(prompt("Bạn Muốn Hiển Thị Bao Nhiêu Số Nguyên Tố : "))
+    var count1 = 0;
+    var p;
+    var k = 1;
+    for (let i = 2; count1 < max; i++) {
+        p = 0;
+        for (let j = 1; j < 100; j++) {
+            if (i % j == 0) {
+                p++;
+            }
+        }
+        if (p < 3) {
+            count1++;
+            document.write("Số Nguyên Tố Thứ " + k + " :  " + i + "<br/>");
+            k++;
+        }
+
+
+    }
+
+</script>
+</body>
+</html>

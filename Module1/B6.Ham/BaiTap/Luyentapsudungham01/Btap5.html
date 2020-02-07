@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>CHECK </label> <br>
+        <input id="input" type="type"
+               oninput="set(this.value)"
+               onchange="set(this.value)"> : <span id="output"></span>
+    </p>
+</form>
+<script>
+    var A = ["Polaris", "Aldebaran", "Deneb", "Vega", " Altair", "Dubhe", "Regulus"]
+    var B = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", " Ursa Major", "Leo"]
+
+    function set(ok) {
+
+        document.getElementById("output").innerHTML = "No Data";
+
+        for (i = 0; i < A.length; i++) {
+            if (A[i] == ok) {
+                document.getElementById("output").innerHTML = B[i];
+            }
+
+        }
+        for (j = 0; j < B.length; j++) {
+            if (B[j] == ok) {
+                document.getElementById("output").innerHTML = A[j];
+            }
+
+        }
+        return ok;
+
+    }
+
+</script>
+</body>
+</html>

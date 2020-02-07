@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var A = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    var x = prompt("Input")
+    check();
+
+    function check() {
+        for (i = 0; i < x.length; i++) {
+            var y = A.includes(x[i])
+            if (y == false) {
+                alert(y);
+                break;
+            }
+        }
+        if (y == true) {
+            alert(y)
+        }
+
+
+    }
+</script>
+</body>
+</html>

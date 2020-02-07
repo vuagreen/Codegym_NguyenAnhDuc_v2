@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Từ Điển</label>
+        <input id="input" type="type"
+               oninput="set(this.value)"
+               onchange="set(this.value)"> :  <span id="output"></span>
+    </p>
+</form>
+<script>
+    let check;
+    var A = ["Red", "Blue", "Apple"]
+    var B = ["Màu Đỏ", "Màu Xanh", "Quả Táo"]
+
+    function set(kitu) {
+        for (i = 0; i < A.length; i++) {
+            if (A[i]==kitu) {
+                document.getElementById("output").innerHTML = B[i];
+            }
+
+        }
+        for (j = 0; j < B.length; j++) {
+            if (B[j]==kitu) {
+                document.getElementById("output").innerHTML = A[j];
+            }
+
+        }
+        return kitu;
+
+    }
+</script>
+</body>
+</html>

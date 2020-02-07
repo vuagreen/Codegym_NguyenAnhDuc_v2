@@ -101,9 +101,9 @@
     }//demo tính tuổi
     function cmnd1() {
 
-        cmnd = prompt("CMND:");
+        idCard = parseInt(prompt('Nhập số cmnd ', "195411269"));
         var re_cmnd = /\b\d\d\d\d\d\d\d\d\d\b/g;
-        let boo_cmnd = re_cmnd.test(cmnd);
+        let boo_cmnd = re_cmnd.test(idCard);
         alert(boo_cmnd);
 
     }// demo check nhập 9 số cmnd true, false return fix

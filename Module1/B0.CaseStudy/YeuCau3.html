@@ -72,7 +72,8 @@
     function add() {// hàm nhập thông tin
 
         name1();
-        idCard = parseInt(prompt('Nhập số cmnd ', "195411269"));
+        cmnd1();
+        //idCard = parseInt(prompt('Nhập số cmnd ', "195411269"));
         birthday1();
         email = prompt('Nhập Email: ', "mirinda@gmail.com");
         address = prompt('Nhập địa chỉ : ', "295 Nguyễn Tất Thành, Đà Nẵng");
@@ -90,6 +91,18 @@
         array[i] = new Array(name, idCard, birthday, email, address, promotion, numberPeople, rentDays, customer, typeOfService, kindOfRoom, giaTien, money_typeOfService, age);
 
     }// Hàm ADD
+    function cmnd1() {
+
+        idCard = parseInt(prompt('Nhập số cmnd ', "195411269"));
+        var re_cmnd = /\b\d\d\d\d\d\d\d\d\d\b/g;
+        let boo_cmnd = re_cmnd.test(idCard);
+        //alert(boo_cmnd);
+        if (boo_cmnd==false){
+            cmnd1();
+        }
+
+
+    }// demo check nhập 9 số cmnd true, false return fix
 
     function show() {// Hàng hiển thị thông tin
 

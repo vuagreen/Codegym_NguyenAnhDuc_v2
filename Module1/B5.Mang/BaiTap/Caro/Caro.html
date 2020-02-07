@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+​
+<body>
+<h3>Game caro phiên bản lỗi</h3>
+<p id="caro"></p>
+<script>
+    let b = document.getElementById("caro");
+    let mang = [];
+    let data="" ;
+    let checkNguoiChoi = true;
+    for (i = 0; i < 5; i++) {
+        mang[i] = new Array("", "", "", "", "");
+    }
+    function displayCaro() {
+        data = "<table border=1>"
+        for (i = 0; i < 5; i++) {
+            data += "<tr>";
+            for (j = 0; j < 5; j++) {
+                data += "<td align='center' style='width:30px;height:30px ' onclick='changeValue(" + i + "," + j + ");'>" + mang[i][j] + "</td>";
+            }
+            data += "</tr>"
+        }
+        b.innerHTML = data;
+    }
+        function changeValue(x, y) {
+            if (checkNguoiChoi && checkDaNhap(x, y)) {
+                mang[x][y] = "X";
+                checkNguoiChoi = false;
+                if (checkWin1()) {
+                    alert("Người chơi 1 win")
+                }
+
+            } else if (!checkNguoiChoi && checkDaNhap(x, y)) {
+                mang[x][y] = "O";
+                checkNguoiChoi = true;
+                if (checkWin2()) {
+                    alert("Người chơi 2 win")
+                }
+
+            }
+            displayCaro();
+        }
+
+    function checkDaNhap(x, y) {
+        if (mang[x][y] === "O" || mang[x][y] === "X") {
+            alert("Ô bạn chọn đã được chọn trước. Vui lòng chọn ô khác.");
+            return false;
+        }
+        return true;
+    }
+
+    function checkWin1() {
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if (mang[i][j] === "X") {
+                    if (mang[i][j + 1] === "X" && mang[i][j + 2] === "X") {
+                        return true
+                    }
+                    if (mang[i + 1][j] === "X" && mang[i + 2][j] === "X") {
+                        return true;
+                    }
+                    if (mang[i + 1][j + 1] === "X" && mang[i + 2][j + 2] === "X") {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    function checkWin2() {
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if (mang[i][j] === "O") {
+                    if (mang[i][j + 1] === "O" && mang[i][j + 2] === "O") {
+                        return true
+                    }
+                    if (mang[i + 1][j] === "O" && mang[i + 2][j] === "O") {
+                        return true;
+                    }
+                    if (mang[i + 1][j + 1] === "O" && mang[i + 2][j + 2] === "O") {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    displayCaro();
+</script>
+</body>
+​
+</html>

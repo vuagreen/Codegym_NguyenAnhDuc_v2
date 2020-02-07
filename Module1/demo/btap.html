@@ -6,7 +6,13 @@
 </head>
 <body>
 <script>
-   alert("Happy New year")
+    function func1(a){
+        if(a == 2)
+            return 2;
+        return a * func1(a - 1);
+    }
+    let b=func1(5);
+    alert(b);
 
 </script>
 </body>
