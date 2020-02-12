@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="250px" height="150px" style="border:1px solid #d3d3d3;"></canvas>
+<h2 style="color: coral">INFO</h2>
+<script>
+    let Rectangle = function (dai, rong) {
+        //thuộc tính
+        this.x = 20;
+        this.y = 20;
+
+        this.dai = dai;
+        this.rong = rong;
+        this.s = dai * rong;
+        this.cv = (dai + rong) * 2;
+        // phương thức
+
+        //xây dựng phương thức
+        function getDai() {
+            return dai;
+        }
+
+        function getRong() {
+            return rong;
+        }
+
+        function getS() {
+            return this.s;
+        }
+
+        function getCv() {
+            return this.cv;
+        }
+
+        function setDai(val1) {
+            this.dai = val1;
+
+        }
+
+        function setRong(val2) {
+            this.dai = val2;
+        }
+
+
+    }
+    var rectangle = new Rectangle(200, 100);
+    let dai=rectangle.dai;
+    let rong=rectangle.rong;
+    let s = rectangle.s;
+    let cv = rectangle.cv
+    document.write( " Chiều Dài: " + dai + " px");
+    document.write("<br>" + " Chiều Rộng : " + rong + " px");
+    document.write("<br>" + " Diện Tích : " + s + " px");
+    document.write("<br>" + "Chu Vi : " + cv + " px");
+    var ctx = document.getElementById("myCanvas").getContext("2d");
+    ctx.beginPath();
+    ctx.strokeStyle = "green";
+    ctx.rect(rectangle.x, rectangle.y, rectangle.dai, rectangle.rong);
+    ctx.stroke();
+</script>
+</body>
+</html>

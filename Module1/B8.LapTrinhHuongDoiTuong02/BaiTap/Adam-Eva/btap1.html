@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="adam" type="button" value="Adam" onclick="adam.eat(apple)">
+<input id="eva" type="button" value="Eva" onclick="eva.eat(apple)">
+<script>
+    var Apple = function () {
+        this.int = 10;
+        this.setInt = function (int) {
+            this.int = int;
+        };
+        this.getInt = function () {
+            return this.int;
+        };
+
+
+    };
+    var Human = function (name, sex, weight) {
+        this.name = name;
+        this.sex = sex;
+        this.weight = weight;
+        this.setWeight = function (weight) {
+            this.weight = weight;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.eat = function (apple) {
+            if (apple.int > 0) {
+                apple.setInt(apple.int - 1);
+                this.weight++;
+                alert(name + "Đã Ăn 1 , còn lại : " + apple.getInt()+"cân nặng là : "+this.weight);
+            } else {
+                alert("Táo Đã Hết !")
+            }
+
+        }
+
+    };
+    var apple = new Apple();
+    var adam = new Human("Adam","Male", 65);
+    var eva=new Human("Eva","Famale",45)
+</script>
+</body>
+</html>

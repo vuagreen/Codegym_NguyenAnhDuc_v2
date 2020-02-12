@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color: coral">RESULT</h2>
+<script>
+    let Temperature = function (nhietdoC) {
+        this.nhietdoC = nhietdoC;
+        this.nhietdoF = nhietdoC * 1.8 + 32;
+        this.nhietdoK = nhietdoC + 273.15;
+        this.getNhietdoC = function () {
+            return nhietdoC
+        }
+        this.getNhietdoF = function () {
+            return this.nhietdoF
+        }
+        this.getNhietdoK = function () {
+            return this.nhietdoK
+        }
+        this.setNhietdoC = function (val) {
+            this.NhietdoC = val;
+
+        }
+
+    }
+    var temperature = new Temperature(10);
+    let enter = "<br>";
+    let doC = temperature.getNhietdoC();
+    let doK = temperature.getNhietdoK();
+    let doF = temperature.getNhietdoF();
+    document.write("Nhiệt Độ C : " + doC + enter + "Nhiệt Độ F là : " + doF + enter + "Nhiệt Độ K là : " + doK)
+</script>
+</body>
+</html>

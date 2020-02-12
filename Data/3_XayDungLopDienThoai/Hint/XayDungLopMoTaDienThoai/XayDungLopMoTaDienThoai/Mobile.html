@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nokia</h1> </br>
+<p id="pin1"></p></br>
+Vùng nhớ dùng để lưu tin nhắn đang soạn thảo : <p id="vungNhoLuuTinNhanDangSoanThao1"></p></br>
+Vùng nhớ dùng để lưu tin nhắn trong hộp thư đến : <p id="vungNhoLuuTinNhanDen1"></p></br>
+Vùng nhớ dùng để lưu tin nhắn đã gửi : <p id="vungNhoLuuTinNhanDaGui1"></p></br>
+<p id="trangThaiDienThoai1"></p></br>
+<input type="radio" name ="batTatDienThoai1" onclick="batDienThoai('nokia');">Bật
+<input type="radio" name ="batTatDienThoai1" checked onclick="tatDienThoai('nokia');">Tắt
+</br>
+<input type="button" onclick="sacPin('nokia');return false;" value="Sạc pin"></br>
+Tin nhắn : <input type="text" id="tinNhan1">
+<input type="button" onclick="soanTinNhan('nokia',tinNhan1.value);return false;" value="Soạn tinh nhắn"></br>
+<input type="button" onclick="nhanTinNhan('nokia');return false;" value="Nhận tin nhắn"></br>
+<input type="button" onclick="guiTinNhan('iphone');return false;" value="Gửi tin nhắn"></br>
+<input type="button" onclick="xemTinNhanDen('nokia');return false;" value="Xem tin nhắn đến"></br>
+<input type="button" onclick="xemTinNhanDaGui('nokia');return false;" value="Xem tin nhắn đã gửi"></br>
+<p id="nokiaResult"></p></br>
+
+=========================================================<br>
+<h1>Iphone</h1> </br>
+Trạng thái pin : <p id="pin2"></p></br>
+Vùng nhớ dùng để lưu tin nhắn đang soạn thảo : <p id="vungNhoLuuTinNhanDangSoanThao2"></p></br>
+Vùng nhớ dùng để lưu tin nhắn trong hộp thư đến : <p id="vungNhoLuuTinNhanDen2"></p></br>
+Vùng nhớ dùng để lưu tin nhắn đã gửi : <p id="vungNhoLuuTinNhanDaGui2"></p></br>
+<p id="trangThaiDienThoai2"></p></br>
+<input type="radio" name ="batTatDienThoai2" onclick="batDienThoai('iphone');">Bật
+<input type="radio" name ="batTatDienThoai2" checked onclick="tatDienThoai('iphone');">Tắt
+</br>
+<input type="button" onclick="sacPin('iphone');return false;" value="Sạc pin"></br>
+Tin nhắn : <input type="text" id="tinNhan2">
+<input type="button" onclick="soanTinNhan('iphone',tinNhan2.value);return false;" value="Soạn tinh nhắn"></br>
+<input type="button" onclick="nhanTinNhan('iphone');return false;" value="Nhận tin nhắn"></br>
+<input type="button" onclick="guiTinNhan('nokia');return false;" value="Gửi tin nhắn"></br>
+<input type="button" onclick="xemTinNhanDen('iphone');return false;" value="Xem tin nhắn đến"></br>
+<input type="button" onclick="xemTinNhanDaGui('iphone');return false;" value="Xem tin nhắn đã gửi"></br>
+<p id="iphoneResult"></p></br>
+
+<script src="Mobile.js"></script>
+<script src="Run.js"></script>
+
+
+</body>
+</html>

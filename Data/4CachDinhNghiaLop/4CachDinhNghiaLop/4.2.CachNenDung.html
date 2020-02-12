@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Trường hợp số thuộc tính >3 thì dùng cách này
+    // Có 4 thuộc tính type, color, price, weight
+    let Apple = function() {
+       this.setType = function (type) {
+           this.type = type;
+       }
+        this.setColor = function (color) {
+            this.color = color;
+        };
+       this.setPrice = function (price) {
+           this.price = price;
+       }
+       this.setWeight = function (weight) {
+           this.weight = weight;
+       }
+        this.getType = function () {
+            return this.type;
+        }
+        this.getColor = function () {
+            return this.color;
+        }
+        this.getPrice = function () {
+            return this.price;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.getInfo = function () {
+            return "type : " + this.getType()
+            + "\n color : " + this.getColor()
+            + "\n price : " + this.getPrice()
+            + "\n weight : " + this.getWeight();
+        };
+
+    }
+    // giống cách 1.1
+    let apple = new Apple();
+    apple.setType("macintosh");
+    apple.setColor("red");
+    apple.setPrice(25000000);
+    apple.setWeight(2.5);
+    alert(apple.getInfo());
+
+    let apple1 = new Apple();
+    apple1.setType("macintosh1");
+    apple1.setColor("yello");
+    apple1.setPrice(45000000);
+    apple1.setWeight(3.5);
+    alert(apple1.getInfo());
+
+</script>
+</body>
+</html>

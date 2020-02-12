@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Math = function (a, b) {
+
+        let enter = "<br>";
+        this.A = a;
+        this.B = b;
+        this.show = function () {
+            document.write("Số A  : " + a + enter + "Số B  : " + b)
+        }
+
+        this.sum = function () {
+            document.write(enter + "Tổng 2 số là : " + (a + b));
+        }
+        this.subtraction = function () {
+            if (a > b) {
+                document.write(enter + "Hiệu 2 số là : " + (a - b));
+            } else {
+                document.write(enter + "Hiệu 2 số là : " + (b - a));
+            }
+
+        }
+        this.multiplication = function () {
+            document.write(enter + "Tích 2 số là : " + (a * b));
+        }
+        this.division = function () {
+            document.write(enter + "A/B = " + (a / b))
+
+        }
+
+    }
+    let math = new Math(3, 4);
+    let show = math.show();
+    let sum = math.sum();
+    let subtraction = math.subtraction();
+    let multiplication = math.multiplication();
+    let division = math.division
+    ();
+</script>
+</body>
+</html>

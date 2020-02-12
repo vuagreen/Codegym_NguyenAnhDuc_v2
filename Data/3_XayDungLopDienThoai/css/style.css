@@ -1,0 +1,192 @@
+/** {*/
+/*	margin: 0;*/
+/*	padding: 0;*/
+/*	max-height: 700px;*/
+/*}*/
+
+/*body {*/
+/*	background-image: linear-gradient(to right top, #dfcce3, #d1c8ef, #b4c8fb, #88caff, #3fcdff);*/
+/*	width: 1200px;*/
+/*	margin: auto;*/
+
+/*	background-attachment: fixed;*/
+/*	box-sizing: border-box;*/
+/*	position: relative;*/
+/*	top: 70px;*/
+/*	background-repeat: no-repeat;*/
+
+/*}*/
+/*.container {*/
+/*	width: 500px;;*/
+/*}*/
+/*.nokia-area {*/
+/*	width: 350px;*/
+/*	height: 500px;*/
+/*	background: #222f3e;*/
+/*	position: relative;*/
+/*	top: 50px;*/
+/*	left: 70px;*/
+/*	border-radius: 7px;*/
+/*	box-shadow: 20px 18px 57px 7px rgba(66,58,66,1);*/
+/*}*/
+
+/*.iphone-area {*/
+/*	width: 350px;*/
+/*	height: 500px;*/
+/*	background: #006266;*/
+/*	position: relative;*/
+/*	left: 700px;*/
+/*	top: -457px;*/
+/*	border-radius: 7px;*/
+/*	box-shadow: 20px 18px 57px 7px rgba(66,58,66,1);*/
+/*}*/
+
+/*.display {*/
+/*	width: 325px;*/
+/*	height: 460px;*/
+/*	background-color: rgb(189, 189, 189);*/
+/*	position: relative;*/
+/*	top: 13px;*/
+/*	left: 12px;*/
+/*}*/
+
+/*#show-display-iphone, #show-display-nokia {*/
+/*	width: 300px;*/
+/*	height: 250px;*/
+/*	border-radius: 6px;*/
+/*	margin: 12px;*/
+/*	background-color: rgb(97, 91, 91);*/
+/*	color: white;*/
+/*	font-weight: bold;*/
+/*	font-family: consolas;*/
+/*}*/
+
+/*#nokia-message-list li, #iphone-message-list li {*/
+/*	list-style-type: none;*/
+/*	padding-top: 10px;*/
+/*	padding-left: 20px;*/
+/*}*/
+
+/*#nokia-message-list li::before, #iphone-message-list li::before {*/
+/*	font-family: "Font Awesome 5 Pro";*/
+/*	content: '\f1ea';*/
+/*	display: inline;*/
+/*	position: relative;*/
+/*	margin-right: 20px;*/
+/*}*/
+
+/*#pin-iphone, #pin-nokia {*/
+/*	width: 40px;*/
+/*	position: relative;*/
+/*	left: 270px;*/
+/*	top: 5px;*/
+/*	border-radius: 25px;*/
+/*	padding: 0 3px;*/
+/*	margin-bottom: 15px;*/
+/*	font-weight: bold;*/
+/*	font-size: 12px;*/
+/*	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
+/*	background-color: #00b894;*/
+/*	color: white;*/
+/*	outline: none;*/
+/*	box-shadow: 3px 3px 3px grey;*/
+/*	border: none;*/
+/*	text-align: center;*/
+/*}*/
+/*.detail {*/
+/*	margin-top: 10px;*/
+/*}*/
+
+/*#content-message-nokia, #content-message-iphone {*/
+/*	width: 70%;*/
+/*	padding: 10px;*/
+/*	margin-left: 3px;*/
+/*	border-radius: 7px;*/
+/*	font-family: consolas;*/
+/*	cursor: pointer;*/
+/*}*/
+
+/*#send-btn {*/
+/*	padding: 5px 15px;*/
+/*	border-radius: 10px;*/
+/*	font-weight: bold;*/
+/*	margin-right: 2px;*/
+/*	color: white;*/
+/*	background-color: #fc5c65;*/
+/*	cursor: pointer;*/
+/*	border: none;*/
+/*	box-shadow: 3px 3px 5px grey;*/
+/*	font-family: consolas;*/
+/*	font-size: 15px;*/
+/*}*/
+
+/*.button {*/
+/*	padding: 2px;*/
+/*	margin-left: 3px;*/
+/*	border-radius: 5px;*/
+/*	box-shadow: 3px 3px 5px grey;*/
+/*	font-family: consolas;*/
+/*	color: white;*/
+/*	background-color: #5758BB;*/
+/*	cursor: pointer;*/
+/*	border: none;*/
+/*}*/
+
+/*.charge {*/
+/*	width: 80%;*/
+/*	margin-left: 30px;*/
+/*	padding: 6px;*/
+/*	border-radius: 5px;*/
+/*	color: white;*/
+/*	background-color: #B53471;*/
+/*	cursor: pointer;*/
+/*	border: none;*/
+/*	box-shadow: 3px 3px 5px grey;*/
+/*	font-family: 'Courier New', Courier, monospace;*/
+/*	font-size: 17px;*/
+/*}*/
+/*.control-button {*/
+/*	margin-left: 5px;*/
+/*}*/
+
+/*.checkOnOff {*/
+/*	position: relative;*/
+/*	top: -5px;*/
+/*	left: 12px;*/
+/*	cursor: pointer;*/
+/*}*/
+/*.checkOnOff::before {*/
+/*	content: '';*/
+/*	position: absolute;*/
+/*	width: 60px;*/
+/*	left: -5px;*/
+/*	height: 26px;*/
+/*	background-color: #ddd;*/
+/*	display: inline-block;*/
+/*	border-radius: 25px;*/
+/*	box-shadow: 0 0 5px rgba(0,0,0,.5);*/
+/*}*/
+/*.checkOnOff::after {*/
+/*	content:'';*/
+/*	width: 22px;*/
+/*	height: 22px;*/
+/*	background-color: white;*/
+/*	position: absolute;*/
+/*	border-radius: 25px;*/
+/*	top: 2px;*/
+/*	left: -2px;*/
+/*	transition: all .3s;*/
+/*	*/
+/*}*/
+/*.checkOnOff:checked::after {*/
+/*	left: 30px;*/
+/*}*/
+/*.checkOnOff:checked::before {*/
+/*	background-color: rgb(79, 114, 38);*/
+/*}*/
+/*.batTat {*/
+/*	text-shadow: 3px 3px 3px grey;*/
+/*	background: rgb(187, 187, 223);*/
+/*	font-weight: bold;*/
+/*	margin-left: 10px;*/
+/*}*/

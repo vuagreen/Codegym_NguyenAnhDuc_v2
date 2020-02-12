@@ -2,11 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>YeuCau2</title>
 </head>
 <body>
 <script>
-    var dem; // biến đếm số lượng khách hàng tồn tại trên hệ thống
+    var dem=0; // biến đếm số lượng khách hàng tồn tại trên hệ thống
     var a = 0;// biến tính toán
     var array = new Array(); // khai báo mảng
     var i = 1; // biến số dòng của mảng
@@ -36,16 +43,17 @@
 
     do {
 
-        menu();
+        displayMainMenu();
 
     } while (true)
 
 
-    function menu() {
+    function displayMainMenu() {
         let number1 = parseInt(prompt(" MENU \n" +            // menu
             "\n1.ADD" +
             "\n2.SHOW" +
             "\n3.EDIT" +
+            "\n4.DELETE" +
             "\n5.EXIT" +
             "" +
             ""));
@@ -62,12 +70,19 @@
                 edit();
                 break;
             case 4:
-                alert(array[1][13]);// Hiển thị tuổi
+                showmini1();
+                i=prompt("Xóa khách hàng thứ : ");
+                dem-=1;
+                array.splice(i,1);
+                break;
             case 5:
                 ondragexit
         }
 
     }// Menu
+    function delete1() {
+
+    }
 
     function add() {// hàm nhập thông tin
 
@@ -94,7 +109,7 @@
     function cmnd1() {
 
         idCard = parseInt(prompt('Nhập số cmnd ', "195411269"));
-        var re_cmnd = /\b\d\d\d\d\d\d\d\d\d\b/g;
+        var re_cmnd = /\b\d{9}\b/g;
         let boo_cmnd = re_cmnd.test(idCard);
         //alert(boo_cmnd);
         if (boo_cmnd==false){
@@ -115,12 +130,14 @@
         switch (a) {
             case 1:
                 showmini1();
+                return show();
                 break;
             case 2:
                 showmini2();
+                return show();
                 break;
             case 3:
-                return menu;
+                return displayMainMenu();
             default:
                 alert("ERROR");
                 return show();
@@ -135,7 +152,7 @@
             result += k + ". Tên Khách Hàng : " + array[k][0] + " Số cmnd : " + array[k][1] + "\n";//truy xuất tên khách hàng và số cmnd
         }
         alert(result);
-        return show();
+        // return show();
 
     }// Hàm Hiển thị list khách hiện có
 
@@ -372,9 +389,11 @@
                 age = age2;}
         }
         if (month1 > current_month) {
-            age =age2- 1;
+            age = age2 - 1;
+        } else {
+            age=age2;
         }
-        alert(age)
+        alert(age);
 
     }// Hàm Tính tuổi
     function fix_adr1() {
@@ -414,5 +433,7 @@
 
 </script>
 
+</body>
+</html>
 </body>
 </html>

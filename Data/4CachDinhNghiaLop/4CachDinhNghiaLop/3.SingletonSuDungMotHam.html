@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //khi bạn thật sự muốn có một hàm khởi tạo mà bạn sẽ chỉ sử dụng một lần duy nhất
+    // và không cần thiết phải khai báo tên cho nó
+    let apple = new function() {
+        this.type = "macintosh";
+        this.color = "red";
+        this.getInfo = function () {
+            return "color : " + this.color + ' type : ' + this.type + ' apple';
+        };
+    }
+    // 1.1 mô tả ở trên, nhưng cách để sử dụng đối tượng thì lại giống cách 2.
+    apple.color = "reddish";
+    alert(apple.getInfo());
+</script>
+</body>
+</html>

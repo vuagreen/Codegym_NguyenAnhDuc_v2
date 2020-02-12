@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="display"></div>
+<span id="status">
+</span>
+<input id="congtac" type="button" onclick="bongden.onChangeStatus()" value="On/Off">
+<script>
+
+    var CongTac = function () {
+        this.status = false;
+
+        this.getStatus = function () {
+            return this.status;
+        };
+
+        this.setStatus = function (status) {
+            this.status = status;
+        };
+
+    };
+    var BongDen = function () {
+            // this.x = "bongdentoi.png";
+            this.status2 = "";
+            var congtac = new CongTac();
+            this.getStatus2 = function () {
+                return this.status2;
+            };
+            this.setStatus2 = function (status2) {
+                this.status2 = status2;
+            };
+            this.control = function () {
+                if (congtac.status === true) {
+                    this.status2  = "Đèn Đang Bật";
+
+                    document.getElementById('display').innerHTML = bongden.display("bongdensang.jpg", 100, 100, 200);
+                } else {
+                    this.status2 = "Đèn Đang Tắt";
+
+                    document.getElementById('display').innerHTML = bongden.display("bongdentoi.png", 100, 100, 200);
+                }
+                document.getElementById('status').innerHTML =this.status2;
+
+
+            };
+            this.display = function (x, y, z, size) {
+                return '<img width="' + size + '"' +
+                    ' height="' + size + '"' +
+                    ' src="' + x + '"' +
+                    ' style="top: ' + y + 'px; left:' + z + 'px;position:absolute;" />';
+            };
+            this.onChangeStatus = function () {
+                if (congtac.status === false) {
+                    congtac.setStatus(true);
+                } else {
+                    congtac.setStatus(false);
+                }
+                this.control();
+
+            }
+
+        }
+    ;
+    var bongden = new BongDen();
+    // var display = bongden.display(x, 20, 30, 200);
+    // bongden.onChangeStatus();
+  bongden.control();
+
+</script>
+</body>
+</html>

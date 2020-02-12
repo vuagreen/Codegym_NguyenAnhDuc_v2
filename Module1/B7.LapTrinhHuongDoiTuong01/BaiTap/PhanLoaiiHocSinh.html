@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var list = [];
+    // var i = 0;
+    var enter = "<br>";
+    var Student = function () {
+        // this.name=name;
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.getName = function () {
+            return this.name;
+        };
+        this.setAge = function (age) {
+            this.age = age;
+        };
+        this.getAge = function () {
+            return this.age;
+        };
+        this.setId = function (id) {
+            this.id = id;
+        };
+        this.getId = function () {
+            return this.id;
+        };
+        this.show = function () {
+            return (this.name + enter + this.age + enter + this.id);
+
+        }
+//         this.brithday = brithday;
+//         this.id = id;
+//         this.diemToan = diemtoan;
+//         this.diemLy = diemly;
+//         this.diemHoa = diemhoa;
+//         this.danhhieu="";
+//         var tb = (diemtoan + diemly + diemhoa) / 3;
+//         this.
+//         this.check = function () {
+//             if (tb>8) {
+// this.danhhieu="Gioi"
+//             }
+//         }
+    };
+    let num = prompt("Số Học sinh Muốn Nhập :");
+    let student1 = new Student();
+    for (k = 0; k < num; k++) {
+        let student1 = new Student();
+        let name = prompt("Name: ","Anh ĐỨc");
+        let age = prompt("Age: ",18);
+        let id = prompt("ID: ",1996);
+        student1.setName(name);
+        student1.setAge(age);
+        student1.setId(id);
+        // alert(student1.getName());
+        list.push(student1);
+    }
+
+    for (j = 0; j < list.length ; j++) {
+        document.write(list[j].show() + enter);
+        // i++;
+    }
+
+</script>
+</body>
+</html>

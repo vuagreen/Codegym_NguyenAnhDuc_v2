@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Trường hợp số thuộc tính <=3 thì dùng cách này (ở đây chỉ có 2 thuộc tính type, color)
+    // Cách khởi tạo này có 2 tham số
+    let Apple = function(type, color) {
+        this.type = type; // không cần viết hàm set cho thuộc tính này
+        this.color = color; // không cần viết hàm set cho thuộc tính này
+        this.getType = function () {
+            return this.type;
+        }
+        this.getColor = function () {
+            return this.color;
+        }
+        this.getInfo = function () {
+            return "color : " + this.color + ' type : ' + this.type + ' apple';
+        };
+    }
+    // giống cách 1.1
+    let apple = new Apple("macintosh", "red"); // đối số
+    alert(apple.getInfo());
+    alert(apple.getColor());
+    alert(apple.getType());
+
+
+
+</script>
+</body>
+</html>

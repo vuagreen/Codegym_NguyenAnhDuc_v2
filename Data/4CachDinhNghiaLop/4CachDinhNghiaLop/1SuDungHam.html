@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Khai báo lớp Apple với các thuộc tính type, color,
+    //phương thức getAppleInfo()
+    function Apple (type) {
+        this.type = type;
+        this.color = "red";
+        this.getInfo = getAppleInfo;
+    }
+    //Khai báo hàm getAppleInfo()
+    //Khuyến nghị: đây là cách không nên dùng,
+    // hàm getInfo() của lớp Apple được định nghĩa một cách tách biệt bên ngoài lớp Apple thông qua hàm getAppleInfo().
+    // Về hình thức, cách này vẫn hoạt động trơn tru, tuy nhiên có một bất lợi là
+    // chúng ta tạo ra rất nhiều hàm mà chúng đều ở phạm vi toàn cục.
+    // Tức là bạn sẽ phải đối mặt với vấn đề xung đột về tên hàm khi bạn
+    // muốn tạo một hàm khác trùng tên
+    // Để khắc phục điều này, bạn có thể khai báo phương thức của bạn ngay bên trong hàm khởi tạo
+    // Tham khảo 1.1SuDungHamBenTrong.html
+    function getAppleInfo() {
+        return "color : " + this.color + ' type : ' + this.type + ' apple';
+    }
+    let apple = new Apple('macintosh');
+    apple.color = "reddish";
+    alert(apple.getInfo());
+</script>
+</body>
+</html>

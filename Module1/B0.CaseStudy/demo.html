@@ -96,8 +96,11 @@
         }
         if (month1 > current_month) {
             age = age2 - 1;
+        } else {
+            age = age2;
+
         }
-        alert(age)
+        alert(age);
     }//demo tính tuổi
     function cmnd1() {
 
@@ -113,36 +116,38 @@
 
 
         if (adr.indexOf("Đà Nẵng") > 0) {
-            fix_adr = 20;}else
-        if ((adr.indexOf("Huế")) > 0){
+            fix_adr = 20;
+        } else if ((adr.indexOf("Huế")) > 0) {
             fix_adr = 10;
-        }else if ((adr.indexOf("Quảng Nam")) > 0){
+        } else if ((adr.indexOf("Quảng Nam")) > 0) {
             fix_adr = 5;
-        }else {fix_adr=0}
-            alert(fix_adr)
+        } else {
+            fix_adr = 0
+        }
+        alert(fix_adr)
 
 
     }// Hàm Fix giá theo địa chỉ
     function fix_rentday1() {
-        var fix_rentday =0;
-        if (parseInt(rentDays >7)) {
-            fix_rentday=30;
+        var fix_rentday = 0;
+        if (parseInt(rentDays > 7)) {
+            fix_rentday = 30;
 
-        }else if (parseInt(rentDays >=5)) {
-            fix_rentday=20;
+        } else if (parseInt(rentDays >= 5)) {
+            fix_rentday = 20;
 
-        }else if (parseInt(rentDays >=2)) {
-            fix_rentday=10;
+        } else if (parseInt(rentDays >= 2)) {
+            fix_rentday = 10;
 
         }
     }// Hàm Fix giá theo ngày thuê
     function fix_ageandadr1() {
-        var fix_ageandadr=0;
-        if (fix_adr=20&&age>=30) {
-            fix_ageandadr=2;
+        var fix_ageandadr = 0;
+        if (fix_adr = 20 && age >= 30) {
+            fix_ageandadr = 2;
         }
         if (fix_adr = 20 && age >= 20) {
-            fix_ageandadr=1;
+            fix_ageandadr = 1;
         }
 
     }// hàm Fix giá theo địa chỉ và độ tuổi

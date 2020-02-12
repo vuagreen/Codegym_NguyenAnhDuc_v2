@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class='container'>
+        <div class = 'nokia-area'>
+            <div class="display">
+                <div class="detail">
+                    <input type="text" id="pin-nokia" disabled >
+                    <hr style="padding: 2px">
+                </div>
+                <div class="detail">
+                    <input type="text" id="content-message-nokia" placeholder="Hãy viết gì đó..." value="">
+                    <button id="send-btn" onclick="guiTinNhan(nokia)">Gửi</button>
+                </div>
+                <div class="detail">
+                    <div class="control-button">
+                        <button class='button' id="hopThuNhapNokia" onclick="showHopThuNhap(nokia)">Hộp thư nháp</button>
+                        <button class='button' id="hopThuDenNokia" onclick="showHopThuDen(nokia)">Hộp thư đến</button>
+                        <button class='button' id="hopThuGuiNokia" onclick="showHopThuGui(nokia)">Hộp thư đã gửi</button>
+                    </div>
+                    <div id="show-display-nokia"><ul id="nokia-message-list"></ul></div>
+                </div>
+                <div class="detail">
+                    <label for="" class="batTat">Bật - Tắt</label>
+                    <input type="checkbox" name="bat-tat-dien-thoai" class="checkOnOff">
+                   
+                </div>
+                <div class="detail">
+                    <button class="charge" onclick="sacPinNokia()">Sạc pin</button>
+                </div>
+            </div>
+        </div>
+        <div class = 'iphone-area'>
+            <div class="display">
+                <div class="detail">
+                    <input type="text" id="pin-iphone" disabled>
+                    <hr style="padding: 2px">
+                </div>
+                <div class="detail">
+                    <input type="text" id="content-message-iphone" placeholder="Hãy viết gì đó...">
+                    <button id="send-btn" onclick="guiTinNhan(iphone)">Gửi</button>
+                </div>
+                <div class="detail">
+                    <div class="control-button">
+                        <button class='button' id="hopThuNhapIphone" onclick="showHopThuNhap(iphone)">Hộp thư nháp</button>
+                        <button class='button' id="hopThuDenIphone" onclick="showHopThuDen(iphone)">Hộp thư đến</button>
+                        <button class='button' id="hopThuGuiIphone" onclick="showHopThuGui(iphone)">Hộp thư đã gửi</button>
+                    </div>
+                    <div id="show-display-iphone"><ul id="iphone-message-list"></ul></div>
+                </div>
+                <div class="detail">
+                    <label for="bat-tat-dien-thoai" class="batTat">Bật - Tắt</label>
+                    <input type="checkbox" name="bat-tat-dien-thoai" class="checkOnOff">
+                </div>
+                <div class="detail">
+                    <button class="charge" onclick="sacPinIphone()">Sạc pin</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/b2cccbdfee.js" crossorigin="anonymous"></script>
+    <script src="js/createClass.js"></script>
+    <script src="js/processingMessage.js"></script>
+</body>
+</html>
