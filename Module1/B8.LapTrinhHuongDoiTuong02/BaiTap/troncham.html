@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="dis"></div>
+<script>
+    var r = 104.9;
+    var result1 = "";
+    var count1 = 0;
+
+    function Hinhtron(p, q) {
+        for (let k = p - r; k < p + r; k += 0.5) {
+            for (let h = q - r; h < q + r; h += 0.5) {
+                var a = Math.pow((k - p), 2);
+                var b = Math.pow((h - q), 2);
+                var c = Math.pow(r, 2);
+                if (((a + b) > c - c) && ((a + b) < c + 0.001)) {
+                    result1 = '<span style="position:absolute;left:' + k + 'px;top:' + h + 'px;color: red">.</span>';
+                    document.write(result1);
+break;
+                    result1 +=result1;
+                    count1++;
+
+                    // position:relative;left:80px;top:2px
+                }
+            }
+        }
+    }
+
+    var r1 = 50;
+    var result = "";
+    var count = 450;
+    var x = 450;
+    var y = 300;
+
+    for (let j = count; j > 300; j--) {
+
+        for (let i = y; i < x; i++) {
+
+
+            // var a= Math.pow((i-500),2);
+            // var b=Math.pow((j-500),2);
+            // var c=Math.pow(40,2);
+            // if ((a+b) == c) {
+            result += '<span style="top:' + j + 'px;left:' + i + 'px; position:absolute; color: #ff0000">-</span>';
+
+
+            //     count++;
+            //
+            //     // position:relative;left:80px;top:2px
+            // }
+            j--;
+        }
+        j = count--;
+        y--;
+        x--;
+        // z--;
+
+    }
+
+    var oki = new Hinhtron(225, 225);
+    var ok2 = new Hinhtron(375, 225);
+    oki;
+    ok2;
+    document.write(result);
+    //document.write(result1);
+    document.write(count1);
+</script>
+</body>
+</html>

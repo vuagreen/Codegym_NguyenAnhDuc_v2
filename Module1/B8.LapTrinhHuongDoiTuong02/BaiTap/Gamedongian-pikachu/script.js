@@ -16,7 +16,7 @@ function Hero(image, top, left, size) {
             ' src="' + this.image + '"' +
             ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
     };
-    let x = 200;
+    let x = 1;
     this.moveRight = function () {
         this.left += x;
         console.log('ok: ' + this.left);
@@ -74,7 +74,13 @@ function start() {
 
     }
     document.getElementById('game').innerHTML = hero.getHeroElement();
-    setTimeout(start, 500)
+    setTimeout(start, 2)
 }
 
 start();
+home();
+document.getElementById('game1').innerHTML = home();
+
+function home() {
+return '<img src="6456.png_860.png" width="300px" height="300px">'
+}

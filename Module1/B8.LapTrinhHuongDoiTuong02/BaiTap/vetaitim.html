@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="dis"></div>
+<canvas id="myCanvas" width="1920px" height="1080px" style="border:1px;"></canvas>
+<canvas id="myCanvas1" width="1920px" height="1080px" style="border:1px;color: red;position: absolute"></canvas>
+<script>
+    var r = 50;
+    var result = "";
+    var count = 450;
+    var x = 450;
+    var y = 300;
+    var can= (Math.sqrt(150))/2;
+
+        for (let j = count; j >300; j--) {
+
+            for (let i = y; i <x; i++) {
+
+
+                // var a= Math.pow((i-500),2);
+                // var b=Math.pow((j-500),2);
+                // var c=Math.pow(40,2);
+                // if ((a+b) == c) {
+                result += '<span style="top:' + j + 'px;left:' + i + 'px; position:absolute; color: #ff0000">-</span>';
+
+
+                //     count++;
+                //
+                //     // position:relative;left:80px;top:2px
+                // }
+                j--;
+            }
+            j=count--;
+            y--;
+            x--;
+            // z--;
+
+    }
+    function Circle(x, y, radius){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+    function createCircle(){
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var circle= new Circle(371.5, 225, 108);
+        ctx.beginPath();
+        ctx.fillStyle = "#FF0000";
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.arc(222, 229, 108, 0, 2 * Math.PI);
+
+        ctx.fill();
+    }
+    function createCircle1(){
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var circle= new Circle(225, 375, 1089);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+    // createCircle1();
+    createCircle();
+
+    document.write(result);
+    // document.write(count);
+</script>
+</body>
+</html>
