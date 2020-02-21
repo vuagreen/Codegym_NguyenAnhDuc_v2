@@ -7,10 +7,10 @@
 <input type="button" value="Change Value" onclick="changeValue()">
 </body>
 <script>
-    let b = document.getElementById("carogame ");
+    let b = document.getElementById("carogame");
 
     let board = [];
-    let data = "";
+    var data = "";
     for (let i = 0; i < 5; i++) {
         board[i] = new Array(0, 0, 0, 0, 0);
     }
@@ -22,7 +22,8 @@
         }
     }
 
-    data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+    data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>";
+    alert(data);
     b.innerHTML = data;
     function changeValue() {
         let positionX = prompt("X: ");

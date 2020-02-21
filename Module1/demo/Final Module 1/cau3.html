@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function NameEdit() {
+        var name = prompt("Input : "," nguYễn thành KIÊN");
+        let name2 = "";
+        name = name.trim().toLocaleLowerCase();
+        for (i = 0; i < name.length; i++) {
+            if (name.charAt(i) === " " && name.charAt(i + 1) === " ") {
+                continue;
+            }
+            if (i === 0 || name.charAt(i - 1) === " ") {
+                name2+=name.charAt(i).toUpperCase();
+                continue;
+            }
+            name2 += name.charAt(i);
+        }
+        name=name2;
+        alert(name);
+    }
+    NameEdit();
+</script>
+</body>
+</html>

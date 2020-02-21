@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ArrayNumber = [];
+    var save="";
+    var max;
+    var leght = parseInt(prompt("Leght Array :"));
+    if (leght < 6) {
+        leght = parseInt(prompt("Leght Array :"));
+    }
+    for (let i = 0; i < leght; i++) {
+        ArrayNumber[i] = parseInt(prompt("Input Number :"));
+        alert("ADD" + ArrayNumber[i]);
+    }
+    for (let k = 1; k < ArrayNumber.length; k++) {
+        if (ArrayNumber[k] < ArrayNumber[k-1]) {
+            max=ArrayNumber[k-1];
+            ArrayNumber[k-1]=ArrayNumber[k];
+            ArrayNumber[k] = max;
+        }
+    }
+    for (let j = 0; j < ArrayNumber.length; j++) {
+        save+=","+ArrayNumber[j];
+    }
+    alert(save.slice(1,save.length));
+
+</script>
+</body>
+</html>

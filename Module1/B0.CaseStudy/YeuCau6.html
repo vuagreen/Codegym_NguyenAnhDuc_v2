@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="control.js"></script>
 </head>
 <body>
 <script>
+    var listCustomers = [];
+    var lisEmployee = [];
+    var count_customer = 0;
+    var count_employee = 0;
+    var enter = "<br>";
+
     var Customer = function () {
         this.setName = function (name) {
             this.name = name;
@@ -30,7 +37,7 @@
         this.setEmail = function (email) {
             this.email = email;
         };
-        this.getMail = function () {
+        this.getEmail = function () {
             return this.email;
         };
         this.setAddress = function (address) {
@@ -50,8 +57,8 @@
 
         };
         this.getNumberPeople = function () {
-            this.numberPeople;
-        }
+            return this.numberPeople;
+        };
         this.setRentDays = function (rentDays) {
             this.rentDays = rentDays;
         };
@@ -67,7 +74,7 @@
         this.setTypeOfService = function (typeOfService) {
             this.typeOfService = typeOfService;
         };
-        this.NetTypeOfService = function () {
+        this.getTypeOfService = function () {
             return this.typeOfService;
         };
         this.setKindOfRoom = function (kindOfRoom) {
@@ -76,10 +83,13 @@
         this.getKindOfRoom = function () {
             return this.kindOfRoom;
         };
-        this.setGiaTien = function (giaTien) {
+        this.setGiaTien = function () {
+            let giaTien = 0;
+            giaTien = this.rentDays * this.money_typeOfService * (1 - this.promotion / 100) ;
             this.giaTien = giaTien;
         };
         this.getGiaTien = function () {
+            this.setGiaTien();
             return this.giaTien;
         };
         this.setMoney_typeOfService = function (money_typeOfService) {
@@ -88,14 +98,217 @@
         this.getMoney_typeOfService = function () {
             return this.money_typeOfService;
         };
-        thi.setAge = function (age) {
+        this.setFix_customer = function (fix_customer) {
+            this.fix_customer = fix_customer;
+        };
+        this.getFix_customer = function () {
+            this.setFix_customer();
+            return this.fix_customer;
+        };
+        this.setAge = function () {
+            current = new Date().getFullYear();
+            current_day = new Date().getDate();
+            current_month = new Date().getMonth() + 1;
+            let month1 = parseInt(this.brithday.substring(3, 5));
+            let day2 = parseInt(this.brithday.substring(0, 2));
+            birthday2 = parseInt(this.brithday.substring(6, 10));//cover về định dạng year
+            var age2 = parseInt(current - birthday2);
+            if (month1 == current_month) {
+                if (day2 > current_day) {
+                    age = age2 - 1;
+                } else {
+                    age = age2;
+                }
+            }
+            if (month1 > current_month) {
+                age = age2 - 1;
+            } else {
+                age = age2;
+            }
             this.age = age;
         };
         this.getAge = function () {
+            this.setAge();
             return this.age;
+        };
+    };
+    var Employee = function () {
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.getName = function () {
+            return this.name;
+        };
+        this.setBrithday = function (brithday) {
+            this.brithday = brithday;
+        };
+        this.getBrithday = function () {
+            return this.brithday;
+        };
+        this.setIdCard = function (idCard) {
+            this.idCard = idCard;
+        };
+        this.getIdCard = function () {
+            return this.idCard;
+        };
+        this.setPhoneNumber = function (phoneNumber) {
+            this.phoneNumber = phoneNumber;
+        };
+        this.getPhoneNumber = function () {
+            return this.phoneNumber;
+
+        };
+        this.setEmail = function (email) {
+            this.email = email;
+        };
+        this.getEmail = function () {
+            return this.email;
+
+        };
+        this.setLiteracy = function (literacy) {
+            this.literacy = literacy;
+
+        };
+        this.getLiteracy = function () {
+            return this.literacy;
+        };
+        this.setPosition = function (position) {
+            this.position = position;
+        };
+        this.getPosition = function () {
+            return this.position;
+        };
+        this.setIncome = function (income) {
+            this.income = income;
+        };
+        this.getIncome = function () {
+            return this.income;
+
+        };
+    };
+
+
+    function addNewCustomer() {
+        var customre = new Customer();
+        name1();
+        customre.setName(name);
+        cmnd1();
+        customre.setIdCard(idCard);
+        birthday1();
+        customre.setBirthday(birthday);
+        email1();
+        customre.setEmail(email);
+        customre.setAddress(prompt("Address: ", "295 Nguyễn Tất Thành, Quận Hải Châu, Đà Nẵng"));
+        customer1();
+        customre.setFix_customer(fix_customer);
+        customre.setCustomer(customer);
+        customre.setPromotion(parseInt(prompt("Promotion: ", "20")));
+        customre.setNumberPeople(parseInt(prompt("Number People: ", "2")));
+        customre.setRentDays(parseInt(prompt("Rentday: ", "5")));
+        typeOfService1();
+        customre.setMoney_typeOfService(money_typeOfService);
+        customre.setTypeOfService(typeOfService);
+        kindOfRoom1();
+        customre.setKindOfRoom(kindOfRoom);
+        listCustomers[count_customer] = customre;
+        count_customer++;
+    }
+
+    function addNewEmployee() {
+        let employee = new Employee();
+        employee.setName(prompt("Name : ", "Phạm Thế Hải"));
+        employee.setBrithday(prompt("Brithday: ", "19/09/1992"));
+        employee.setIdCard(prompt("IdCard: ", "194633654"));
+        employee.setPhoneNumber(prompt("Phone Number: ", "0985353696"));
+        employee.setEmail(prompt("Email: ", "Ceowinwin@gmail.com"));
+        employee.setLiteracy(prompt("Literacy: ", "Đại Học"));
+        employee.setPosition(prompt("Position: ", "Ceo"));
+        employee.setIncome(prompt("Income: ", "5000$"));
+        lisEmployee[count_employee] = employee;
+        count_employee++;
+    }
+
+    function
+    Menu() {
+        a = parseInt(prompt(("MENU \n+" +
+            "\n1.addcustomer" +
+            "\n2.addemployee" +
+            "\n3.showcustomer" +
+            "\n4.showemployee")));
+        switch (a) {
+            case 1 :
+                addNewCustomer();
+                dem++;
+                break;
+            case 2:
+                addNewEmployee();
+                break;
+            case 3:
+                showCustomer();
+                break;
+            case 4:
+                edit();
+                break;
+            case 5:
+                ondragexit;
+
         }
 
     }
+
+    do {
+        Menu();
+    } while (true)
+
+    function showCustomer() {// Hàng hiển thị thông tin
+
+
+        a = parseInt(prompt("Số Khách Hiện Tại :" + dem +
+            "\n1. Xem List Khách Hàng : " +
+            "\n.2 Xem Chi Tiết Khách hàng" +
+            "\n.3 Quay Lại Menu"
+        ));
+        switch (a) {
+            case 1:
+                showmini1();
+                return showCustomer();
+                break;
+            case 2:
+                showmini2();
+                return showCustomer();
+                break;
+            case 3:
+                return Menu();
+            default:
+                alert("ERROR");
+                return showCustomer();
+
+        }
+    }//Hàm Hiển Thị
+
+
+    function showmini1() { // show List khách hàng đang tồn tại
+        let result = "";
+        for (let k = 0; k < listCustomers.length; k++) {//
+            result += k + ". Tên Khách Hàng : " + listCustomers[k].getName() + " Số cmnd : " + listCustomers[k].getIdCard() + "\n";//truy xuất tên khách hàng và số cmnd
+        }
+        alert(result);
+        // return show();
+
+    }// Hàm Hiển thị list khách hiện có
+
+    function showmini2(i) {// xuất thông tin chi tiết của khách hàng
+        i = parseInt(prompt("Xem Thông Tin Khách Hàng Thứ :"
+        ));
+        i--;
+        alert("1. Tên: " + listCustomers[i].getName() + "\n2. CMND: " + listCustomers[i].getIdCard() + "\n3.Ngày Tháng Năm Sinh: " + listCustomers[i].getBrithday() + "\n4.Email: " + listCustomers[i].getEmail() +
+            "\n5.Địa Chỉ: " + listCustomers[i].getAddress() + "\n6.Giảm Giá: " + listCustomers[i].getPromotion() + "%" + "\n7.Số Người Đi Kèm: " + listCustomers[i].getNumberPeople() +
+            "\n8.Số Ngày Thuê: " + listCustomers[i].getRentDays() + "\n9.Customer: " + listCustomers[i].getCustomer() + "\n10. Loại Dịch Vụ: " + listCustomers[i].getTypeOfService() +
+            "\n11. Loại Phòng Thuê: " + listCustomers[i].getKindOfRoom() + "\n12.Giá Tiền :" + listCustomers[i].getGiaTien() + ' $' + "\n13. Age : " + listCustomers[i].getAge());
+
+    }// Hàm hiển thị chi tiết khách hàng
+
+
 </script>
 </body>
 </html>

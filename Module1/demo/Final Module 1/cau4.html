@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../B0.CaseStudy/control.js"></script>
+</head>
+<body>
+<script>
+    var listEmployee = [];
+    var dem = 0;
+    var p=0;
+    var Employee = function () {
+        this.setUser = function (user) {
+            this.user = user;
+        };
+        this.getUser = function () {
+            return this.user;
+        };
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.getName = function () {
+            return this.name;
+        };
+        this.setPass = function (pass) {
+            this.pass = pass;
+        };
+        this.getPass = function () {
+            return this.pass;
+        };
+        this.setBrithday = function (brithday) {
+            this.brithday = brithday;
+        };
+        this.getBrithday = function () {
+            return this.brithday;
+        };
+        this.setIdCard = function (idcard) {
+            this.idCard = idcard;
+        };
+        this.getIdCard = function () {
+            return this.idCard;
+        };
+        this.setSex = function (sex) {
+            this.sex = sex;
+        };
+        this.getSex = function () {
+            return this.sex;
+        };
+        this.setAddress = function (address) {
+            this.address = address;
+        };
+        this.getAddress = function () {
+            return this.address;
+        };
+        this.setPhoneNumber = function (phonenumber) {
+            this.phoneNumber = phonenumber;
+        };
+        this.getPhoneNumber = function () {
+            return this.phoneNumber;
+        };
+        this.setEmail = function (email) {
+            this.email = email;
+        };
+        this.getEmail = function () {
+            return this.email;
+        };
+    };
+
+    function Menu() {
+
+        a = parseInt(prompt(("MENU \n" +
+            "\n1.Register" +
+            "\n2.Login" +
+            "\n3.Exit")));
+        switch (a) {
+            case 1 :
+                addNewEmployee();
+                dem++;
+                break;
+            case 2:
+                Login();
+                break;
+            case 3:
+                ondragexit;
+
+        }
+    }
+
+    function addNewEmployee() {
+        var employee = new Employee();
+        employee.setUser(prompt("UserName: ","admin"));
+        employee.setName(prompt("Name: ","Anh Đức"));
+        employee.setPass(prompt("Pass: ","123"));
+        birthday1();
+        employee.setBrithday(birthday);
+        cmnd1();
+        employee.setIdCard(idCard);
+        employee.setSex(prompt("Sex :","Male"));
+        employee.setAddress(prompt("Address: ", "295 Nguyễn Tất Thành, Hải Châu, Đà Nẵng"));
+        employee.setPhoneNumber(prompt("PhoneNumber:","0945654999"));
+        email1();
+        employee.setEmail(email);
+        listEmployee[dem] = employee;
+    }
+function show() {
+    alert("1. Tên: " + listEmployee[p].getName() + "\n2. Sex: " + listEmployee[p].getSex()+ "\n3. CMND: " + listEmployee[p].getIdCard() + "\n4.Ngày Tháng Năm Sinh: " + listEmployee[p].getBrithday() + "\n5.Email: " +listEmployee[p].getEmail() +
+        "\n6.Địa Chỉ: " + listEmployee[p].getAddress());
+}
+    function Login() {
+        p = parseInt(prompt("Login Account Thứ :"));
+        p--;
+        User();
+        Pass();
+        function User() {
+            var user = prompt("UserName : ");
+            if (user!==listEmployee[p].getUser()) {
+                alert("ERRO UserName");
+                User();
+            }
+        }
+        function Pass() {
+            var pass = prompt("PassWord : ");
+            if (pass!==listEmployee[p].getPass()) {
+                alert("ERRO PassWord");
+                Pass();
+            }
+        }
+
+        alert("Login Thành Công !");
+        show();
+        return Menu();
+        }
+
+    do {
+        Menu();
+    } while (true)
+
+
+</script>
+</body>
+</html>

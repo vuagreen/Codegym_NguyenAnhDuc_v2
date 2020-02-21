@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = "";
+
+    function Number() {
+        a = prompt("Number: ");
+        var check = /\b\d{4}\b/g;
+        let check2 = check.test(a);
+        if (check2 === false) {
+            alert("ERRO");
+            Number();
+        } else {
+            isNumber();
+        }
+
+
+    }
+
+    function isNumber() {
+        x = a.charAt(0) * 1 + a.charAt(1) * 1;
+        y = a.charAt(2) * 1 - a.charAt(3) * 1;
+        if (x == y) {
+            alert("True");
+        } else {
+            alert("False")
+
+        }
+    }
+
+    Number();
+
+</script>
+</body>
+</html>
