@@ -10,7 +10,9 @@ public class Tim_So_Lon_Nhat {
 
     public static int[] getArray() {
         return array;
-    }public static int[] getArray2() {
+    }
+
+    public static int[] getArray2() {
         return array;
     }
 
@@ -24,7 +26,8 @@ public class Tim_So_Lon_Nhat {
             array[i] = number.nextInt(max);
         }
     }
-    public static int[] arrayOne2(int max,int[] array1) {
+
+    public static int[] arrayOne2(int max, int[] array1) {
         int size;
         System.out.println("Enter Size Array");
         size = sc.nextInt();
@@ -39,14 +42,22 @@ public class Tim_So_Lon_Nhat {
     public static void show(int[] array) {
         System.out.println("Property list: ");
         for (int x : array) {
-            System.out.print( x+ " ");
+            System.out.print(x + " ");
         }
 
     }
+
     public static void show2(int[] array1) {
         System.out.println("Property list: ");
         for (int x : array1) {
-            System.out.print( x+ " ");
+            System.out.print(x + " ");
+        }
+
+    }
+    public static void show3() {
+        System.out.println("Property list: ");
+        for (int x : array) {
+            System.out.print(x + " ");
         }
 
     }

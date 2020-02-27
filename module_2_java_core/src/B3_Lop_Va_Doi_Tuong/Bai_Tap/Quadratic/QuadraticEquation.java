@@ -1,4 +1,4 @@
-package B3_Lop_Va_Doi_Tuong.Bai_Tap;
+package B3_Lop_Va_Doi_Tuong.Bai_Tap.Quadratic;
 
 import java.util.Scanner;
 
