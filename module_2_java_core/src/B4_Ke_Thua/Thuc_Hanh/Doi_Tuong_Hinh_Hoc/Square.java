@@ -1,6 +1,8 @@
 package B4_Ke_Thua.Thuc_Hanh.Doi_Tuong_Hinh_Hoc;
 
-public class Square extends Rectangle {
+import B5_Advanced_Object.Bai_Tap.Interface_Resizeable.Resizeable;
+
+public class Square extends Rectangle implements Resizeable {
     public Square() {
     }
 
@@ -37,6 +39,12 @@ public class Square extends Rectangle {
                 + getSide()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        setSide(getSide() * percent);
+        getArea();
     }
 }
 

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="commons-collections4-4.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/CaseStudy_Module2/Libs/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/CaseStudy_Module2/Libs/commons-lang3-3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/CaseStudy_Module2/Libs/opencsv-4.6.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>

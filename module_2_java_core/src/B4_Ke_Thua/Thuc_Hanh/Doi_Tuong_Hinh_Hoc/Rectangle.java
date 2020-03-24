@@ -1,6 +1,8 @@
 package B4_Ke_Thua.Thuc_Hanh.Doi_Tuong_Hinh_Hoc;
 
-public class Rectangle extends Shape {
+import B5_Advanced_Object.Bai_Tap.Interface_Resizeable.Resizeable;
+
+public class Rectangle extends Shape implements Resizeable {
     private double width = 1.0;
     private double length = 1.0;
 
@@ -50,5 +52,11 @@ public class Rectangle extends Shape {
                 + getLength()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        setLength(this.length * percent);
+        getArea();
     }
 }
