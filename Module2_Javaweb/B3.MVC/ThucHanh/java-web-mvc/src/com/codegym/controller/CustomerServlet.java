@@ -20,16 +20,17 @@ public class CustomerServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        if(action == null){
+        if (action == null) {
             action = "";
         }
-        switch (action){
+        switch (action) {
             case "create":
                 createCustomer(request, response);
                 break;
             case "edit":
                 break;
             case "delete":
+                deleteCustomer(request, response);
                 break;
             default:
                 break;
@@ -40,7 +41,7 @@ public class CustomerServlet extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
-        int id = (int)(Math.random() * 10000);
+        int id = (int) (Math.random() * 10000);
 
         Customer customer = new Customer(id, name, email, address);
         this.customerService.save(customer);
@@ -57,23 +58,23 @@ public class CustomerServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        if(action == null){
+        if (action == null) {
             action = "";
         }
-        switch (action){
+        switch (action) {
             case "create":
                 showCreateForm(request, response);
                 break;
             case "edit":
                 break;
             case "delete":
-                showDeleteForm(request,response);
-                deleteCustomer(request,response);
+                showDeleteForm(request, response);
+
 
 
                 break;
             case "view":
-viewCustomer(request, response);
+                viewCustomer(request, response);
                 break;
             default:
                 listCustomers(request, response);
@@ -105,11 +106,12 @@ viewCustomer(request, response);
             e.printStackTrace();
         }
     }
+
     private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = this.customerService.findById(id);
         RequestDispatcher dispatcher;
-        if(customer == null){
+        if (customer == null) {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             request.setAttribute("customer", customer);
@@ -123,11 +125,12 @@ viewCustomer(request, response);
             e.printStackTrace();
         }
     }
+
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = this.customerService.findById(id);
         RequestDispatcher dispatcher;
-        if(customer == null){
+        if (customer == null) {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             this.customerService.remove(id);
@@ -138,11 +141,13 @@ viewCustomer(request, response);
             }
         }
     }
+    //đợi mình xem tí nha
+
     private void viewCustomer(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = this.customerService.findById(id);
         RequestDispatcher dispatcher;
-        if(customer == null){
+        if (customer == null) {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
             request.setAttribute("customer", customer);
