@@ -1,0 +1,67 @@
+header {
+    width: 1000px;
+    height: 40px;
+    background: #00FFFF;
+    margin: auto;
+}
+
+nav {
+    width: 1000px;
+    height: 30px;
+    background: #FFFF00;
+    margin: auto;
+}
+
+section {
+    width: 1000px;
+    height: 400px;
+    background: #99FFFF;
+    margin: auto;
+}
+
+#left {
+    width: 200px;
+    height: 400px;
+    background: #00FFFF;
+    float: left;
+}
+#main {
+    width: 600px;
+    height: 400px;
+    background: #4CAF50;
+    float: left;
+}
+#right {
+    height: 400px;
+    background: #99FFFF;
+}
+
+footer {
+    width: 1000px;
+    height: 100px;
+    background: #4CAF50;
+    margin: auto;
+}
+/*==Style cho menu===*/
+#menu ul {
+    background: #1F568B;
+    list-style-type: none;
+    text-align: center;
+}
+#menu-furama-vi li {
+    color: #f1f1f1;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -5px;
+}
+#menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+#menu a:hover {
+    background: #F1F1F1;
+    color: #333;
+}

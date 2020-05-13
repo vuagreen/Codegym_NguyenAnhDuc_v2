@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TestSpring</title>
+</head>
+<body>
+<form th:object="${person}" th:action="@{/addPerson}" method="post">
+<div>
+    <p>Ten :</p>
+    <input type="text" th:field="*{name}">
+</div>
+<div>
+    <p>Dia Chi :</p>
+    <input type="text" th:field="*{address}">
+</div>
+    <input type="submit" value="them">
+</form>
+</body>
+</html>

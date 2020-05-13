@@ -1,0 +1,23 @@
+.header-content {
+    padding-top: 10px;
+    padding-bottom: 12px;
+}
+div {
+    display: block;
+}
+.header {
+    color: #212121;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+body {
+    overflow-x: hidden;
+}
+.sticky {
+    display: block;
+}
+.header-nav {
+    background-color: #046056;
+    width: 100%;
+    transition: all .3s ease-in-out;
+}

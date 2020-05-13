@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Boot</title>
+</head>
+<body>
+<table>
+    <tr th:each="person:${persons}">
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.address}"></td>
+    </tr>
+</table>
+</body>
+</html>

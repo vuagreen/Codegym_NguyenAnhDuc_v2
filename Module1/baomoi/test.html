@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <style type="text/css">
+    /*.frame {
+      height: 200px;
+      width: 200px;
+      overflow: hidden;
+    }
+    .zoomin img {
+      height: 200px;
+      width: 200px;
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+      transition: all 2s ease;
+    }
+    .zoomin img:hover {
+      width: 300px;
+      height: 300px;
+    }*/
+    div{
+    	width: 15cm;
+      	height: 10cm;
+      	overflow: hidden;
+    }
+      img {
+      	width: 15cm;
+      	height: 10cm;
+      	
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: .6s ease-in-out;
+      transition: .6s ease-in-out;
+      }
+     	img:hover {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+      }
+  </style>
+</head>
+<body>
+  <div class="zoomin frame">
+    <img src="image/vanhau.jpg"  title="Scale on Hover with Transition using CSS" />
+  </div>
+</body>
+</html>

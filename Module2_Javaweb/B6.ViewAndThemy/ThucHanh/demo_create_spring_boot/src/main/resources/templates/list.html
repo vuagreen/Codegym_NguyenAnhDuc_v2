@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TestSpringThymeleaf</title>
+</head>
+<body>
+
+<center>
+    <div th:if="${message}">
+        <span th:text="${message}"></span>
+    </div>
+    <a th:href="@{/addPerson}">Add New Person</a>
+    <table>
+        <tr>
+            <th>Ten</th>
+            <th>Dia Chi</th>
+        </tr>
+        <tr th:each="person:${persons}">
+            <td th:text="${person.name}"></td>
+            <td th:text="${person.address}"></td>
+
+        </tr>
+    </table>
+</center>
+</body>
+</html>
