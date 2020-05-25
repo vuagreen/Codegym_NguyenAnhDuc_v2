@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b836d29e-22fa-4c79-a6e8-5b1de94f60b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CaseStudyModule2JavaCore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/Models/Services.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B2_Mang_Va_Phuong_Thuc/demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B3_Lop_Va_Doi_Tuong/Bai_Tap/fan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B3_Lop_Va_Doi_Tuong/Bai_Tap/stop_fan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B3_Lop_Va_Doi_Tuong/Thuc_Hanh/demostatic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B3_Lop_Va_Doi_Tuong/Thuc_Hanh/lop_hinh_chu_nhat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B3_Lop_Va_Doi_Tuong/demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B3_Lop_Va_Doi_Tuong/demo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B4_Ke_Thua/Thuc_Hanh/he_cac_doi_tuong_hinh_hoc/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B4_Ke_Thua/Thuc_Hanh/he_cac_doi_tuong_hinh_hoc/CircleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B4_Ke_Thua/Thuc_Hanh/he_cac_doi_tuong_hinh_hoc/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B4_Ke_Thua/Thuc_Hanh/he_cac_doi_tuong_hinh_hoc/RectangleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B4_Ke_Thua/Thuc_Hanh/he_cac_doi_tuong_hinh_hoc/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B4_Ke_Thua/Thuc_Hanh/he_cac_doi_tuong_hinh_hoc/ShapeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B4_Ke_Thua/Thuc_Hanh/he_cac_doi_tuong_hinh_hoc/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B4_Ke_Thua/Thuc_Hanh/he_cac_doi_tuong_hinh_hoc/SquareTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Bai_Tap/Colorable/Colorable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Bai_Tap/Colorable/Repository/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Bai_Tap/Colorable/Repository/CircleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Bai_Tap/Colorable/Repository/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Bai_Tap/Colorable/Repository/RectangleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Bai_Tap/Colorable/Repository/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Bai_Tap/Colorable/Repository/ShapeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Bai_Tap/Colorable/Repository/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Bai_Tap/Colorable/Repository/SquareTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Bai_Tap/Colorable/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Class_Animal/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Class_Animal/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Class_Animal/Chicken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Class_Animal/Edible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Class_Animal/Fruit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Class_Animal/Orange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Class_Animal/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Class_Animal/Tiger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/CircleComparatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/CircleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/ComparableCircle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/ComparableCircleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/Comparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/CricleComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/RectangleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/ShapeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B5_Advanced_Object/Thuc_Hanh/Comparator/SquareTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B6_Cau_Truc_Du_Lieu_Va_Giai_Thuat_Co_Ban/Thuc_Hanh/Class_List/MyList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B6_Cau_Truc_Du_Lieu_Va_Giai_Thuat_Co_Ban/Thuc_Hanh/Class_List/MyListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudyModule2JavaCore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyModule2JavaCore/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_java_core_hoclai/out/production/Module2_java_core_hoclai/B2_Mang_Va_Phuong_Thuc/Bai_Tap/Tim_Min.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/out/production/Module2_java_core_hoclai/B2_Mang_Va_Phuong_Thuc/Bai_Tap/Tim_Min.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B2_Mang_Va_Phuong_Thuc/Bai_Tap/Tim_Min.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Module2_java_core_hoclai/src/B2_Mang_Va_Phuong_Thuc/Bai_Tap/Tim_Min.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_2_java_core/out/production/module_2_java_core/CaseStudy_Module2/Views/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module_2_java_core/out/production/module_2_java_core/CaseStudy_Module2/Views/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module_2_java_core/src/CaseStudy_Module2/Views/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module_2_java_core/src/CaseStudy_Module2/Views/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1c7P0g5dZNTcH5zn9L0tf89F8rI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CaseStudyModule2JavaCore" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b836d29e-22fa-4c79-a6e8-5b1de94f60b7" name="Default Changelist" comment="" />
+      <created>1589876436817</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589876436817</updated>
+      <workItem from="1589876438218" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589876454438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589876454438" />
+  </component>
+</project>

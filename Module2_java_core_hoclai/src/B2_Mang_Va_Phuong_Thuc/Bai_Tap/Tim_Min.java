@@ -9,5 +9,7 @@ public class Tim_Min {
         Tim_So_Lon_Nhat.max();
         Tim_So_Lon_Nhat.show(Tim_So_Lon_Nhat.getArray());
         Tim_So_Lon_Nhat.showMin();
+
     }
+
 }
