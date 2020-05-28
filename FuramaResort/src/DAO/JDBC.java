@@ -1,6 +1,5 @@
-package Commons;
+package DAO;
 
-import Controllers.MainController;
 import Models.*;
 
 import java.sql.Connection;
@@ -225,6 +224,26 @@ public class JDBC {
 
     }
 
+    public void selectAllEmployee(String sqlQuery) {
+        String sqlSelect = "";
+        sqlSelect = sqlQuery;
+        try {
+            pstm = connection.prepareStatement(sqlSelect);
+            ResultSet rs = pstm.executeQuery();
+            System.out.printf("%45s","EMPLOYEE LIST  \n");
+            System.out.println("-------------------------------------------------------------------------------");
+            System.out.printf("%-9s%-23s%-17s%-20s%s\n", "ID", "Tên Employee", "Tuổi", "Giới Tính", "Địa Chỉ");
+
+            while (rs.next()) {
+                System.out.printf("%-10d%-23s%-17d%-19s%s\n", rs.getInt("id_employee"), rs.getString("ten_employee"), rs.getInt("tuoi"),
+                        rs.getString("gioi_tinh"), rs.getString("dia_chi"));
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void selectAllCustomer(String sqlQuery) {
         String sqlSelect = "";
         sqlSelect = sqlQuery;
@@ -266,10 +285,6 @@ public class JDBC {
     }
 
 
-    public static void main(String[] args) {
-        JDBC jdbc = new JDBC();
-        jdbc.selectAllBooking();
-    }
 
 }
 ;

@@ -1,4 +1,4 @@
-package Commons;
+package DAO;
 
 import java.util.Scanner;
 
@@ -25,7 +25,7 @@ public class FunValidation {
     }
     //Check name validate
     public static boolean checkNameService(String str) {
-         regex = "^[A-Z][a-z]+$";
+         regex = "^[A-Z][a-z]+\\s*\\w*$";
         return str.matches(regex);
     }
 

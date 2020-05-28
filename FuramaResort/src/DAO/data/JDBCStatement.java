@@ -1,4 +1,6 @@
-package Commons;
+package DAO.data;
+
+import DAO.JDBCConnection;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

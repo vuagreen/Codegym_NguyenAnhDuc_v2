@@ -1,8 +1,8 @@
-package Commons;
+package DAO.data;
 
+import DAO.JDBCConnection;
 import Models.Services;
 import Models.Villa;
-import com.mysql.cj.jdbc.JdbcConnection;
 
 import java.sql.*;
 

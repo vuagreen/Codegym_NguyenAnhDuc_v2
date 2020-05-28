@@ -65,8 +65,4 @@ public class Villa extends Services {
                 ", soTang=" + soTang ;
     }
 
-    public static void main(String[] args) {
-        Villa villa = new Villa("123", "villa1", 12, 3, 5, "theo ngay", "nono", "", 5, 5);
-        System.out.println(villa.showInfor());
-    }
 }

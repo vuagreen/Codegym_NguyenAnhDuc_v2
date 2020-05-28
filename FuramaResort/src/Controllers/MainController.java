@@ -1,16 +1,14 @@
 package Controllers;
 
-import Commons.FunValidation;
-import Commons.JDBC;
+import DAO.FunValidation;
+import DAO.JDBC;
 import Models.*;
 
 import java.util.Scanner;
-import java.util.UUID;
 
 public class MainController {
     static Scanner scanner = new Scanner(System.in);
     static JDBC JDBC = new JDBC();
-    public static String regexDichVuDiKem = "^massage|karaoke|food|drink|car$";
     public static String regexName = "^([A-Z][a-z]+)( [A-Z][a-z]+)*$";
     public static String regexEmailException = "^\\w+@\\w+.\\w+$";
     public static String regexSex = "^(male)|(female)|(unknown)$";
@@ -66,6 +64,14 @@ public class MainController {
     }
 
     private void showInfoEmployee() {
+        JDBC.selectAllEmployee("SELECT * FROM employee");
+        backToMenu();
+    }
+
+    public void backToMenu() {
+        System.out.println("Enter to back to menu...");
+        scanner.nextLine();
+        displayMainMenu();
     }
 
     private void addNewBooking() {
@@ -116,6 +122,8 @@ public class MainController {
     }
 
     private void showInfoCustomer() {
+        JDBC.selectAllCustomer("SELECT * FROM customer");
+        backToMenu();
     }
 
     private void addNewCustomer() {
@@ -145,9 +153,7 @@ public class MainController {
         customer.setDiaChi(scanner.nextLine());
         JDBC.insertCustomer(customer);
         System.out.println("Add Customer success !!");
-        System.out.println("Nhấn Phím Bất kì để quay lại Menu !!");
-        scanner.nextLine();
-        displayMainMenu();
+       backToMenu();
     }
 
     private void menuShowService() {
@@ -163,40 +169,28 @@ public class MainController {
         switch (scanner.nextLine()) {
             case "1":
                 JDBC.selectAllVilla("SELECT * FROM villa");
-                System.out.println("Enter to back to menu...");
-                scanner.nextLine();
-                displayMainMenu();
+                backToMenu();
                 break;
             case "2":
 
                 JDBC.selectAllHouse("SELECT * FROM house");
-                System.out.println("Enter to back to menu...");
-                scanner.nextLine();
-                displayMainMenu();
+                backToMenu();
                 break;
             case "3":
                 JDBC.selectAllRoom("SELECT * FROM room");
-                System.out.println("Enter to back to menu...");
-                scanner.nextLine();
-                displayMainMenu();
+                backToMenu();
                 break;
             case "4":
                 JDBC.selectAllVilla("SELECT DISTINCT* FROM villa");
-                System.out.println("Enter to back to menu...");
-                scanner.nextLine();
-                displayMainMenu();
+                backToMenu();
                 break;
             case "5":
                 JDBC.selectAllHouse("SELECT DISTINCT* FROM house");
-                System.out.println("Enter to back to menu...");
-                scanner.nextLine();
-                displayMainMenu();
+                backToMenu();
                 break;
             case "6":
                 JDBC.selectAllRoom("SELECT DISTINCT* FROM room");
-                System.out.println("Enter to back to menu...");
-                scanner.nextLine();
-                displayMainMenu();
+                backToMenu();
                 break;
             case "7":
                 displayMainMenu();
@@ -204,9 +198,7 @@ public class MainController {
             case "8":
                 System.exit(0);
             default:
-                System.out.println("\nError.Press Enter To Back to menu");
-                scanner.nextLine();
-                displayMainMenu();
+                backToMenu();
 
         }
     }
@@ -235,7 +227,7 @@ public class MainController {
             }
 
             case 4: {
-                displayMainMenu();
+                backToMenu();
                 break;
             }
             default: {
@@ -274,7 +266,7 @@ public class MainController {
         errMes = "Số lượng người tối đa phải >0 và nhỏ hơn <20 ";
         System.out.println("Số Người Tối Đa :");
         service.setSoNguoiToiDa(FunValidation.checkValidateNumberInt(content, errMes));
-        while (service.getSoNguoiToiDa() < 0 || service.getSoNguoiToiDa() > 20) {
+        while (service.getSoNguoiToiDa() < 1 || service.getSoNguoiToiDa() > 20) {
             System.out.println(errMes);
             service.setSoNguoiToiDa(FunValidation.checkValidateNumberInt(content, errMes));
         }
@@ -295,7 +287,7 @@ public class MainController {
         System.out.println(" Tiêu Chuẩn Phòng : ");
         ((Villa) villa).setTieuChuanPhong(scanner.nextLine());
         while (!FunValidation.checkNameService(((Villa) villa).getTieuChuanPhong())) {
-            System.out.println("Kiểu Thuê sai định dạng, mời bạn nhập lại :");
+            System.out.println("Tiêu Chuẩn Phòng sai định dạng, mời bạn nhập lại :");
             ((Villa) villa).setTieuChuanPhong(scanner.nextLine());
         }
         System.out.println("Tiện Nghi Khác : ");
@@ -318,9 +310,7 @@ public class MainController {
         }
         JDBC.insertVilla((Villa) villa);
         System.out.println("Add New Villa success !!");
-        System.out.println("Nhấn Phím Bất kì để quay lại Menu !!");
-        scanner.nextLine();
-        displayMainMenu();
+        backToMenu();
 
     }
 
@@ -347,9 +337,7 @@ public class MainController {
         }
         JDBC.insertHouse((House) house);
         System.out.println("Add New House success !!");
-        System.out.println("Nhấn Phím Bất kì để quay lại Menu !!");
-        scanner.nextLine();
-        displayMainMenu();
+        backToMenu();
 
 
     }
@@ -361,9 +349,7 @@ public class MainController {
         ((Room) room).setDichVuMienPhiDiKem(scanner.nextLine());
         JDBC.insertRoom((Room) room);
         System.out.println("Add New Room success !!");
-        System.out.println("Nhấn Phím Bất kì để quay lại Menu !!");
-        scanner.nextLine();
-        displayMainMenu();
+        backToMenu();
     }
 
     public String loaiKhach() {
@@ -392,9 +378,5 @@ public class MainController {
         return null;
     }
 
-    public static void main(String[] args) {
-        MainController mainController = new MainController();
-        mainController.displayMainMenu();
-    }
 
 }
