@@ -4,11 +4,14 @@ import DAO.FunValidation;
 import DAO.JDBC;
 import Models.*;
 
+import javax.rmi.CORBA.Util;
+import java.sql.Date;
 import java.util.Scanner;
 
 public class MainController {
     static Scanner scanner = new Scanner(System.in);
     static JDBC JDBC = new JDBC();
+    int a;
     public static String regexName = "^([A-Z][a-z]+)( [A-Z][a-z]+)*$";
     public static String regexEmailException = "^\\w+@\\w+.\\w+$";
     public static String regexSex = "^(male)|(female)|(unknown)$";
@@ -18,6 +21,8 @@ public class MainController {
 
     public void displayMainMenu() {
         String choice;
+        System.out.println("FURAMA RESORT MENU");
+        System.out.println("---------------------------");
         System.out.println("1. Add New Services\n" +
                 "2. Show Services\n" +
                 "3. Add New Customer\n" +
@@ -46,15 +51,22 @@ public class MainController {
             }
             case "5": {
                 addNewBooking();
+                backToMenu();
                 break;
             }
             case "6":
                 showInfoEmployee();
+                backToMenu();
                 break;
-            case "7":
+            case "10":
             case "8":
+                JDBC.selectAllBooking();
+                backToMenu();
+                break;
             case "9":
-            case "10": {
+            case "7": {
+                JDBC.disConnection();
+                System.out.println("CLOSE------>>>>>");
                 System.exit(0);
             }
             default: {
@@ -83,42 +95,79 @@ public class MainController {
         booking.setId_customer(Integer.parseInt(scanner.nextLine()));
         System.out.println(
                 "1.Booking Villa " +
-                        "\n 2.Booking House" +
-                        "\n 3.Booking Room");
+                        "\n2.Booking House" +
+                        "\n3.Booking Room");
         number = scanner.nextLine();
         switch (number) {
             case "1":
                 JDBC.selectAllVilla("SELECT * FROM villa");
-                System.out.println("Enter ID ");
-                booking.setId_villa(Integer.parseInt(scanner.nextLine()));
+                System.out.println("STATUS ->>>");
+                JDBC.selectIdBooking();
+                booking.setId_villa(bookVilla());
+                JDBC.reset();
                 break;
             case "2":
                 JDBC.selectAllHouse("SELECT * FROM house");
+                JDBC.selectIdBooking();
                 System.out.println("Enter ID ");
                 booking.setId_house(Integer.parseInt(scanner.nextLine()));
                 break;
             case "3":
                 JDBC.selectAllRoom("SELECT * FROM room");
+                JDBC.selectIdBooking();
                 System.out.println("Enter ID ");
                 booking.setId_room(Integer.parseInt(scanner.nextLine()));
                 break;
             default:
                 System.out.println("ERRO");
                 addNewBooking();
-        }booking.setId_services(100000);
-        check= JDBC.checkID2("SELECT * FROM services", "id_services", booking.getId_services());
+        }
+        booking.setId_services(showServices());
+        java.util.Date date = new java.util.Date();
+        java.sql.Date dates = convertUtilToSql(date);
+        booking.setDay(dates);
+        check = JDBC.checkID2("SELECT * FROM services", "id_services", booking.getId_services());
         while (!check) {
+            System.out.println("ID Không Tồn Tại, Mời Bạn Nhập Lại :");
             booking.setId_services(showServices());
-            check= JDBC.checkID2("SELECT * FROM services", "id_services", booking.getId_services());
+            check = JDBC.checkID2("SELECT * FROM services", "id_services", booking.getId_services());
+        }
+        System.out.println("Ngày Thuê");
+        booking.setRentday(FunValidation.checkValidateNumberInt("Ngày Thuê", "Ngày Thuê là kiểu Nguyên "));
+        while (booking.getRentday() < 1) {
+            System.out.println("ngày thuê phải > 0");
+            booking.setRentday(FunValidation.checkValidateNumberInt("Ngày Thuê", "Ngày Thuê là kiểu Nguyên "));
         }
         JDBC.insertBooking(booking);
-
-
     }
+
+    private static java.sql.Date convertUtilToSql(java.util.Date uDate) {
+        java.sql.Date sDate = new java.sql.Date(uDate.getTime());
+        return sDate;
+    }
+
+    public int bookVilla() {
+        a = 0;
+        Boolean check;
+        System.out.println("Enter ID ");
+        a = FunValidation.checkValidateNumberInt("Enter ID", "ID là số nguyên , Mời Bạn nhập lại :  ");
+        check = JDBC.checkID2("SELECT * FROM villa", "id_villa", a);
+        while (!check) {
+            System.out.println("Villa này không tồn tại, mời bạn chọn lại :");
+            a = bookVilla();
+            check = JDBC.checkID2("SELECT * FROM villa", "id_villa", a);
+        }
+        if (JDBC.checkIdVilla(a)) {
+            System.out.println("Villa Này Đang Sử Dụng");
+            a = bookVilla();
+        }
+        return a;
+    }
+
     public int showServices() {
         JDBC.selectAllServices("SELECT * FROM services");
         System.out.println("Enter ID ");
-        return  Integer.parseInt(scanner.nextLine());
+        return FunValidation.checkValidateNumberInt("Enter ID", "ID Phải Là Số Nguyên, Mời Bạn Nhập Lại");
     }
 
     private void showInfoCustomer() {
@@ -153,7 +202,7 @@ public class MainController {
         customer.setDiaChi(scanner.nextLine());
         JDBC.insertCustomer(customer);
         System.out.println("Add Customer success !!");
-       backToMenu();
+        backToMenu();
     }
 
     private void menuShowService() {
@@ -181,7 +230,7 @@ public class MainController {
                 backToMenu();
                 break;
             case "4":
-                JDBC.selectAllVilla("SELECT DISTINCT* FROM villa");
+                JDBC.selectAllVilla("SELECT DISTINCT * FROM villa");
                 backToMenu();
                 break;
             case "5":

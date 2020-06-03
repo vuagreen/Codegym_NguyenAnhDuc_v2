@@ -47,7 +47,7 @@ public class FunValidation {
                 Scanner scanner = new Scanner(System.in);
                 return scanner.nextInt();
             } catch (Exception e) {
-                System.out.println(errMes+e);
+                System.out.println(errMes);
             }
         }
     }

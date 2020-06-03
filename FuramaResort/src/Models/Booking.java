@@ -1,5 +1,7 @@
 package Models;
 
+import java.util.Date;
+
 public class Booking {
     private int id_customer;
     private int id_detail;
@@ -7,17 +9,25 @@ public class Booking {
     private int id_villa;
     private int id_house;
     private int id_room;
+    private java.sql.Date day;
+    private int rentday;
 
-    public Booking() {
+    public int getRentday() {
+        return rentday;
     }
 
-    public Booking(int id_customer, int id_detail, int id_services, int id_villa, int id_house, int id_room) {
+
+
+
+    public Booking(int id_customer, int id_detail, int id_services, int id_villa, int id_house, int id_room, java.sql.Date day,int rentday) {
         this.id_customer = id_customer;
         this.id_detail = id_detail;
         this.id_services = id_services;
         this.id_villa = id_villa;
         this.id_house = id_house;
         this.id_room = id_room;
+        this.day = day;
+        this.rentday = rentday;
     }
 
     public int getId_customer() {
@@ -66,5 +76,19 @@ public class Booking {
 
     public void setId_room(int id_room) {
         this.id_room = id_room;
+    }
+
+    public void setDay(java.sql.Date day) {
+        this.day = day;
+    }
+
+    public Booking() {
+    }
+    public void setRentday(int rentday) {
+        this.rentday = rentday;
+    }
+
+    public java.sql.Date getDay() {
+        return day;
     }
 }
