@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+<h2 style="margin: auto;width: 650px">CREATE PRODUCT</h2>
+<p>
+    <a style="margin: auto;width: 650px;position: relative;left: 640px" href="/"></a>
+</p>
+
+
+<th:block th:if="${message !=null}" >
+    <div class="alert alert-success" role="alert">
+    <p style="margin: auto;width: 650px" th:text="${message}"></p><a style=" text-decoration: underline; margin: auto;width: 650px;position: relative;left: 615px" href="/" class="alert-link"> Give it a click back to move list product.</a>
+    </div>
+</th:block>
+<div style="border: 1px solid black; width: 650px;
+    padding: 10px 55px 10px 58px;
+    margin: auto;"  >
+
+<form th:action="@{/product/create}" th:object="${product}" method="post">
+    <div class="form-group">
+        <label>Product Name</label>
+        <input type="text" class="form-control" th:field="*{name}" >
+    </div>
+    <div class="form-group">
+        <label>Price</label>
+        <input type="text" class="form-control" th:field="*{price}" >
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" th:field="*{description}" >
+    </div>
+    <div class="form-group">
+        <label>Supplier</label>
+        <input type="text" class="form-control" th:field="*{supplier}">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
