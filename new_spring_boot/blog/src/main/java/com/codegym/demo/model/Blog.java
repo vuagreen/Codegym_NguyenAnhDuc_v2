@@ -8,22 +8,29 @@ public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String tieuDe;
+
+    @Column
+    private String content;
+
+    @Column
     private String tomTatNoiDung;
+
+    @Column
     private String noiDung;
+
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "customer_id")
     private Customer customers;
 
     public Blog() {
     }
 
-    public Customer getCustomer() {
+    public Customer getCustomers() {
         return customers;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customers = customer;
+    public void setCustomers(Customer customers) {
+        this.customers = customers;
     }
 
     public Long getId() {
@@ -34,12 +41,12 @@ public class Blog {
         this.id = id;
     }
 
-    public String getTieuDe() {
-        return tieuDe;
+    public String getContent() {
+        return content;
     }
 
-    public void setTieuDe(String tieuDe) {
-        this.tieuDe = tieuDe;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getTomTatNoiDung() {

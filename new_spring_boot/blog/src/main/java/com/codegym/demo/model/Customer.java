@@ -11,23 +11,23 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column
     private String name;
+    @Column
     private String email;
 
-
-    @OneToMany(mappedBy = "customers",targetEntity = Blog.class)
+    @OneToMany(mappedBy = "customers", targetEntity = Blog.class)
     private Set<Blog> blogs;
 
 
     public Customer() {
     }
 
-    public Set<Blog> getCustomer() {
+    public Set<Blog> getBlogs() {
         return blogs;
     }
 
-    public void setCustomer(Set<Blog> blogs) {
+    public void setBlogs(Set<Blog> blogs) {
         this.blogs = blogs;
     }
 
