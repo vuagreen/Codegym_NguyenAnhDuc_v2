@@ -8,22 +8,33 @@ public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+<<<<<<< HEAD
     private String title;
+=======
+
+    @Column
+    private String content;
+
+    @Column
+>>>>>>> a6e4ba35633b58093c05efca83bf6874c08efe53
     private String tomTatNoiDung;
+
+    @Column
     private String noiDung;
+
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "customer_id")
     private Customer customers;
 
     public Blog() {
     }
 
-    public Customer getCustomer() {
+    public Customer getCustomers() {
         return customers;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customers = customer;
+    public void setCustomers(Customer customers) {
+        this.customers = customers;
     }
 
     public Long getId() {
@@ -34,12 +45,21 @@ public class Blog {
         this.id = id;
     }
 
+<<<<<<< HEAD
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
+=======
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+>>>>>>> a6e4ba35633b58093c05efca83bf6874c08efe53
     }
 
     public String getTomTatNoiDung() {
