@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+<h1 align="center">Read the blog details</h1>
+<a href="/">Back home</a>
+<div class="main" th:object="${blog}">
+    <h2 th:text="${blog.getTitle()}"></h2>
+    <h2>Content</h2>
+    <textarea th:text="${blog.getContent()}"></textarea>
+</div>
+</body>
+</html>

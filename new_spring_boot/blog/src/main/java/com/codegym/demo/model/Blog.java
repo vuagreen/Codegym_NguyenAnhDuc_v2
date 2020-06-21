@@ -8,7 +8,7 @@ public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String tieuDe;
+    private String title;
     private String tomTatNoiDung;
     private String noiDung;
     @ManyToOne
@@ -34,12 +34,12 @@ public class Blog {
         this.id = id;
     }
 
-    public String getTieuDe() {
-        return tieuDe;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTieuDe(String tieuDe) {
-        this.tieuDe = tieuDe;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getTomTatNoiDung() {
