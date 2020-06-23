@@ -4,6 +4,8 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Data/C0120G1_Nguyen_Dinh_Hoa" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Data/CaseStudyModule2JavaCore" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Data/CoolAdmin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Data/charisma" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/new_spring_boot/Module2_C03_AnhDuc/src/main/resources/templates/lib/CoolAdmin1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/new_spring_boot/Module2_C03_AnhDuc/src/main/resources/templates/lib/ad" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/new_spring_boot/Module2_C03_AnhDuc/src/main/resources/templates/lib/table/charisma1" vcs="Git" />
