@@ -15,7 +15,7 @@ import javax.transaction.Transactional;
 @Transactional
 public class CustomerServiceImpl implements CustomerService {
     @Autowired
-    private CustomerRepository customerRepository;
+     CustomerRepository customerRepository;
 
     @Override
     public Page<Customer> findAll(Pageable pageable) {
