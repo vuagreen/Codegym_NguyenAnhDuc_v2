@@ -34,30 +34,54 @@
 
     <link href="css/theme.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="css/anhduc-style.css">
-<!--ADD CSSS-->
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
+    <link rel="stylesheet" href="css/forminput.css">
+    <!--ADD CSSS-->
+<style>
+    /* Dropdown Button */
+    .dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
 
-    <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    /* Dropdown button on hover & focus */
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+    }
 
-    <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
-    <!-- Vendor CSS-->
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
 
-    <!-- Main CSS-->
-    <link href="css/main.css" rel="stylesheet" media="all">
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd}
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {display:block;}
+</style>
 </head>
 
 <body class="animsition">
@@ -494,8 +518,49 @@
                                         </div>
                                         <button class="au-btn-filter">
                                             <i class="zmdi zmdi-filter-list"></i>filters
+
                                         </button>
                                     </div>
+                                    <div class="dropdown">
+                                        <a onclick="myFunction()" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-more"></i></a>
+
+                                        <div id="myDropdown" class="dropdown-content">
+
+                                                    <a class="item" href="#areYouSure" data-toggle="modal" role="button" rel="tooltip" data-placement="top" title data-original-title="View" aria-describedby="tooltip14490" > <i class="zmdi zmdi-view-compact"></i></a>
+
+                                                    <a href="#areYouSure" data-toggle="modal" role="button"><i class="fa fa-edit"></i>Delete</a>
+                                                    <a href="#areYouSure" data-toggle="modal" role="button"><i class="fa fa-eye"></i>Delete</a>
+                                                    <a href="#areYouSure" data-toggle="modal" role="button"><i class="fa"></i>Delete</a>
+
+
+                                            <div class="notifi__item">
+                                                <div class="bg-c2 img-cir img-40">
+                                                    <i class="zmdi zmdi-account-box"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Your account has been blocked</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c3 img-cir img-40">
+                                                    <i class="zmdi zmdi-file-text"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>You got a new file</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__footer">
+                                                <a href="#areYouSure" data-toggle="modal" role="button">All notifications</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="au-btn au-btn-icon au-btn--green au-btn--small"
+                                            href="#crate-customer-form" id="btn2" data-toggle="modal">
+                                        <i class="zmdi zmdi-plus"></i>Add Customer2
+                                    </button>
+
                                     <div class="table-data__tool-right dorne-signin-btn">
                                         <button class="au-btn au-btn-icon au-btn--green au-btn--small"
                                                 href="#crate-customer-form" id="btn1" data-toggle="modal">
@@ -1085,14 +1150,21 @@
                                                data-toggle="tab" href="#nav-profile" role="tab"
                                                aria-controls="nav-profile"
                                                aria-selected="false">Service</a>
+                                            <a class="nav-item nav-link" id="nav-aservice-tab"
+                                               data-toggle="tab" href="#nav-a-service" role="tab"
+                                               aria-controls="nav-contact"
+                                               aria-selected="false">
+                                                Accompanied service</a>
                                             <a class="nav-item nav-link" id="nav-contact-tab"
                                                data-toggle="tab" href="#nav-contact" role="tab"
                                                aria-controls="nav-contact"
-                                               aria-selected="false">Contact</a>
+                                               aria-selected="false">
+                                                Contract Details</a>
+
                                         </div>
                                     </nav>
                                     <div class="tab-content pl-3 pt-2" id="nav-tabContent">
-                                          <!--Table Employee-->
+                                        <!--Table Employee-->
                                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                              aria-labelledby="nav-employee-tab">
                                             <div class="table-responsive table-data">
@@ -1628,21 +1700,548 @@
                                             </div>
                                             <div class="user-data__footer">
                                                 <button class="au-btn au-btn-load fa fa-plus"
-                                                        href="#crate-demo-form" data-toggle="modal">Add New
+                                                        href="#crate-service-form" data-toggle="modal">Add New
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-a-service" role="tabpanel"
+                                             aria-labelledby="nav-profile-tab">
+                                            <div class="table-responsive table-data">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>name</td>
+                                                        <td>role</td>
+                                                        <td>Action</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role bp">Bộ Phận</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+												<a data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                                   aria-expanded="false"><i class="zmdi zmdi-more"></i></a>
+
+												<div class="table-data-feature dropdown-menu" style="left: -50px">
+
+                                                    <button class="item" href="#show-info" data-toggle="modal"
+                                                            rel="tooltip" data-placement="top"
+                                                            title="View">
+                                                        <i class="zmdi zmdi-view-compact"></i>
+                                                    </button>
+                                                    <button class="item" href="#show-info" data-toggle="modal"
+                                                            rel="tooltip" data-placement="top"
+                                                            title="Edit">
+                                                        <i class="zmdi zmdi-edit"></i>
+                                                    </button>
+                                                    <button class="item" href="#areYouSure" data-toggle="modal"
+                                                            rel="tooltip" data-placement="top"
+                                                            title="Delete">
+                                                        <i class="zmdi zmdi-delete"></i>
+                                                    </button>
+                                                    <button class="item" data-toggle="tooltip" data-placement="top"
+                                                            title="Send">
+                                                        <i class="zmdi zmdi-mail-send"></i>
+                                                    </button>
+
+                                                </div>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="user-data__footer">
+                                                <button class="au-btn au-btn-load fa fa-plus"
+                                                        href="#crate-a-service-form" data-toggle="modal">Add New
                                                 </button>
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="nav-contact" role="tabpanel"
-                                             aria-labelledby="nav-contact-tab">
-                                            <p>Raw denim you probably haven't heard of them jean shorts
-                                                Austin. Nesciunt tofu stumptown aliqua, retro synth
-                                                master cleanse. Mustache cliche tempor, williamsburg carles
-                                                vegan helvetica. Reprehenderit butcher retro keffiyeh
-                                                dreamcatcher synth. Cosby sweater eu banh mi, irure terry
-                                                richardson ex sd. Alip placeat salvia cillum iphone.
-                                                Seitan alip s cardigan american apparel, butcher voluptate
-                                                nisi .</p>
-                                        </div>
+                                                    aria-labelledby="nav-contact-tab">
+                                            <div class="table-responsive table-data">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>name</td>
+                                                        <td>role</td>
+                                                        <td>Action</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role td">Trình Độ</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+												<a data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                                   aria-expanded="false"><i class="zmdi zmdi-more"></i></a>
+
+												<div class="table-data-feature dropdown-menu" style="left: -50px">
+
+                                                    <button class="item" href="#show-info" data-toggle="modal"
+                                                            rel="tooltip" data-placement="top"
+                                                            title="View">
+                                                        <i class="zmdi zmdi-view-compact"></i>
+                                                    </button>
+                                                    <button class="item" href="#show-info" data-toggle="modal"
+                                                            rel="tooltip" data-placement="top"
+                                                            title="Edit">
+                                                        <i class="zmdi zmdi-edit"></i>
+                                                    </button>
+                                                    <button class="item" href="#areYouSure" data-toggle="modal"
+                                                            rel="tooltip" data-placement="top"
+                                                            title="Delete">
+                                                        <i class="zmdi zmdi-delete"></i>
+                                                    </button>
+                                                    <button class="item" data-toggle="tooltip" data-placement="top"
+                                                            title="Send">
+                                                        <i class="zmdi zmdi-mail-send"></i>
+                                                    </button>
+
+                                                </div>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="au-checkbox">
+                                                                <input type="checkbox">
+                                                                <span class="au-checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Gold</h6>
+                                                                <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="role lk">Loại Khách</span>
+                                                        </td>
+                                                        <td>
+                                                        <span class="more">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </span>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="user-data__footer">
+                                                <button class="au-btn au-btn-load fa fa-plus"
+                                                        href="#crate-contact-form" data-toggle="modal">Add New
+                                                </button>
+                                            </div>
+                                    </div>
                                     </div>
 
                                 </div>
@@ -1975,93 +2574,53 @@
 </div>
 <!-- Edit Modal HTML -->
 <!-- Form Crate Customer -->
-<div id="crate-demo-form" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="card" style="width: 800px;left: -200px" >
+<div id="crate-service-form" class="modal fade" >
+    <div class="modal-dialog" >
+        <div class="modal-content"  >
+
+            <div class="card">
                 <div class="card-header">
-                    <strong>Customer Create</strong> Form
+                    <strong>Service Create</strong> Form
                 </div>
-                <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-                    <div class="wrapper wrapper--w680">
-                        <div class="card card-4" style="width: 1000px">
-                            <div class="card-body">
-                                <h2 class="title">Registration Form</h2>
-                                <form method="POST">
-                                    <div class="row row-space">
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">first name</label>
-                                                <input class="input--style-4" type="text" name="first_name">
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">last name</label>
-                                                <input class="input--style-4" type="text" name="last_name">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row row-space">
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">Birthday</label>
-                                                <div class="input-group-icon">
-                                                    <input class="input--style-4 js-datepicker" type="text" name="birthday">
-                                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">Gender</label>
-                                                <div class="p-t-10">
-                                                    <label class="radio-container m-r-45">Male
-                                                        <input type="radio" checked="checked" name="gender">
-                                                        <span class="checkmark"></span>
-                                                    </label>
-                                                    <label class="radio-container">Female
-                                                        <input type="radio" name="gender">
-                                                        <span class="checkmark"></span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row row-space">
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">Email</label>
-                                                <input class="input--style-4" type="email" name="email">
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="input-group">
-                                                <label class="label">Phone Number</label>
-                                                <input class="input--style-4" type="text" name="phone">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                        <label class="label">Subject</label>
-                                        <div class="rs-select2 js-select-simple select--no-search">
-                                            <select name="subject">
-                                                <option disabled="disabled" selected="selected">Choose option</option>
-                                                <option>Subject 1</option>
-                                                <option>Subject 2</option>
-                                                <option>Subject 3</option>
-                                            </select>
-                                            <div class="select-dropdown"></div>
-                                        </div>
-                                    </div>
-                                    <div class="p-t-15">
-                                        <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                <div class="card-body card-block">
+                <!-- Default form register -->
+                    <h1>Create Service Form</h1>
+                <form class="cf" >
+                    <div class="half left cf">
+                        <input type="text"  placeholder="Tên Dịch Vụ">
+                        <input type="number"  placeholder="Diện Tích">
+                        <input type="number"  placeholder="Số Tầng">
+                        <input type="number"  placeholder="Số Người Tối Đa">
+                        <input type="number"  placeholder="Chi Phí Thuê">
+
+                        <input type="text"  placeholder="Name">
+                        <input type="text" id="input-email" placeholder="Email address">
+                        <input type="text" id="input-subject" placeholder="Subject">
                     </div>
-                </div>
+
+                    <div class="half right cf">
+                        <input type="text"  placeholder="Loại Dịch Vụ" disabled>
+                        <select name="select" class="form-control">
+                            <option value="Member">Villa</option>
+                            <option value="Silver">House</option>
+                            <option value="Gold">Room</option>
+                        </select>
+                        <input type="text"  placeholder="Kiểu Thuê" disabled>
+                        <select name="select" class="form-control">
+                            <option value="Member">Theo Giờ</option>
+                            <option value="Silver">Theo Ngày</option>
+                            <option value="Gold">Theo Tháng</option>
+                        </select>
+                        <input type="text"  placeholder="Trạng Thái" disabled >
+                        <label class="switch switch-text switch-primary switch-pill" size="lg">
+                            <input type="checkbox" class="switch-input" checked="true">
+                            <span data-on="On" data-off="Off" class="switch-label"></span>
+                            <span class="switch-handle"></span>
+                        </label>
+                    </div>
+                    <input type="submit" value="Submit" id="input-submit">
+                </form>
+                </div>              <!-- Default form register -->
             </div>
         </div>
     </div>
@@ -2118,7 +2677,7 @@
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3">
-                                <label for="text-input" class=" form-control-label">Birthday</label>
+                                <label for="text-input" class="form-control-label">Birthday</label>
                             </div>
                             <div class="col-12 col-md-9">
                                 <input type="date" name="text-input" placeholder="IdCard" class="form-control">
@@ -2301,8 +2860,8 @@
 </div>
 <!--END Form Crate Employee -->
 
-<!-- Form Crate Employee -->
-<div id="crate-service-form" class="modal fade">
+<!-- Form Crate Service -->
+<div id="crate-service2-form" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="card">
@@ -2354,7 +2913,8 @@
                                 <label for="text-input" class=" form-control-label">NumberPeople</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="number" name="text-input" placeholder="Số Người Tối Đa" class="form-control">
+                                <input type="number" name="text-input" placeholder="Số Người Tối Đa"
+                                       class="form-control">
 
                             </div>
                         </div>
@@ -2417,7 +2977,7 @@
         </div>
     </div>
 </div>
-<!--END Form Crate Employee -->
+<!--END Form Crate Service -->
 
 <!-- Form Crate item -->
 <div id="crate-item-form" class="modal fade">
@@ -2536,9 +3096,9 @@
 <!--END Form Crate Customer -->
 
 <!-- Modal Are You Sure HTML -->
-<div id="areYouSure" class="modal fade">
+<div id="areYouSure" class="modal fade" >
     <div class="modal-dialog modal-confirm">
-        <div class="modal-content">
+        <div class="modal-content" style="margin-top:40%">
             <div class="modal-header flex-column">
                 <div class="icon-box">
                     <i class="fa fa-trash-alt"></i>
@@ -2564,7 +3124,7 @@
 <!-- Bootstrap JS-->
 <script src="vendor/bootstrap-4.1/popper.min.js"></script>
 <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-<!-- Vendor JS       -->
+<!-- Vendor JS \-->
 <script src="vendor/slick/slick.min.js">
 </script>
 <script src="vendor/wow/wow.min.js"></script>
@@ -2594,6 +3154,27 @@
 
 <!-- Main JS-->
 <script src="js/global.js"></script>
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 </body>
 
 </html>
