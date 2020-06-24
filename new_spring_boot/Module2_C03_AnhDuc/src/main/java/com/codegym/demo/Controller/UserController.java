@@ -24,7 +24,7 @@ public class UserController {
 
     @PostMapping("/login")
     public ModelAndView login(@ModelAttribute("user") User user) {
-        ModelAndView modelAndView = new ModelAndView("admin/index");
+        ModelAndView modelAndView = new ModelAndView("lib/ad/table2");
         if (user.getUser().equals("admin")) {
             if (user.getPassword().equals("admin")) {
                 return modelAndView;
