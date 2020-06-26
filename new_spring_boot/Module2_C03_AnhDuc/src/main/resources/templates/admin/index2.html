@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>EMPLOYEE HOME</title>
+
+    <!-- Fontfaces CSS-->
+    <link th:href="@{admin/css/font-face.css}" rel="stylesheet" media="all">
+    <link th:href="@{admin/vendor/font-awesome-4.7/css/font-awesome.min.css}" rel="stylesheet" media="all">
+    <link th:href="@{admin/vendor/font-awesome-5/css/fontawesome-all.min.css}" rel="stylesheet" media="all">
+    <link th:href="@{admin/vendor/mdi-font/css/material-design-iconic-font.min.css}" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link th:href="@{admin/vendor/bootstrap-4.1/bootstrap.min.css}" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link th:href="@{admin/vendor/animsition/animsition.min.css}" rel="stylesheet" media="all">
+    <link th:href="@{admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css}" rel="stylesheet" media="all">
+    <link th:href="@{admin/vendor/wow/animate.css}" rel="stylesheet" media="all">
+    <link th:href="@{admin/vendor/css-hamburgers/hamburgers.min.css}" rel="stylesheet" media="all">
+    <link th:href="@{admin/vendor/slick/slick.css}" rel="stylesheet}" media="all">
+    <link th:href="@{admin/vendor/select2/select2.min.css}" rel="stylesheet" media="all">
+    <link th:href="@{admin/vendor/perfect-scrollbar/perfect-scrollbar.css}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+
+    <link th:href="@{'admin/css/theme.css'}" rel="stylesheet" media="all">
+    <link rel="stylesheet" th:href="@{admin/css/anhduc-style.css}">
+    <link rel="stylesheet" th:href="@{admin/css/forminput.css}">
+    <!--ADD CSSS-->
+    <style>
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #2980B9;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd
+        }
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {
+            display: block;
+        }
+    </style>
+
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar2">
+            <div class="logo">
+                <a href="#">
+                    <img th:src="@{admin/images/icon/logo-white.png}" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar2__content js-scrollbar1">
+                <div class="account2">
+                    <div class="image img-cir img-120">
+                        <img th:src="@{admin/images/icon/avatar-big-01.jpg}" alt="John Doe" />
+                    </div>
+                    <h4 class="name">john doe</h4>
+                    <a href="#">Sign out</a>
+                </div>
+                <nav class="navbar-sidebar2">
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                            <a th:href="@{admin/index2.html}">
+                                <i class="fas fa-home"></i>HOME</a>
+                            <span class="inbox-num">3</span>
+                        </li>
+                        <li>
+                            <a th:href="@{admin/index2.html}">
+                                <i class="fas fa-edit"></i>Employee</a>
+                            <span class="inbox-num">3</span>
+                        </li>
+                        <li>
+                            <a th:href="@{admin/employee-table.html}">
+                                <i class="fas fa-table"></i>Customer</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages
+                                <span class="arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </span>
+                            </a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a th:href="@{admin/login.html}">
+                                        <i class="fas fa-sign-in-alt"></i>Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">
+                                        <i class="fas fa-user"></i>Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">
+                                        <i class="fas fa-unlock-alt"></i>Forget Password</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container2">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop2">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap2">
+                            <div class="logo d-block d-lg-none">
+                                <a href="#">
+                                    <img th:src="@{admin/images/icon/logo-white.png}" alt="CoolAdmin" />
+                                </a>
+                            </div>
+                            <div class="header-button2">
+                                <div class="header-button-item js-item-menu">
+                                    <i class="zmdi zmdi-search"></i>
+                                    <div class="search-dropdown js-dropdown">
+                                        <form action="">
+                                            <input class="au-input au-input--full au-input--h65" type="text" placeholder="Search for datas &amp; reports..." />
+                                            <span class="search-dropdown__icon">
+                                                <i class="zmdi zmdi-search"></i>
+                                            </span>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="header-button-item has-noti js-item-menu">
+                                    <i class="zmdi zmdi-notifications"></i>
+                                    <div class="notifi-dropdown js-dropdown">
+                                        <div class="notifi__title">
+                                            <p>You have 3 Notifications</p>
+                                        </div>
+                                        <div class="notifi__item">
+                                            <div class="bg-c1 img-cir img-40">
+                                                <i class="zmdi zmdi-email-open"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p>You got a email notification</p>
+                                                <span class="date">April 12, 2018 06:50</span>
+                                            </div>
+                                        </div>
+                                        <div class="notifi__item">
+                                            <div class="bg-c2 img-cir img-40">
+                                                <i class="zmdi zmdi-account-box"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p>Your account has been blocked</p>
+                                                <span class="date">April 12, 2018 06:50</span>
+                                            </div>
+                                        </div>
+                                        <div class="notifi__item">
+                                            <div class="bg-c3 img-cir img-40">
+                                                <i class="zmdi zmdi-file-text"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p>You got a new file</p>
+                                                <span class="date">April 12, 2018 06:50</span>
+                                            </div>
+                                        </div>
+                                        <div class="notifi__footer">
+                                            <a href="#">All notifications</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-button-item mr-0 js-sidebar-btn">
+                                    <i class="zmdi zmdi-menu"></i>
+                                </div>
+                                <div class="setting-menu js-right-sidebar d-none d-lg-block">
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-account"></i>Account</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-settings"></i>Setting</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-globe"></i>Language</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-pin"></i>Location</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-email"></i>Email</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-notifications"></i>Notifications</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <aside class="menu-sidebar2 js-right-sidebar d-block d-lg-none">
+                <div class="logo">
+                    <a href="#">
+                        <img th:src="@{admin/images/icon/logo-white.png}" alt="Cool Admin" />
+                    </a>
+                </div>
+                <div class="menu-sidebar2__content js-scrollbar2">
+                    <div class="account2">
+                        <div class="image img-cir img-120">
+                            <img th:src="@{admin/images/icon/avatar-big-01.jpg}" alt="John Doe" />
+                        </div>
+                        <h4 class="name">john doe</h4>
+                        <a href="#">Sign out</a>
+                    </div>
+                    <nav class="navbar-sidebar2">
+                        <ul class="list-unstyled navbar__list">
+                            <li class="active has-sub">
+                                <a class="js-arrow" href="#">
+                                    <i class="fas fa-tachometer-alt"></i>Dashboard
+                                    <span class="arrow">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </a>
+                                <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                    <li>
+                                        <a th:href="@{admin/index.html}">
+                                            <i class="fas fa-tachometer-alt"></i>Dashboard 1</a>
+                                    </li>
+                                    <li>
+                                        <a th:href="@{admin/index2.html}">
+                                            <i class="fas fa-tachometer-alt"></i>Dashboard 2</a>
+                                    </li>
+                                    <li>
+                                        <a th:href="@{admin/index3.html}">
+                                            <i class="fas fa-tachometer-alt"></i>Dashboard 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-tachometer-alt"></i>Dashboard 4</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-chart-bar"></i>Inbox</a>
+                                <span class="inbox-num">3</span>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-shopping-basket"></i>eCommerce</a>
+                            </li>
+                            <li class="has-sub">
+                                <a class="js-arrow" href="#">
+                                    <i class="fas fa-trophy"></i>Features
+                                    <span class="arrow">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </a>
+                                <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-table"></i>Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="far fa-check-square"></i>Forms</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-calendar-alt"></i>Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-map-marker-alt"></i>Maps</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-sub">
+                                <a class="js-arrow" href="#">
+                                    <i class="fas fa-copy"></i>Pages
+                                    <span class="arrow">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </a>
+                                <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                    <li>
+                                        <a th:href="@{admin/login.html}">
+                                            <i class="fas fa-sign-in-alt"></i>Login</a>
+                                    </li>
+                                    <li>
+                                        <a th:href="@{admin/register.html}">
+                                            <i class="fas fa-user"></i>Register</a>
+                                    </li>
+                                    <li>
+                                        <a th:href="@{admin/forget-pass.html}">
+                                            <i class="fas fa-unlock-alt"></i>Forget Password</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-sub">
+                                <a class="js-arrow" href="#">
+                                    <i class="fas fa-desktop"></i>UI Elements
+                                    <span class="arrow">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+            <!-- END HEADER DESKTOP-->
+
+            <!-- BREADCRUMB-->
+            <section class="au-breadcrumb m-t-75">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="au-breadcrumb-content">
+                                    <div class="au-breadcrumb-left">
+                                        <span class="au-breadcrumb-span">You are here:</span>
+                                        <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                            <li class="list-inline-item active">
+                                                <a href="#">Home</a>
+                                            </li>
+                                            <li class="list-inline-item seprate">
+                                                <span>/</span>
+                                            </li>
+                                            <li class="list-inline-item">Dashboard</li>
+                                        </ul>
+                                    </div>
+                                    <button class="au-btn au-btn-icon au-btn--green">
+                                        <i class="zmdi zmdi-plus"></i>add item</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END BREADCRUMB-->
+
+            <!-- STATISTIC-->
+            <section class="statistic">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item">
+                                    <h2 class="number">10,368</h2>
+                                    <span class="desc">members online</span>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-account-o"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item">
+                                    <h2 class="number">388,688</h2>
+                                    <span class="desc">items sold</span>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-shopping-cart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item">
+                                    <h2 class="number">1,086</h2>
+                                    <span class="desc">this week</span>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-calendar-note"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item">
+                                    <h2 class="number">$1,060,386</h2>
+                                    <span class="desc">total earnings</span>
+                                    <div class="icon">
+                                        <i class="zmdi zmdi-money"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END STATISTIC-->
+
+
+            <section>
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- USER DATA-->
+                                <div class="user-data m-b-30">
+                                    <h3 class="title-3 m-b-30">
+                                        <i class="zmdi zmdi-account-calendar"></i>SERVICE DATA</h3>
+                                    <div class="filters m-b-45">
+                                        <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
+                                            <select class="js-select2" name="property">
+                                                <option selected="selected">All Properties</option>
+                                                <option value="">Products</option>
+                                                <option value="">Services</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                        <div class="rs-select2--dark rs-select2--sm rs-select2--border">
+                                            <select class="js-select2 au-select-dark" name="time">
+                                                <option selected="selected">All Time</option>
+                                                <option value="">By Month</option>
+                                                <option value="">By Day</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                        <div class="rs-select2--dark rs-select2--border">
+                                            <button class="au-btn au-btn-icon au-btn--green au-btn--small"
+                                                    href="#crate-service-form" data-toggle="modal">
+                                                <i class="zmdi zmdi-plus"></i>Add Item
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-responsive table-data">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>name</td>
+                                                <td>role</td>
+                                                <td></td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="table-data__info">
+                                                        <h6>Gold</h6>
+                                                        <span>
+                                                                <a href="#">1johndoe@gmail.com</a>
+                                                            </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="role lk">Loại Khách</span>
+                                                </td>
+
+                                                <!--                                            Start Button More-->
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" th:href="@{#show-info}"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="View">
+                                                            <i class="zmdi zmdi-view-compact"></i>
+                                                        </button>
+                                                        <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Edit">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                                title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <!--                                            END Button More-->
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="table-data__info">
+                                                        <h6>Gold</h6>
+                                                        <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="role lk">Loại Khách</span>
+                                                </td>
+
+                                                <!--                                            Start Button More-->
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="View">
+                                                            <i class="zmdi zmdi-view-compact"></i>
+                                                        </button>
+                                                        <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Edit">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                                title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <!--                                            END Button More-->
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="table-data__info">
+                                                        <h6>Gold</h6>
+                                                        <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="role lk">Loại Khách</span>
+                                                </td>
+
+                                                <!--                                            Start Button More-->
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="View">
+                                                            <i class="zmdi zmdi-view-compact"></i>
+                                                        </button>
+                                                        <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Edit">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                                title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <!--                                            END Button More-->
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="table-data__info">
+                                                        <h6>Gold</h6>
+                                                        <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="role lk">Loại Khách</span>
+                                                </td>
+
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="View">
+                                                            <i class="zmdi zmdi-view-compact"></i>
+                                                        </button>
+                                                        <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Edit">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                                title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox" checked="checked">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="table-data__info">
+                                                        <h6>Sale 1</h6>
+                                                        <span>
+                                                                <a href="#">johndoe@gmail.com</a>
+                                                            </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="role vt">Vị Trí</span>
+                                                </td>
+
+                                                <td>
+                                                    <div  class="table-data-feature " >
+                                                        <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="View">
+                                                            <i class="zmdi zmdi-view-compact"></i>
+                                                        </button>
+                                                        <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Edit">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                                title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="user-data__footer">
+                                        <button class="au-btn au-btn-load">load more</button>
+                                    </div>
+                                </div>
+                                <!-- END USER DATA-->
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- USER DATA-->
+                                <div class=" m-b-30" >
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <strong>Customer Create</strong> Form
+                                        </div>
+                                        <div class="card-body card-block">
+                                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label class=" form-control-label" style="line-height: 20px">Static</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <p class="form-control-static">Username</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label for="text-input" class=" form-control-label" style="line-height: 70px">Name </label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <input type="text"  name="text-input" placeholder="Text"
+                                                               class="form-control">
+                                                        <small class="form-text text-muted">This is a help text</small>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label for="email-input" class=" form-control-label" style="line-height: 70px">Email </label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <input type="email"  name="email-input" placeholder="Enter Email"
+                                                               class="form-control">
+                                                        <small class="help-block form-text">Please enter your email</small>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label for="text-input" class=" form-control-label" style="line-height: 70px">IdCard</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <input type="text" name="text-input" placeholder="IdCard" class="form-control">
+                                                        <small class="form-text text-muted">This is a help number</small>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label for="text-input" class="form-control-label" style="line-height: 70px">Birthday</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <input type="date" name="text-input" placeholder="IdCard" class="form-control">
+                                                        <small class="form-text text-muted">This is a help date</small>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4" >
+                                                        <label for="text-input" class="form-control-label">&nbsp;</label>
+                                                        <label for="text-input" class="form-control-label">Phone Number</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <input type="text" name="text-input"  placeholder="PhoneNumber" class="form-control">
+                                                        <small class="form-text text-muted">This is a help number</small>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label for="select" class=" form-control-label">Type Customer</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <select name="select"  class="form-control">
+                                                            <option value="Member">Member</option>
+                                                            <option value="Silver">Silver</option>
+                                                            <option value="Gold">Gold</option>
+                                                            <option value="Platinum">Platinum</option>
+                                                            <option value="Diamond">Diamond</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="submit" class="btn btn-primary btn-sm">
+                                                <i class="fa fa-dot-circle-o"></i> Submit
+                                            </button>
+                                            <button type="reset" class="btn btn-danger btn-sm">
+                                                <i class="fa fa-ban"></i> Reset
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END USER DATA-->
+                            </div>
+                            <div class="col-md-6 offset-md-3" >
+                                <!-- ADD CONTRACT-->
+                                <div class=" m-b-30" >
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <strong>Contract Create</strong> Form
+                                        </div>
+                                        <div class="card-body card-block">
+                                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label class=" form-control-label" style="line-height: 20px ;font-size: 14px">Static</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <p class="form-control-label" style="font-size: 16px">Furama Resort Contract</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label >&nbsp;</label>
+                                                        <label for="text-input" href="#crate-customer-form" data-toggle="modal" class=" form-control-label" style="font-size: 14px" ><i class="fa fa-edit"></i>Customer </label>
+
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <label>&nbsp;</label>
+                                                        <select name="select"  class="form-control">
+                                                            <option value="Member">
+                                                                Click on the left to add new</option>
+                                                            <option value="Member">Anh Duc</option>
+                                                            <option value="Silver">Van Minh</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label>&nbsp;</label>
+                                                        <label for="text-input" href="#crate-service-form" data-toggle="modal" class=" form-control-label" style="font-size: 14px;font-size: 14px" ><i class="fa fa-edit"></i>Service </label>
+
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <label>&nbsp;</label>
+                                                        <select name="select"  class="form-control">
+                                                            <option value="Member">
+                                                                Click on the left to add new</option>
+                                                            <option value="Member">Villa</option>
+                                                            <option value="Silver">Room</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4"><label>&nbsp;&nbsp;</label>
+                                                        <label for="email-input" href="#crate-employee-form" data-toggle="modal" class=" form-control-label" style="font-size: 14px"><i class="fa fa-edit"></i>Employee </label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <label>&nbsp;&nbsp;</label>
+                                                        <select name="select"  class="form-control">
+                                                            <option value="Member">
+                                                                Click on the left to add new</option>
+                                                            <option value="Member">Member</option>
+                                                            <option value="Silver">Silver</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label>&nbsp;</label>
+                                                        <label for="text-input" class=" form-control-label" style="font-size: 14px">IdCard</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <input type="text" name="text-input" placeholder="IdCard" class="form-control">
+                                                        <small class="form-text text-muted">This is a help number</small>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4"> <label for="text-input" class="form-control-label">&nbsp;</label>
+                                                        <label for="text-input" class="form-control-label" style="font-size: 14px">Start Day</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <input type="date" name="text-input" placeholder="IdCard" class="form-control">
+                                                        <small class="form-text text-muted">This is a help date</small>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4"> <label>&nbsp;</label>
+                                                        <label for="text-input" class="form-control-label" style="font-size: 14px">End Day</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <input type="date" name="text-input" placeholder="IdCard" class="form-control">
+                                                        <small class="form-text text-muted">This is a help date</small>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4" >
+                                                        <label for="text-input" class="form-control-label">&nbsp;</label>
+                                                        <label for="text-input" class="form-control-label"style="font-size: 14px">Phone Number</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <input type="text" name="text-input"  placeholder="PhoneNumber" class="form-control">
+                                                        <small class="form-text text-muted">This is a help number</small>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-4">
+                                                        <label for="select" class=" form-control-label"style="font-size: 14px">Type Customer</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <select name="select"  class="form-control">
+                                                            <option value="Member">Member</option>
+                                                            <option value="Silver">Silver</option>
+                                                            <option value="Gold">Gold</option>
+                                                            <option value="Platinum">Platinum</option>
+                                                            <option value="Diamond">Diamond</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="submit" class="btn btn-primary btn-sm">
+                                                <i class="fa fa-dot-circle-o"></i> Submit
+                                            </button>
+                                            <button type="reset" class="btn btn-danger btn-sm">
+                                                <i class="fa fa-ban"></i> Reset
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END ADD CONTRACT-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copyright">
+                                <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a th:href="@{https://colorlib.com}">Colorlib</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END PAGE CONTAINER-->
+        </div>
+
+    </div>
+
+    <!-- Edit Modal HTML -->
+
+    <!-- Form Crate Service -->
+    <div id="crate-service-form" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Service Create</strong> Form
+                    </div>
+                    <div class="card-body card-block">
+                        <!-- Default form register -->
+                        <form class="cf">
+                            <div class="half left cf">
+                                <input type="text" placeholder="Tên Dịch Vụ">
+                                <input type="number" placeholder="Diện Tích">
+                                <input type="number" placeholder="Số Tầng">
+                                <input type="number" placeholder="Số Người Tối Đa">
+                                <input type="number" placeholder="Chi Phí Thuê">
+
+                                <input type="text" placeholder="Name">
+                                <input type="text" id="input-email" placeholder="Email address">
+                                <input type="text" id="input-subject" placeholder="Subject">
+                            </div>
+
+                            <div class="half right cf">
+                                <input type="text" placeholder="Loại Dịch Vụ" disabled>
+                                <select name="select" class="form-control">
+                                    <option value="Member">Villa</option>
+                                    <option value="Silver">House</option>
+                                    <option value="Gold">Room</option>
+                                </select>
+                                <input type="text" placeholder="Kiểu Thuê" disabled>
+                                <select name="select" class="form-control">
+                                    <option value="Member">Theo Giờ</option>
+                                    <option value="Silver">Theo Ngày</option>
+                                    <option value="Gold">Theo Tháng</option>
+                                </select>
+                                <input type="text" placeholder="Trạng Thái" disabled>
+                                <label class="switch switch-text switch-primary switch-pill" size="lg">
+                                    <input type="checkbox" class="switch-input" checked="true">
+                                    <span data-on="On" data-off="Off" class="switch-label"></span>
+                                    <span class="switch-handle"></span>
+                                </label>
+                            </div>
+                            <input type="submit" value="Submit" id="input-submit">
+                        </form>
+                    </div>              <!-- Default form register -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Form Crate Service -->
+
+    <!-- Form Crate Customer -->
+    <div id="crate-customer-form" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Customer Create</strong> Form
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label class=" form-control-label" style="line-height: 20px">Static</label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <p class="form-control-static">Username</p>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label for="text-input" class=" form-control-label" style="line-height: 70px">Name </label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input type="text" id="text-input" name="text-input" placeholder="Text"
+                                           class="form-control">
+                                    <small class="form-text text-muted">This is a help text</small>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label for="email-input" class=" form-control-label" style="line-height: 70px">Email </label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input type="email" id="email-input" name="email-input" placeholder="Enter Email"
+                                           class="form-control">
+                                    <small class="help-block form-text">Please enter your email</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label for="text-input" class=" form-control-label" style="line-height: 70px">IdCard</label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input type="text" name="text-input" placeholder="IdCard" class="form-control">
+                                    <small class="form-text text-muted">This is a help number</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label for="text-input" class="form-control-label" style="line-height: 70px">Birthday</label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input type="date" name="text-input" placeholder="IdCard" class="form-control">
+                                    <small class="form-text text-muted">This is a help date</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-4" >
+                                    <label for="text-input" class="form-control-label">&nbsp;</label>
+                                    <label for="text-input" class="form-control-label">Phone Number</label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input type="text" name="text-input"  placeholder="PhoneNumber" class="form-control">
+                                    <small class="form-text text-muted">This is a help number</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label for="select" class=" form-control-label">Type Customer</label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <select name="select" id="select" class="form-control">
+                                        <option value="Member">Member</option>
+                                        <option value="Silver">Silver</option>
+                                        <option value="Gold">Gold</option>
+                                        <option value="Platinum">Platinum</option>
+                                        <option value="Diamond">Diamond</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Form Crate Customer -->
+
+    <!-- Form Crate Contract -->
+    <div id="create-contract-form" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Customer Create</strong> Form
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label class=" form-control-label" style="line-height: 20px">Static</label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <p class="form-control-static">Username</p>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label for="text-input" class=" form-control-label" style="line-height: 70px">Name </label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input type="text"  name="text-input" placeholder="Text"
+                                           class="form-control">
+                                    <small class="form-text text-muted">This is a help text</small>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label for="email-input" class=" form-control-label" style="line-height: 70px">Email </label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input type="email" name="email-input" placeholder="Enter Email"
+                                           class="form-control">
+                                    <small class="help-block form-text">Please enter your email</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label for="text-input" class=" form-control-label" style="line-height: 70px">IdCard</label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input type="text" name="text-input" placeholder="IdCard" class="form-control">
+                                    <small class="form-text text-muted">This is a help number</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label for="text-input" class="form-control-label" style="line-height: 70px">Birthday</label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input type="date" name="text-input" placeholder="IdCard" class="form-control">
+                                    <small class="form-text text-muted">This is a help date</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-4" >
+                                    <label for="text-input" class="form-control-label">&nbsp;</label>
+                                    <label for="text-input" class="form-control-label">Phone Number</label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <input type="text" name="text-input"  placeholder="PhoneNumber" class="form-control">
+                                    <small class="form-text text-muted">This is a help number</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-4">
+                                    <label for="select" class=" form-control-label">Type Customer</label>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <select name="select"  class="form-control">
+                                        <option value="Member">Member</option>
+                                        <option value="Silver">Silver</option>
+                                        <option value="Gold">Gold</option>
+                                        <option value="Platinum">Platinum</option>
+                                        <option value="Diamond">Diamond</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Form Crate Contract -->
+
+    <!-- Form Crate A - Service -->
+    <div id="crate-a-service-form" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Customer Create</strong> Form
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label" style="line-height: 20px;font-size: 14px">Static</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <p class="form-control-static">Username</p>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label" style="line-height: 70px ;font-size: 14px">Name </label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input" placeholder="Text"
+                                           class="form-control">
+                                    <small class="form-text text-muted">This is a help text</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label" style="line-height: 70px;font-size: 14px">Dram</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input" placeholder="IdCard" class="form-control">
+                                    <small class="form-text text-muted">This is a help number</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3" >
+                                    <label for="text-input" class="form-control-label">&nbsp;</label>
+                                    <label for="text-input" class="form-control-label" style="font-size: 14px">Price</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input"  placeholder="PhoneNumber" class="form-control">
+                                    <small class="form-text text-muted">This is a help number</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="select" class=" form-control-label" style="font-size: 14px">Status</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select"  class="form-control">
+                                        <option value="Gold">Gold</option>
+                                        <option value="Platinum">Platinum</option>
+                                        <option value="Diamond">Diamond</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-plus"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Form Crate A-Service -->
+
+    <!-- Form Crate A - Service -->
+    <div id="crate-contact-form" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Contact Create</strong> Form
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label" style="line-height: 20px;font-size: 14px">Static</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <p class="form-control-static">Username</p>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label" style="line-height: 70px ;font-size: 14px">Name </label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input" placeholder="Dịch Vụ Đi Kèm"
+                                           class="form-control">
+                                    <small class="form-text text-muted">This is a help text</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label" style="line-height: 70px;font-size: 14px">Count</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input" placeholder="Số Lượng" class="form-control">
+                                    <small class="form-text text-muted">This is a help number</small>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-plus"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Form Crate A-Service -->
+
+    <!-- Form Crate Employee -->
+    <div id="crate-employee-form" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Employee Create</strong> Form
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label">Static</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <p class="form-control-static">Username</p>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">Name </label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input" placeholder="Text"
+                                           class="form-control">
+                                    <small class="form-text text-muted">This is a help text</small>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="email-input" class=" form-control-label">Email </label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="email" name="email-input" placeholder="Enter Email"
+                                           class="form-control">
+                                    <small class="help-block form-text">Please enter your email</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">IdCard</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input" placeholder="IdCard" class="form-control">
+                                    <small class="form-text text-muted">This is a help number</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">Birthday</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="date" name="text-input" placeholder="IdCard" class="form-control">
+                                    <small class="form-text text-muted">This is a help date</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">PhoneNumber</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input" placeholder="PhoneNumber" class="form-control">
+                                    <small class="form-text text-muted">This is a help number</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">Address </label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input" placeholder="Text"
+                                           class="form-control">
+                                    <small class="form-text text-muted">This is a help text</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">Salary</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="number" name="text-input" placeholder="Salary" class="form-control">
+                                    <small class="form-text text-muted">This is a help number</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="select" class=" form-control-label">Bộ Phận</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select" class="form-control">
+                                        <option value="Member">Member</option>
+                                        <option value="Silver">Silver</option>
+                                        <option value="Gold">Gold</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="select" class=" form-control-label">Trình ĐỘ</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select" class="form-control">
+                                        <option value="Member">Cao Đẳng</option>
+                                        <option value="Silver">Đại Học</option>
+                                        <option value="Gold">Trung Cấp</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="select" class=" form-control-label">Vị Trí</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select" class="form-control">
+                                        <option value="Member">Trưởng Phòng</option>
+                                        <option value="Silver">Kế Toán</option>
+                                        <option value="Gold">Thu Ngân</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Form Crate Employee -->
+
+    <!-- Form Crate Service -->
+    <div id="crate-service2-form" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Service Create</strong> Form
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label">Static</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <p class="form-control-static">Username</p>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">Name </label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input" placeholder="Text"
+                                           class="form-control">
+
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="email-input" class=" form-control-label">Salary</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" name="text-input" placeholder="Salary"
+                                           class="form-control">
+
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">Diện Tích</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="number" name="text-input" placeholder="Diện Tích" class="form-control">
+
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">NumberPeople</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="number" name="text-input" placeholder="Số Người Tối Đa"
+                                           class="form-control">
+
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">Số Tầng</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="number" name="text-input" placeholder="Số Tầng" class="form-control">
+
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">Trạng Thái </label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="number" name="text-input" placeholder="Text"
+                                           class="form-control">
+
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="select" class=" form-control-label">Kiểu Thuê</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select" class="form-control">
+                                        <option value="Member">Theo Ngày</option>
+                                        <option value="Silver">Theo Tháng</option>
+                                        <option value="Gold">Theo Giờ</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="select" class=" form-control-label">Loại Dịch Vụ</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select" class="form-control">
+                                        <option value="Member">Villa</option>
+                                        <option value="Silver">Room</option>
+                                        <option value="Gold">House</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Form Crate Service -->
+
+    <!-- Form Crate item -->
+    <div id="crate-item-form" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Item Create</strong> Form
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label">Static</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <p class="form-control-static">Item</p>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">Name Item </label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" id="text-input1" name="text-input" placeholder="Text"
+                                           class="form-control">
+                                    <small class="form-text text-muted">This is a help text</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="select" class=" form-control-label">Type Item</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select" id="select-item" class="form-control">
+                                        <option value="Member">Bộ Phận</option>
+                                        <option value="Silver">Trình Độ</option>
+                                        <option value="Gold">Vị Trí</option>
+                                        <option value="Platinum">Loại Khách</option>
+                                        <option value="Diamond">Loại Dịch Vụ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Form Crate item -->
+
+    <!-- Form Crate item -->
+    <div id="show-info" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Show Info </strong>
+                    </div>
+                    <div class="card-body card-block">
+                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label class=" form-control-label">Static</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <p class="form-control-static">Item</p>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="text-input" class=" form-control-label">Name Item </label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <input type="text" id="text-input2" name="text-input" placeholder="Text"
+                                           class="form-control">
+                                    <small class="form-text text-muted">This is a help text</small>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="select" class=" form-control-label">Type Item</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <select name="select" id="select-item1" class="form-control">
+                                        <option value="Member">Bộ Phận</option>
+                                        <option value="Silver">Trình Độ</option>
+                                        <option value="Gold">Vị Trí</option>
+                                        <option value="Platinum">Loại Khách</option>
+                                        <option value="Diamond">Loại Dịch Vụ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Form Crate Customer -->
+
+    <!-- Modal Are You Sure HTML -->
+    <div id="areYouSure" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content" style="margin-top:40%">
+                <div class="modal-header flex-column">
+                    <div class="icon-box">
+                        <i class="fa fa-trash-alt"></i>
+                    </div>
+                    <h4 class="modal-title w-100">Are you sure?</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Do you really want to delete these records?</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Modal Are You Sure HTML -->
+    <!--NEW CONTROLLER DEMO-->
+    <div class="dropdown">
+        <a onclick="myFunction()" data-toggle="dropdown" href="#" role="button"
+           aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-more"></i></a>
+
+        <div id="myDropdown1" class="dropdown-content">
+            <a class="item" href="#areYouSure" data-toggle="modal" role="button"
+               rel="tooltip" data-placement="top" title data-original-title="View"
+               aria-describedby="tooltip14490"> &ensp;&ensp;<i class="fa fa-eye"></i>&ensp;View</a>
+            <a href="#areYouSure" data-toggle="modal" role="button">&ensp;&ensp;<i
+                    class="fa fa-edit"></i>&ensp;Edit</a>
+            <a href="#areYouSure" data-toggle="modal" role="button">&ensp;&ensp;<i
+                    class="fa fa-remove"></i>&ensp;Delete</a>
+
+        </div>
+    </div>
+    <button class="au-btn au-btn-icon au-btn--green au-btn--small"
+            href="#crate-customer-form" id="btn2" data-toggle="modal">
+        <i class="zmdi zmdi-plus"></i>Add Customer2
+    </button>
+
+    <!--NEW CONTROLLER DEMO-->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <!-- Jquery JS-->
+    <script th:src="@{admin/vendor/jquery-3.2.1.min.js}"></script>
+    <!-- Bootstrap JS-->
+    <script th:src="@{admin/vendor/bootstrap-4.1/popper.min.js}"></script>
+    <script th:src="@{admin/vendor/bootstrap-4.1/bootstrap.min.js}"></script>
+    <!-- Vendor JS \-->
+    <script th:src="@{admin/vendor/slick/slick.min.js}">
+    </script>
+    <script th:src="@{admin/vendor/wow/wow.min.js}"></script>
+    <script th:src="@{admin/vendor/animsition/animsition.min.js}"></script>
+    <script th:src="@{admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js}">
+    </script>
+    <script th:src="@{admin/vendor/counter-up/jquery.waypoints.min.js}"></script>
+    <script th:src="@{admin/vendor/counter-up/jquery.counterup.min.js}">
+    </script>
+    <script th:src="@{admin/vendor/circle-progress/circle-progress.min.js}"></script>
+    <script th:src="@{admin/vendor/perfect-scrollbar/perfect-scrollbar.js}"></script>
+    <script th:src="@{admin/vendor/chartjs/Chart.bundle.min.js}"></script>
+    <script th:src="@{admin/vendor/select2/select2.min.js}">
+    </script>
+
+    <!-- Main JS-->
+    <script>$("[rel='tooltip']").tooltip();</script>
+    <script th:src="@{admin/js/main.js}"></script>
+    <script th:src="@{admin/js/anhduc-controller.js}"></script>
+    <!--ADD-->
+    <!-- Jquery JS-->
+    <script th:src="@{admin/vendor/jquery/jquery.min.js}"></script>
+    <!-- Vendor JS-->
+    <script th:src="@{admin/vendor/select2/select2.min.js}"></script>
+    <script th:src="@{admin/vendor/datepicker/moment.min.js}"></script>
+    <script th:src="@{admin/vendor/datepicker/daterangepicker.js}"></script>
+
+    <!-- Main JS-->
+    <script th:src="@{admin/js/global.js}"></script>
+    <script>
+        /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+        function myFunction() {
+
+            document.getElementById("myDropdown").classList.toggle("show");
+            document.getElementById("myDropdown1").classList.toggle("show");
+            document.getElementById("myDropdown2").classList.toggle("show");
+            document.getElementById("myDropdown3").classList.toggle("show");
+            document.getElementById("myDropdown4").classList.toggle("show");
+            document.getElementsByClassName("show-more").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+<!-- end document-->

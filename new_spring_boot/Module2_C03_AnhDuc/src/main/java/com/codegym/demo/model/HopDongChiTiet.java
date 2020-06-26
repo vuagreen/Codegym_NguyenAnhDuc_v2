@@ -41,14 +41,15 @@ public class HopDongChiTiet {
         this.dichVuDiKem = dichVuDiKem;
     }
 
-    public List<HopDong> getHopDongs() {
+    public HopDong getHopDongs() {
         return hopDongs;
     }
 
-    public void setHopDongs(List<HopDong> hopDongs) {
+    public void setHopDongs(HopDong hopDongs) {
         this.hopDongs = hopDongs;
     }
 
-    @OneToMany(mappedBy = "hopDongChiTiet")
-    private List<HopDong> hopDongs;
+    @ManyToOne
+    @JoinColumn
+    private HopDong hopDongs;
 }

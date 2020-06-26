@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -15,10 +15,10 @@
     <link rel="icon" href="img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css}" rel="stylesheet">
 
     <!-- Responsive CSS -->
-    <link href="css/responsive/responsive.css" rel="stylesheet">
+    <link th:href="@{admin/css/responsive/responsive.css}" rel="stylesheet">
 
 </head>
 
@@ -51,7 +51,7 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                        <a class="navbar-brand" href="index.html"><img th:src="@{adminimg/core-img/logo.png}" alt=""></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
@@ -184,18 +184,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- ****** Footer Area End ****** -->
 
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script th:src="@{admin/js/jquery/jquery-2.2.4.min.js}"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script th:src="@{admin/js/bootstrap/popper.min.js}"></script>
     <!-- Bootstrap-4 js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script th:src="@{admin/js/bootstrap/bootstrap.min.js}"></script>
     <!-- All Plugins js -->
-    <script src="js/others/plugins.js"></script>
+    <script th:src="@{admin/js/others/plugins.js}"></script>
     <!-- Google Maps js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9KNSL1jTv4MY9Pza6w8DJkpI_nHyCnk"></script>
-    <script src="js/google-map/map-active.js"></script>
+    <script th:src="@{adminhttps://maps.googleapis.com/maps/api/js?key=AIzaSyDk9KNSL1jTv4MY9Pza6w8DJkpI_nHyCnk"></script>
+    <script th:src="@{admin/js/google-map/map-active.js}"></script>
     <!-- Active JS -->
-    <script src="js/active.js"></script>
+    <script th:src="@{admin/js/active.js}"></script>
 </body>
 
 </html>

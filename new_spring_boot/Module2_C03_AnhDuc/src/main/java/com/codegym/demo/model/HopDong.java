@@ -2,6 +2,7 @@ package com.codegym.demo.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class HopDong {
@@ -21,9 +22,8 @@ public class HopDong {
     @JoinColumn
     private DichVu dichVu;
 
-    @ManyToOne
-    @JoinColumn
-    private HopDongChiTiet hopDongChiTiet;
+    @OneToMany(mappedBy = "hopDongs")
+    List<HopDongChiTiet> hopDongChiTiets;
 
     @ManyToOne
     @JoinColumn
@@ -88,12 +88,12 @@ public class HopDong {
         this.dichVu = dichVu;
     }
 
-    public HopDongChiTiet getHopDongChiTiet() {
-        return hopDongChiTiet;
+    public List<HopDongChiTiet> getHopDongChiTiets() {
+        return hopDongChiTiets;
     }
 
-    public void setHopDongChiTiet(HopDongChiTiet hopDongChiTiet) {
-        this.hopDongChiTiet = hopDongChiTiet;
+    public void setHopDongChiTiets(List<HopDongChiTiet> hopDongChiTiets) {
+        this.hopDongChiTiets = hopDongChiTiets;
     }
 
     public KhachHang getKhachHang() {
