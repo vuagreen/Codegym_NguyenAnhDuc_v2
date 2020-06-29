@@ -9,7 +9,8 @@ public class ViTri {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String tenViTri;
+    private String name;
+
     @OneToMany(mappedBy = "viTri", cascade = CascadeType.ALL)
     private List<NhanVien> nhanViens;
 
@@ -24,12 +25,12 @@ public class ViTri {
         this.id = id;
     }
 
-    public String getTenViTri() {
-        return tenViTri;
+    public String getName() {
+        return name;
     }
 
-    public void setTenViTri(String tenViTri) {
-        this.tenViTri = tenViTri;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<NhanVien> getNhanViens() {

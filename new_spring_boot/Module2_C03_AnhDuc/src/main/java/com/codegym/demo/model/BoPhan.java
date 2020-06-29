@@ -9,7 +9,7 @@ public class BoPhan {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String tenBoPhan;
+    private String name;
 
     public BoPhan() {
     }
@@ -22,12 +22,12 @@ public class BoPhan {
         this.id = id;
     }
 
-    public String getTenBoPhan() {
-        return tenBoPhan;
+    public String getName() {
+        return name;
     }
 
-    public void setTenBoPhan(String tenBoPhan) {
-        this.tenBoPhan = tenBoPhan;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<NhanVien> getNhanViens() {

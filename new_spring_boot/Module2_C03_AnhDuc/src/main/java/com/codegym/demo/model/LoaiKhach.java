@@ -9,7 +9,7 @@ public class LoaiKhach {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String tenLoaiKhach;
+    private String name;
 
     @OneToMany(mappedBy = "loaiKhach")
     private List<KhachHang> khachHangs;
@@ -25,12 +25,12 @@ public class LoaiKhach {
         this.id = id;
     }
 
-    public String getTenLoaiKhach() {
-        return tenLoaiKhach;
+    public String getName() {
+        return name;
     }
 
-    public void setTenLoaiKhach(String tenLoaiKhach) {
-        this.tenLoaiKhach = tenLoaiKhach;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<KhachHang> getKhachHangs() {

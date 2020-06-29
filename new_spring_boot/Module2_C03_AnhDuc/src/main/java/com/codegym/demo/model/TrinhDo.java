@@ -9,7 +9,7 @@ public class TrinhDo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String trinhDo;
+    private String name;
     @OneToMany(mappedBy = "trinhDo",targetEntity = NhanVien.class)
     private List<NhanVien> nhanViens;
 
@@ -24,12 +24,12 @@ public class TrinhDo {
         this.id = id;
     }
 
-    public String getTrinhDo() {
-        return trinhDo;
+    public String getName() {
+        return name;
     }
 
-    public void setTrinhDo(String trinhDo) {
-        this.trinhDo = trinhDo;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<NhanVien> getNhanViens() {

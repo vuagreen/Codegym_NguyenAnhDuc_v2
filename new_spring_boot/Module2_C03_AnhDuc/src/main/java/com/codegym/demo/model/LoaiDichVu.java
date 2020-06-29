@@ -9,7 +9,7 @@ public class LoaiDichVu {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String tenLoaiDichVu;
+    private String name;
 
     public LoaiDichVu() {
     }
@@ -22,12 +22,12 @@ public class LoaiDichVu {
         this.id = id;
     }
 
-    public String getTenLoaiDichVu() {
-        return tenLoaiDichVu;
+    public String getName() {
+        return name;
     }
 
-    public void setTenLoaiDichVu(String tenLoaiDichVu) {
-        this.tenLoaiDichVu = tenLoaiDichVu;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<DichVu> getDichVus() {

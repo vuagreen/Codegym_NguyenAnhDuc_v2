@@ -858,6 +858,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        <th:block th:each="vitri:${vitris}">
                                         <tr>
                                             <td>
                                                 <label class="au-checkbox">
@@ -867,14 +868,14 @@
                                             </td>
                                             <td>
                                                 <div class="table-data__info">
-                                                    <h6>Gold</h6>
-                                                    <span>
-                                                                <a href="#">1johndoe@gmail.com</a>
-                                                            </span>
+                                                    <h6 th:text="${vitri.name}"></h6>
+<!--                                                    <span>-->
+<!--                                                                <a href="#">1johndoe@gmail.com</a>-->
+<!--                                                            </span>-->
                                                 </div>
                                             </td>
                                             <td>
-                                                <span class="role lk">Loại Khách</span>
+                                                <span class="role vt">Vị Trí</span>
                                             </td>
 
 <!--                                            Start Button More-->
@@ -884,7 +885,8 @@
                                                             title="View">
                                                         <i class="zmdi zmdi-view-compact"></i>
                                                     </button>
-                                                    <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
+<!--                                                    th:href="@{/edit-item/1/__${vitri.id}__ }"-->
+                                                    <button class="item"  href="#crate-item-form2"  data-toggle="modal" rel="tooltip" data-placement="top"
                                                             title="Edit">
                                                         <i class="zmdi zmdi-edit"></i>
                                                     </button>
@@ -901,172 +903,189 @@
                                             <!--                                            END Button More-->
 
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <div class="table-data__info">
-                                                    <h6>Gold</h6>
-                                                    <span>
-                                                                <a href="#">johndoe@gmail.com</a>
-                                                            </span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="role lk">Loại Khách</span>
-                                            </td>
+                                        </th:block>
+                                        <th:block th:each="trinhdo:${trinhdos}">
+                                            <tr>
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="table-data__info">
+                                                        <h6 th:text="${trinhdo.getName()}"></h6>
+                                                        <!--                                                    <span>-->
+                                                        <!--                                                                <a href="#">1johndoe@gmail.com</a>-->
+                                                        <!--                                                            </span>-->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="role td">Trình Độ</span>
+                                                </td>
 
-                                            <!--                                            Start Button More-->
-                                            <td>
-                                                <div class="table-data-feature">
-                                                    <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="View">
-                                                        <i class="zmdi zmdi-view-compact"></i>
-                                                    </button>
-                                                    <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="Edit">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </button>
-                                                    <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="Delete">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top"
-                                                            title="More">
-                                                        <i class="zmdi zmdi-more"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                            <!--                                            END Button More-->
+                                                <!--                                            Start Button More-->
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="View">
+                                                            <i class="zmdi zmdi-view-compact"></i>
+                                                        </button>
+                                                        <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Edit">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                                title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <!--                                            END Button More-->
 
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <div class="table-data__info">
-                                                    <h6>Gold</h6>
-                                                    <span>
-                                                                <a href="#">johndoe@gmail.com</a>
-                                                            </span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="role lk">Loại Khách</span>
-                                            </td>
+                                            </tr>
+                                        </th:block>
+                                        <th:block th:each="bophan:${bophans}">
+                                            <tr>
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="table-data__info">
+                                                        <h6 th:text="${bophan.getName()}"></h6>
+                                                        <!--                                                    <span>-->
+                                                        <!--                                                                <a href="#">1johndoe@gmail.com</a>-->
+                                                        <!--                                                            </span>-->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="role bp">Bộ Phận</span>
+                                                </td>
 
-                                            <!--                                            Start Button More-->
-                                            <td>
-                                                <div class="table-data-feature">
-                                                    <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="View">
-                                                        <i class="zmdi zmdi-view-compact"></i>
-                                                    </button>
-                                                    <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="Edit">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </button>
-                                                    <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="Delete">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top"
-                                                            title="More">
-                                                        <i class="zmdi zmdi-more"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                            <!--                                            END Button More-->
+                                                <!--                                            Start Button More-->
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="View">
+                                                            <i class="zmdi zmdi-view-compact"></i>
+                                                        </button>
+                                                        <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Edit">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                                title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <!--                                            END Button More-->
 
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <div class="table-data__info">
-                                                    <h6>Gold</h6>
-                                                    <span>
-                                                                <a href="#">johndoe@gmail.com</a>
-                                                            </span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="role lk">Loại Khách</span>
-                                            </td>
+                                            </tr>
+                                        </th:block>
+                                        <th:block th:each="loaidichvu:${loaidichvus}">
+                                            <tr>
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="table-data__info">
+                                                        <h6 th:text="${loaidichvu.getName()}"></h6>
+                                                        <!--                                                    <span>-->
+                                                        <!--                                                                <a href="#">1johndoe@gmail.com</a>-->
+                                                        <!--                                                            </span>-->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="role ldv">Loại Dịch Vụ</span>
+                                                </td>
 
-                                            <td>
-                                                <div class="table-data-feature">
-                                                    <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="View">
-                                                        <i class="zmdi zmdi-view-compact"></i>
-                                                    </button>
-                                                    <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="Edit">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </button>
-                                                    <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="Delete">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top"
-                                                            title="More">
-                                                        <i class="zmdi zmdi-more"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <label class="au-checkbox">
-                                                    <input type="checkbox" checked="checked">
-                                                    <span class="au-checkmark"></span>
-                                                </label>
-                                            </td>
-                                            <td>
-                                                <div class="table-data__info">
-                                                    <h6>Sale 1</h6>
-                                                    <span>
-                                                                <a href="#">johndoe@gmail.com</a>
-                                                            </span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <span class="role vt">Vị Trí</span>
-                                            </td>
+                                                <!--                                            Start Button More-->
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="View">
+                                                            <i class="zmdi zmdi-view-compact"></i>
+                                                        </button>
+                                                        <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Edit">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                                title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <!--                                            END Button More-->
 
-                                            <td>
-                                                <div  class="table-data-feature " >
-                                                    <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="View">
-                                                        <i class="zmdi zmdi-view-compact"></i>
-                                                    </button>
-                                                    <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="Edit">
-                                                        <i class="zmdi zmdi-edit"></i>
-                                                    </button>
-                                                    <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="Delete">
-                                                        <i class="zmdi zmdi-delete"></i>
-                                                    </button>
-                                                    <button class="item" data-toggle="tooltip" data-placement="top"
-                                                            title="More">
-                                                        <i class="zmdi zmdi-more"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            </tr>
+                                        </th:block>
+                                        <th:block th:each="loaikhach:${loaikhachs}">
+                                            <tr>
+                                                <td>
+                                                    <label class="au-checkbox">
+                                                        <input type="checkbox">
+                                                        <span class="au-checkmark"></span>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div class="table-data__info">
+                                                        <h6 th:text="${loaikhach.getName()}"></h6>
+                                                        <!--                                                    <span>-->
+                                                        <!--                                                                <a href="#">1johndoe@gmail.com</a>-->
+                                                        <!--                                                            </span>-->
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="role lk">Loại Khách</span>
+                                                </td>
+
+                                                <!--                                            Start Button More-->
+                                                <td>
+                                                    <div class="table-data-feature">
+                                                        <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="View">
+                                                            <i class="zmdi zmdi-view-compact"></i>
+                                                        </button>
+                                                        <button class="item" href="#create-customer-form"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Edit">
+                                                            <i class="zmdi zmdi-edit"></i>
+                                                        </button>
+                                                        <button class="item" href="#areYouSure"  data-toggle="modal" rel="tooltip" data-placement="top"
+                                                                title="Delete">
+                                                            <i class="zmdi zmdi-delete"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                                title="More">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <!--                                            END Button More-->
+
+                                            </tr>
+                                        </th:block>
+
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -2584,7 +2603,7 @@
                     <strong>Customer Create</strong> Form
                 </div>
                 <div class="card-body card-block">
-                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                    <form th:action="@{/create-customer}" th:object="${khachhanglist}" method="post" enctype="multipart/form-data" class="form-horizontal">
                         <div class="row form-group">
                             <div class="col col-md-4">
                                 <label class=" form-control-label" style="line-height: 20px">Static</label>
@@ -2598,7 +2617,7 @@
                                 <label for="text-input" class=" form-control-label" style="line-height: 70px">Name </label>
                             </div>
                             <div class="col-12 col-md-8">
-                                <input type="text" id="text-input" name="text-input" placeholder="Text"
+                                <input  type="text" th:field="" id="text-input" name="text-input" placeholder="Text"
                                        class="form-control">
                                 <small class="form-text text-muted">This is a help text</small>
                             </div>
@@ -2647,12 +2666,11 @@
                                 <label for="select" class=" form-control-label">Type Customer</label>
                             </div>
                             <div class="col-12 col-md-8">
-                                <select name="select" id="select" class="form-control">
-                                    <option value="Member">Member</option>
-                                    <option value="Silver">Silver</option>
-                                    <option value="Gold">Gold</option>
-                                    <option value="Platinum">Platinum</option>
-                                    <option value="Diamond">Diamond</option>
+                                <select th:field="*{loai_khach_id}" name="select" id="select" class="form-control">
+                                    <option value=""> Type Customer </option>
+                                    <option th:each="loaikhach : ${loaikhachs}"
+                                            th:value="${loaikhach.id}"
+                                            th:utext="${loaikhach.name}"/>
                                 </select>
                             </div>
                         </div>
@@ -3162,7 +3180,7 @@
                     <strong>Item Create</strong> Form
                 </div>
                 <div class="card-body card-block">
-                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                    <form action="/create-item" method="post" enctype="multipart/form-data" class="form-horizontal">
                         <div class="row form-group">
                             <div class="col col-md-3">
                                 <label class=" form-control-label">Static</label>
@@ -3173,6 +3191,7 @@
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3">
+                                <label>&nbsp;</label>
                                 <label for="text-input" class=" form-control-label">Name Item </label>
                             </div>
                             <div class="col-12 col-md-9">
@@ -3187,23 +3206,81 @@
                             </div>
                             <div class="col-12 col-md-9">
                                 <select name="select" id="select-item" class="form-control">
-                                    <option value="Member">Bộ Phận</option>
-                                    <option value="Silver">Trình Độ</option>
-                                    <option value="Gold">Vị Trí</option>
-                                    <option value="Platinum">Loại Khách</option>
-                                    <option value="Diamond">Loại Dịch Vụ</option>
+                                    <option value="3">Bộ Phận</option>
+                                    <option value="2">Trình Độ</option>
+                                    <option value="1">Vị Trí</option>
+                                    <option value="5">Loại Khách</option>
+                                    <option value="4">Loại Dịch Vụ</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="fa fa-dot-circle-o"></i> Submit
+                            </button>
+                            <button type="reset" class="btn btn-danger btn-sm">
+                                <i class="fa fa-ban"></i> Reset
+                            </button>
+                        </div>
                     </form>
                 </div>
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-sm">
-                        <i class="fa fa-dot-circle-o"></i> Submit
-                    </button>
-                    <button type="reset" class="btn btn-danger btn-sm">
-                        <i class="fa fa-ban"></i> Reset
-                    </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="crate-item-form2" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Item Create</strong> Form
+                </div>
+                <div class="card-body card-block">
+                    <th:block th:if="${itembyid}">
+                    <form action="/edit-item" th:object="${itembyid}"  method="post" enctype="multipart/form-data" class="form-horizontal">
+                        <input th:type="hidden" name="idItem" th:field="*{id}">
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label class=" form-control-label">Static</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <p class="form-control-static">Item</p>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label>&nbsp;</label>
+                                <label for="text-input" class=" form-control-label">Name Item </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input th:type="text" th:field="*{name}" name="text-input" placeholder="Text"
+                                       class="form-control">
+                                <small class="form-text text-muted">This is a help text</small>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="select" class=" form-control-label">Type Item</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <select name="select2" class="form-control">
+                                    <option value="3">Bộ Phận</option>
+                                    <option value="2">Trình Độ</option>
+                                    <option value="1">Vị Trí</option>
+                                    <option value="5">Loại Khách</option>
+                                    <option value="4">Loại Dịch Vụ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="fa fa-dot-circle-o"></i> Submit
+                            </button>
+                            <button type="reset" class="btn btn-danger btn-sm">
+                                <i class="fa fa-ban"></i> Reset
+                            </button>
+                        </div>
+                    </form></th:block>
                 </div>
             </div>
         </div>
