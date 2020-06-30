@@ -43,4 +43,24 @@ $(document).ready(function(){
         }
     });
 });
+var id_item = 0;
+var name_item = "";
+
+let id_tem = document.getElementById("id_item").value;
+let input_show_name = document.getElementById("input_show_name");
+let input_show_type = document.getElementById("input_show_type").value;
+
+function editItem(namer) {
+    name_item = namer;
+
+    console.log(name_item);
+  //  let t =$(this).parents("tr").contents().filter("td");
+  //   let t = $("#edit1").contents();
+  //    console.log(t);
+  //  input_show_name.value = name_item.innerText;
+  //   t.each(function () {
+  //       alert($(this).text());
+  //   })
+    //alert(t)
+}
 

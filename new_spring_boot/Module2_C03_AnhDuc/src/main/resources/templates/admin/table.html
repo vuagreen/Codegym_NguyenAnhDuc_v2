@@ -89,6 +89,7 @@
 </head>
 
 <body class="animsition">
+
 <div class="page-wrapper">
     <!-- HEADER MOBILE-->
     <header class="header-mobile d-block d-lg-none">
@@ -493,6 +494,7 @@
         <!-- END HEADER DESKTOP-->
 
         <!-- MAIN CONTENT-->
+
         <div class="main-content">
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
@@ -646,6 +648,7 @@
                                                 </div>
                                             </td>
                                             <!--END ACCTION CUSTOMER-->
+                                            <div id="mainmenu123">abc</div>
                                         </tr>
                                         <tr class="spacer"></tr>
                                         <tr class="tr-shadow">
@@ -858,7 +861,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <th:block th:each="vitri:${vitris}">
+                                        <th:block th:each="vitri,state:${vitris}">
                                         <tr>
                                             <td>
                                                 <label class="au-checkbox">
@@ -868,7 +871,9 @@
                                             </td>
                                             <td>
                                                 <div class="table-data__info">
-                                                    <h6 th:text="${vitri.name}"></h6>
+<!--                                                    <input th:type="hidden" id="id_item" name="id_item" th:field="${vitri.id}">-->
+                                                    <div  id="id_item" th:text="${vitri.id}"></div>
+                                                    <div id="name_item" th:text="${vitri.name}" ></div>
 <!--                                                    <span>-->
 <!--                                                                <a href="#">1johndoe@gmail.com</a>-->
 <!--                                                            </span>-->
@@ -881,8 +886,8 @@
 <!--                                            Start Button More-->
                                             <td>
                                                 <div class="table-data-feature">
-                                                    <button class="item" href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top"
-                                                            title="View">
+                                                    <button th:data-2="${vitri.name}"  class="item" th:onclick="'editItem(this.getAttribute('data-2'));'"  href="#show-info"  data-toggle="modal" rel="tooltip" data-placement="top">
+<!--                                                        title="View"-->
                                                         <i class="zmdi zmdi-view-compact"></i>
                                                     </button>
 <!--                                                    th:href="@{/edit-item/1/__${vitri.id}__ }"-->
@@ -900,7 +905,7 @@
                                                     </button>
                                                 </div>
                                             </td>
-                                            <!--                                            END Button More-->
+                                            <!--END Button More-->
 
                                         </tr>
                                         </th:block>
@@ -2617,7 +2622,7 @@
                                 <label for="text-input" class=" form-control-label" style="line-height: 70px">Name </label>
                             </div>
                             <div class="col-12 col-md-8">
-                                <input  type="text" th:field="" id="text-input" name="text-input" placeholder="Text"
+                                <input  type="text"  id="text-input" name="text-input" placeholder="Text"
                                        class="form-control">
                                 <small class="form-text text-muted">This is a help text</small>
                             </div>
@@ -2666,7 +2671,7 @@
                                 <label for="select" class=" form-control-label">Type Customer</label>
                             </div>
                             <div class="col-12 col-md-8">
-                                <select th:field="*{loai_khach_id}" name="select" id="select" class="form-control">
+                                <select  name="select" id="select" class="form-control">
                                     <option value=""> Type Customer </option>
                                     <option th:each="loaikhach : ${loaikhachs}"
                                             th:value="${loaikhach.id}"
@@ -3311,14 +3316,14 @@
                                 <label for="text-input" class=" form-control-label">Name Item </label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="text" id="text-input2" name="text-input" placeholder="Text"
+                                <input id="input_show_name" type="text" value="" name="text-input"
                                        class="form-control">
                                 <small class="form-text text-muted">This is a help text</small>
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3">
-                                <label for="select" class=" form-control-label">Type Item</label>
+                                <label id="input_show_type" for="select" class=" form-control-label">Type Item</label>
                             </div>
                             <div class="col-12 col-md-9">
                                 <select name="select" id="select-item1" class="form-control">
@@ -3427,7 +3432,9 @@
 
 <!-- Main JS-->
 <script th:src="@{admin/js/global.js}"></script>
+
 <script>
+
     /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
     function myFunction() {
