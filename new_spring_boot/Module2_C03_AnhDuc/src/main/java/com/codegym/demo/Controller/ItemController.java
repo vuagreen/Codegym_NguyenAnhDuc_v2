@@ -14,6 +14,8 @@ import java.util.List;
 @Controller
 public class ItemController {
     @Autowired
+    private KhachHangService khachHangService;
+    @Autowired
     private ViTriService viTriService;
     @Autowired
     private TrinhDoService trinhDoService;
@@ -56,7 +58,7 @@ public class ItemController {
             default:
         }
 
-        UserController.showItem(modelAndView, viTriService, trinhDoService, boPhanService, loaiDichVuService, loaiKhachService);
+        UserController.showItem(modelAndView, viTriService, trinhDoService, boPhanService, loaiDichVuService, loaiKhachService,khachHangService);
 
         return modelAndView;
     }
@@ -87,7 +89,7 @@ public class ItemController {
                 break;
             default:
         }
-        UserController.showItem(modelAndView, viTriService, trinhDoService, boPhanService, loaiDichVuService, loaiKhachService);
+        UserController.showItem(modelAndView, viTriService, trinhDoService, boPhanService, loaiDichVuService, loaiKhachService,khachHangService);
         return modelAndView;
 
     }
@@ -113,7 +115,7 @@ public class ItemController {
                 break;
             default:
         }
-        UserController.showItem(modelAndView, viTriService, trinhDoService, boPhanService, loaiDichVuService, loaiKhachService);
+        UserController.showItem(modelAndView, viTriService, trinhDoService, boPhanService, loaiDichVuService, loaiKhachService,khachHangService);
         return modelAndView;
     }
 }

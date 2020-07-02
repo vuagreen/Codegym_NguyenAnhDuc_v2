@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -35,13 +39,20 @@ public class UserController {
         return "home/index";
     }
 
+    @GetMapping("/")
+    public ModelAndView control( ) {
+        ModelAndView modelAndView = new ModelAndView("admin/table");
+        showItem(modelAndView, viTriService, trinhDoService, boPhanService, loaiDichVuService, loaiKhachService,khachHangService);
+
+        return modelAndView ;
+    }
+
     @PostMapping("/login")
     public ModelAndView login(@ModelAttribute("user") User user) {
         ModelAndView modelAndView = new ModelAndView("admin/table");
 
-        showItem(modelAndView, viTriService, trinhDoService, boPhanService, loaiDichVuService, loaiKhachService);
-        List<KhachHang> khachHangs = (List<KhachHang>) khachHangService.findAll();
-        modelAndView.addObject("khachhanglist", khachHangs);
+        showItem(modelAndView, viTriService, trinhDoService, boPhanService, loaiDichVuService, loaiKhachService,khachHangService);
+
         List<User> userList=  (List<User>)userService.findAll();
 
         if (user.getUser().equals(user.getUser())) {
@@ -59,17 +70,27 @@ public class UserController {
         }
     }
 
-    static void showItem(ModelAndView modelAndView, ViTriService viTriService, TrinhDoService trinhDoService, BoPhanService boPhanService, LoaiDichVuService loaiDichVuService, LoaiKhachService loaiKhachService) {
+    static void showItem(ModelAndView modelAndView, ViTriService viTriService, TrinhDoService trinhDoService, BoPhanService boPhanService, LoaiDichVuService loaiDichVuService, LoaiKhachService loaiKhachService,KhachHangService khachHangService) {
+
+        KhachHang khachHang = new KhachHang();
+        List<LoaiKhach> loaiKhachList = (List<LoaiKhach>) loaiKhachService.findAll();
+        DateFormat df = new SimpleDateFormat("dd/MM/YYYY");
         List<ViTri> viTriList = (List<ViTri>) viTriService.findAll();
         List<TrinhDo> trinhDoList = (List<TrinhDo>) trinhDoService.findAll();
         List<BoPhan> boPhanList = (List<BoPhan>) boPhanService.findAll();
         List<LoaiDichVu> loaiDichVuList = (List<LoaiDichVu>) loaiDichVuService.findAll();
-        List<LoaiKhach> loaiKhachList = (List<LoaiKhach>) loaiKhachService.findAll();
+        List<KhachHang> khachHangs = (List<KhachHang>) khachHangService.findAll();
+        Timestamp stamp = new Timestamp(System.currentTimeMillis());
+        Date date = new Date(stamp.getTime());
+
+
 
         modelAndView.addObject("vitris", viTriList);
         modelAndView.addObject("trinhdos", trinhDoList);
         modelAndView.addObject("bophans", boPhanList);
         modelAndView.addObject("loaidichvus", loaiDichVuList);
         modelAndView.addObject("loaikhachs", loaiKhachList);
+        modelAndView.addObject("customer", khachHang);
+        modelAndView.addObject("khachhanglist", khachHangs);
     }
 }

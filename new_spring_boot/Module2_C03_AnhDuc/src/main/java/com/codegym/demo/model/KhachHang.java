@@ -1,5 +1,7 @@
 package com.codegym.demo.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -9,11 +11,18 @@ public class KhachHang {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String hoTen;
+//    @DateTimeFormat(pattern = "yyyy/mm/dd")
+@DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
     private Date ngaySinh;
+
     private int soCmnd;
+
     private int soDienThoai;
+
     private String email;
+
     private String diaChi;
 
     @OneToMany(mappedBy = "khachHang")
