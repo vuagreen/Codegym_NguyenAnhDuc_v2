@@ -1,0 +1,40 @@
+element.style {
+}
+.navbar {
+    overflow: hidden;
+    background-color: deepskyblue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+div {
+    display: block;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
