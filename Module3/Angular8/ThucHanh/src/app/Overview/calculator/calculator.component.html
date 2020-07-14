@@ -1,0 +1,27 @@
+
+<h2>Awesome Calculator</h2>
+<div>
+  <input type="number" class="form-input"
+         [value]="oneput"
+         (change)="changeOneput($event.target.value)">
+  <select
+    class="form-input"
+    [value]="opera"
+    (change)="changeOpera($event.target.value)">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="number" class="form-input"
+         [value]="twoput"
+         (change)="changeTwo($event.target.value)">
+</div>
+<div>
+  <button class="form-input" (click)="Caculator()">
+    Thực thi
+  </button>
+</div>
+<div class="output">
+  {{output}}
+</div>

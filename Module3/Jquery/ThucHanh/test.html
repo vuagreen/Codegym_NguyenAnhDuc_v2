@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+
+<p>Click Now</p>
+<button>Show</button>
+<p id="p1"> one</p>
+
+<p></p>
+<input value="ok">
+<script>
+    $("#p1").hover(function(){
+            alert("Bạn đã di chuyển vào p1!");
+        },
+        function(){
+            alert("Tạm biệt! Bạn vừa rời khỏi p1!");
+        });
+    $("p").dblclick(function() {
+        $(this).hide();
+    });
+    $("button").click(function() {
+        $("p").show();
+    });
+    $("input").focus(function(){
+        $(this).css("background-color", "red");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+    $("p").on({
+        mouseenter: function(){
+            $(this).css("background-color", "lightgray");
+        },
+        mouseleave: function(){
+            $(this).css("background-color", "lightblue");
+        },
+        click: function(){
+            $(this).css("background-color", "yellow");
+        }
+    });
+</script>
+
+</body>
+</html>
