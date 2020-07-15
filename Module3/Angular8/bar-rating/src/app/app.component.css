@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+.logo {
+  background-image: url('https://miro.medium.com/max/3492/1*P7x-_0XfQz6CVmMY_QAv0w.png');
+  height: 70px;
+  width: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.flex-container {
+  display: flex;
+}
