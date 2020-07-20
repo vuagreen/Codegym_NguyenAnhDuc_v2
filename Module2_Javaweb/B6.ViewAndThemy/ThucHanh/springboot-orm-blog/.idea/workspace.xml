@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a8298481-f0ca-42e9-8f7f-50c2fc302b29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo3/src/main/java/com/codegym/demo/entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo3/src/main/java/com/codegym/demo/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo3/src/main/java/com/codegym/demo/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo3/src/main/java/com/codegym/demo/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/blog/src/main/java/com/codegym/demo/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/blog/src/main/java/com/codegym/demo/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/blog/src/main/java/com/codegym/demo/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/blog/src/main/java/com/codegym/demo/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/blog/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/blog/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/demo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/demo/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/demo/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/demo/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../new_spring_boot/demo/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../new_spring_boot/demo/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1dSH984PKmAHh6qkYEFkE3Zx8Y3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../new_spring_boot/blog" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringbootOrmBlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-orm-blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.codegym.springbootormblog.SpringbootOrmBlogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8298481-f0ca-42e9-8f7f-50c2fc302b29" name="Default Changelist" comment="" />
+      <created>1592411419556</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592411419556</updated>
+      <workItem from="1592411421962" duration="614000" />
+      <workItem from="1592414047662" duration="118000" />
+      <workItem from="1592414360671" duration="44000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1327" y="275" key="FileChooserDialogImpl" timestamp="1592414402739">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1327" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592414402739" />
+  </component>
+</project>

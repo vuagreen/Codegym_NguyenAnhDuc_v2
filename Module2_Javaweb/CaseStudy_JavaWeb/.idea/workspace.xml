@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="89e8da78-7bc6-40d4-91be-287716c8d687" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../new_spring_boot/Module2_C03_AnhDuc/src/main/resources/templates/lib/ad/table.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../new_spring_boot/Module2_C03_AnhDuc/src/main/resources/templates/lib/ad/table.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1datj5tX26AN0iUNr7taTc7ytBM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../new_spring_boot/Module2_C03_AnhDuc" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="CaseStudyJavaWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="case_study_java_web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.codegym.case_study_java_web.CaseStudyJavaWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89e8da78-7bc6-40d4-91be-287716c8d687" name="Default Changelist" comment="" />
+      <created>1592675163484</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592675163484</updated>
+      <workItem from="1592675164749" duration="32000" />
+      <workItem from="1592675659122" duration="33000" />
+      <workItem from="1592712604743" duration="698000" />
+      <workItem from="1592713639766" duration="2000" />
+      <workItem from="1593003350392" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1593003362012">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1080.-650.1080.1880@0.0.1920.1040" timestamp="1592675690429" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593003362012" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1592713243624">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1080.-650.1080.1880@0.0.1920.1040" timestamp="1592713243624" />
+  </component>
+</project>
