@@ -1,0 +1,35 @@
+<form (ngSubmit)="onSubmit(formSignIn)" #formSignIn='ngForm'>
+  <div (keyup.enter)="onSubmit(formSignIn)">
+    <input
+      class="form-control col-2"
+      placeholder="Email"
+      ngModel
+      #txtEmail="ngModel"
+      name="email"
+      required
+      email
+      minlength="5"
+    >
+    <div class="alert alert-danger" *ngIf="txtEmail.touched&& txtEmail.errors?.required">Not Null</div>
+    <div class="alert alert-danger" *ngIf="txtEmail.touched&& txtEmail.errors?.email">Not Email</div>
+    <div class="alert alert-danger" *ngIf="txtEmail.touched&& txtEmail.errors?.minlength">MinLength is 5</div>
+    <p *ngIf="txtEmail.errors?.email">Not EMAIL</p>
+    <br>
+    <input
+      #txtPassword="ngModel"
+      class="form-control col-2"
+      name="password"
+      type="password"
+      placeholder="Password"
+      required
+      minlength="6"
+      ngModel>
+    <br>
+    <div class="alert alert-danger" *ngIf="txtPassword.touched&& txtPassword.errors?.required">NOT NULL</div>
+      <div class="alert alert-danger" *ngIf="txtPassword.touched&& txtPassword.errors?.minlength">MINLENGTH IS 6</div>
+      <button [disabled]="formSignIn.invalid">Submit</button>
+  </div>
+</form>
+<p>{{txtEmail.errors | json }}</p>
+<p>{{txtPassword.errors | json }}</p>
+

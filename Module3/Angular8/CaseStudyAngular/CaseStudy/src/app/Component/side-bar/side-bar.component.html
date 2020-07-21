@@ -23,19 +23,25 @@
     </div>
     <ul class="list-unstyled components mb-5">
       <li class="active">
-        <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+        <a href="#" [routerLink]="['/']"><span class="fa fa-home mr-3" ></span> Home</a>
+      </li>
+<!--      <li>-->
+<!--        <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>-->
+<!--      </li>-->
+      <li>
+        <a href="#"  [routerLink]="['/employee']"><span class="fa fa-gift mr-3"></span> Quản Lí Nhân Viên</a>
       </li>
       <li>
-        <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+        <a href="#" [routerLink]="['/service']"><span class="fa fa-trophy mr-3" ></span> Quản lí Dịch Vụ</a>
       </li>
       <li>
-        <a href="#"><span class="fa fa-gift mr-3"></span> Gift Code</a>
+        <a href="#" [routerLink]="['/']"><span class="fa fa-address-card mr-3" ></span> Quản Lí Khách hàng</a>
       </li>
       <li>
-        <a href="#"><span class="fa fa-trophy mr-3"></span> Top Review</a>
+        <a href="#"  [routerLink]="['/contract']"><span class="fa fa-cog mr-3"></span > Quản Lí Hợp Đồng </a>
       </li>
       <li>
-        <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
+        <a href="#" [routerLink]="['/contractdetail']"><span class="fa fa-cog mr-3"></span> Quản Lí Hợp Đồng Chi Tiết</a>
       </li>
       <li>
         <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
@@ -56,7 +62,8 @@
     <br>
     <br>
     <br>
-    <app-table-list></app-table-list>
+<!--    <app-table-customer></app-table-customer>-->
+    <router-outlet></router-outlet>
   </div>
 </div>
 

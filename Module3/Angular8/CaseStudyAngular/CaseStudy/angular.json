@@ -28,7 +28,8 @@
               "../CaseStudy/node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
-              "./CaseStudy/node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -123,6 +124,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "CaseStudy"
 }
