@@ -13,4 +13,6 @@ public interface UserService {
 
     void remove(Long id);
     public User findByEmail(String email);
+
+    Boolean checkInfo(User user1, User user2);
 }

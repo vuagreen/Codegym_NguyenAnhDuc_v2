@@ -38,4 +38,12 @@ public class UserServiceImpl implements UserService {
     public User findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
+
+    @Override
+    public Boolean checkInfo(User user1, User user2) {
+        if (user1.getPhoneNumber().equals(user2) && user1.getQuestion().equals(user2.getQuestion()) && user1.getAnswer().equals(user2.getAnswer())) {
+            return true;
+        }
+        return false;
+    }
 }

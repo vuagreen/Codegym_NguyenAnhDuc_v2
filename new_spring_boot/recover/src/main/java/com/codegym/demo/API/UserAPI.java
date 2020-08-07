@@ -107,6 +107,42 @@ public class UserAPI {
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
+    @PostMapping("/users/verify/info")
+    public ResponseEntity<Void> checkInfoRecover(@RequestBody User user) {
+        String content;
+        String text;
+        String newPassword;
+        User currentUser = userService.findByEmail(user.getEmail());
+
+        if (currentUser == null) {
+            System.out.println("User with email " + user.getEmail() + " not found");
+            return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+        }
+        if (!userService.checkInfo(currentUser,user)) {
+            System.out.println("Sai Info");
+            return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+        }
+        newPassword = RandomStringUtils.randomAlphanumeric(10);
+        currentUser.setPassword(newPassword);
+        userService.save(currentUser);
+        content = "Yêu Cầu Thay Đổi Mật Khẩu";
+        text = "Chào quý khách,\n" +
+                "Mật Khẩu của quý khách đã được thay đổi thành công.\n" +
+                "\n" +
+                "Mật Khẩu Mới của quý khách là : " + newPassword;
+        System.out.println("Sending Email...");
+        try {
+
+            sendEmail(currentUser.getEmail(), content, text);
+
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Done");
+        return new ResponseEntity<Void>(HttpStatus.OK);
+    }
+
     private void sendEmail(String email, String content, String text) {
 
         SimpleMailMessage msg = new SimpleMailMessage();
@@ -141,6 +177,21 @@ public class UserAPI {
             return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<User>(user, HttpStatus.OK);
+    }
+
+    @PostMapping("/users")
+    public ResponseEntity<Void> checkLogin(@RequestBody User user) {
+        User currentUser = userService.findByEmail(user.getEmail());
+
+        if (currentUser == null) {
+            System.out.println("User with email " + user.getEmail() + " not found");
+            return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+        }
+        if (!currentUser.getPassword().equals(user.getPassword())) {
+            System.out.println("Sai mật Khẩu");
+            return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<Void>( HttpStatus.OK);
     }
 
     @PostMapping("/users")
