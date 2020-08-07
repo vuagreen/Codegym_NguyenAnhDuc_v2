@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Angular8/demo-component/demo-component" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Lib/nebular" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/demo/angular-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/demo/student-management" vcs="Git" />
+  </component>
+</project>

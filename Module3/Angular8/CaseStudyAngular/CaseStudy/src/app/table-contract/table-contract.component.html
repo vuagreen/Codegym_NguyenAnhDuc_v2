@@ -1,1 +1,385 @@
-<p>table-contract works!</p>
+<script>$("[rel='tooltip']").tooltip();</script>
+<app-menu (mySeach)="setterm($event);"></app-menu>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container-xl">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-5">
+            <h2>LIST <b>CONTRACTS</b></h2>
+          </div>
+          <div class="col-sm-7">
+
+            <a (click)="resetOb()" href="#create-contract-form" class="btn btn-success" data-toggle="modal"><i
+              class="material-icons">&#xE147;</i>
+              <span>Add New Contract</span></a>
+            <input hidden type="text" placeholder="Seach" [(ngModel)]="term">
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>CustomerName</th>
+          <th>ServiceName</th>
+          <th>StartDate</th>
+          <th>EndDate</th>
+          <th>deposit</th>
+          <th>total</th>
+          <th style="width: 130px">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let contract of contracts |filter:term |paginate: { itemsPerPage: 3, currentPage: p }">
+          <td>{{contract.id}}</td>
+          <td><a href="#"> {{contract.cusId.fullName}}</a></td>
+          <td>{{contract.serId.serviceName}}</td>
+          <td>{{contract.startDate}}</td>
+          <td> {{contract.endDate}}</td>
+          <td> {{contract.deposit}}</td>
+          <td> {{contract.total}}</td>
+          <td>
+            <a (click)="setContractView(contract)" href="#show-contract-form" class="view" title="View" rel="tooltip"
+               data-toggle="modal"><i
+              class="material-icons">remove_red_eye</i></a>
+            <a (click)="setContract(contract)" href="#show-contract-form" class="settings" title="Edit" rel="tooltip"
+               data-toggle="modal"><i
+              class="material-icons">&#xE8B8;</i></a>
+            <a (click)="setContract(contract)" href="#deleteContractForm" class="delete" title="Delete" rel="tooltip"
+               data-toggle="modal"><i
+              class="material-icons">&#xE5C9;</i></a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="clearfix">
+        <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+        <ul class="pagination">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Modal HTML -->
+<div id="deleteContractForm" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h4 class="modal-title">Delete Contract</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Bạn Có Muốn Xóa Hợp Đồng Này Không ?</p>
+          <p class="text-warning">
+            <small>Data sẽ bị xóa vĩnh viễn </small>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+          <input data-dismiss="modal" (click)="deleteContract(contract.id)" type="submit" class="btn btn-danger"
+                 value="Delete">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Form Crate Customer -->
+<div id="create-contract-form" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card">
+        <div class="card-header">
+          <strong>Contract Create</strong> Form
+        </div>
+        <div class="card-body card-block">
+          <form [formGroup]="formAddNewContract" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 20px">Static</label>
+              </div>
+              <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <p class="form-control-static">Username</p>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 70px">NameCustomer </label>
+              </div>
+              <div class="col-12 col-md-8 my-auto">
+                <select [ngModel]="contract.cusId" readOnly="lock" class="form-control"
+                        formControlName="cusId"
+                        name="select">
+                  <option *ngFor="let customer of customers" [ngValue]="customer">
+                    {{ customer.fullName }}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 70px">EmployeeName </label>
+              </div>
+              <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <select [ngModel]="contract.empId" readOnly="lock" class="form-control"
+                        formControlName="empId"
+                        name="select">
+                  <option *ngFor="let employee of employees" [ngValue]="employee">
+                    {{ employee.fullName }}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 70px">ServiceName</label>
+              </div>
+              <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <!--                <input formControlName="serId" type="text" name="text-input" placeholder="serId" class="form-control">-->
+                <select (change)="onChange()" [ngModel]="contract.serId" readOnly="lock" class="form-control"
+                        formControlName="serId"
+                        name="select">
+                  <option  *ngFor="let service of services" [ngValue]="service" >
+                    {{ service.serviceName }}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class="form-control-label" style="line-height: 70px">StartDate</label>
+              </div>
+              <div class="col-12 col-md-8 my-auto">
+                <input [value]="contract.startDate" [ngModel]="contract.startDate"
+                       formControlName="startDate" type="date"
+                       name="text-input"
+                       class="form-control">
+                <ng-container *ngFor="let error of validation_messages.birthday">
+                  <small
+                    *ngIf="formAddNewContract.get('startDate').hasError(error.type) &&formAddNewContract.get('startDate').touched"
+                    class="text-danger"> {{error.message}}</small>
+                </ng-container>
+              </div>
+
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class="form-control-label" style="line-height: 70px">EndDate</label>
+              </div>
+              <div class="col-12 col-md-8 my-auto">
+                <input [ngModel]="contract.endDate" formControlName="endDate" type="date"
+                       name="text-input" placeholder="dd/mm/yyyy"
+                       class="form-control">
+                <ng-container *ngFor="let error of validation_messages.birthday">
+                  <small
+                    *ngIf="formAddNewContract.get('endDate').hasError(error.type) &&formAddNewContract.get('endDate').touched"
+                    class="text-danger"> {{error.message}}</small>
+                </ng-container>
+              </div>
+
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 70px">Deposit</label>
+              </div>
+              <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <input formControlName="deposit" type="text" name="text-input" placeholder="deposit"
+                       class="form-control">
+              </div>
+              <ng-container *ngFor="let error of validation_messages.number">
+                <small style="padding-left: 180px"
+                       *ngIf="formAddNewContract.get('deposit').hasError(error.type) &&formAddNewContract.get('deposit').touched"
+                       class="text-danger"> {{error.message}}</small>
+              </ng-container>
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 70px">Total</label>
+              </div>
+              <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <input disabled formControlName="total" [value]="total" ype="text" name="text-input" placeholder="total"
+                       class="form-control">
+              </div>
+              <ng-container *ngFor="let error of validation_messages.number">
+                <small style="padding-left: 180px"
+                       *ngIf="formAddNewContract.get('total').hasError(error.type) &&formAddNewContract.get('total').touched"
+                       class="text-danger"> {{error.message}}</small>
+              </ng-container>
+            </div>
+            <div class="card-footer">
+              <button (click)="addNewContract()" data-dismiss="modal" type="submit" class="btn btn-primary btn-sm"
+                      [disabled]="!formAddNewContract.valid">
+                <i class="fa fa-dot-circle-o"></i> Submit
+              </button>
+              <button type="reset" class="btn btn-danger btn-sm">
+                <i class="fa fa-ban"></i> Reset
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--END Form Crate Customer -->
+<!-- Form SHOW Customer -->
+<div id="show-contract-form" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="card">
+        <div class="card-header">
+          <strong>Contract Show</strong> Form
+        </div>
+        <div class="card-body card-block">
+          <form [formGroup]="formAddNewContract" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <input formControlName="id" type="text" name="text-input" placeholder="Text"
+                   class="form-control" hidden [ngModel]="contract.id">
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 20px">Static</label>
+              </div>
+              <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <p class="form-control-static">Username</p>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 70px">NameCustomer </label>
+              </div>
+              <div class="col-12 col-md-8 my-auto">
+                <select [disabled]="lock" [ngModel]="contract.cusId.fullName" readOnly="lock" class="form-control"
+                        formControlName="cusId"
+                        name="select">
+                  <option *ngFor="let customer of customers" [ngValue]="customer"
+                          [selected]="contract.cusId.cusId == customer.cusId">
+                    {{ customer.fullName }}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 70px">EmployeeName </label>
+              </div>
+              <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <select readOnly="lock" [ngModel]="contract.empId" class="form-control"
+                        formControlName="empId"
+                        name="select">
+                  <option *ngFor="let employee of employees" [ngValue]="employee"
+                          [selected]="contract.empId.empId == employee.empId">
+                    {{ employee.fullName }}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 70px">ServiceName</label>
+              </div>
+              <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <!--                <input formControlName="serId" type="text" name="text-input" placeholder="serId" class="form-control">-->
+                <select readonly="look" [ngModel]="contract.serId" class="form-control"
+                        formControlName="serId"
+                        name="select">
+                  <option *ngFor="let service of services" [ngValue]="service"
+                          [selected]="contract.serId.serId==service.serId">
+                    {{ service.serviceName }}
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class="form-control-label" style="line-height: 70px">StartDate</label>
+              </div>
+              <div class="col-12 col-md-8 my-auto">
+                <input [readOnly]="lock" [ngModel]="contract.startDate" formControlName="startDate" type="date"
+                       name="text-input"
+                       class="form-control">
+                <ng-container *ngFor="let error of validation_messages.birthday">
+                  <small
+                    *ngIf="formAddNewContract.get('startDate').hasError(error.type) &&formAddNewContract.get('startDate').touched"
+                    class="text-danger"> {{error.message}}</small>
+                </ng-container>
+              </div>
+
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class="form-control-label" style="line-height: 70px">EndDate</label>
+              </div>
+              <div class="col-12 col-md-8 my-auto">
+                <input [readOnly]="lock" [ngModel]="contract.endDate" formControlName="endDate" type="date"
+                       name="text-input" placeholder="dd/mm/yyyy"
+                       class="form-control">
+                <ng-container *ngFor="let error of validation_messages.birthday">
+                  <small
+                    *ngIf="formAddNewContract.get('endDate').hasError(error.type) &&formAddNewContract.get('endDate').touched"
+                    class="text-danger"> {{error.message}}</small>
+                </ng-container>
+              </div>
+
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 70px">Deposit</label>
+              </div>
+              <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <input [readOnly]="lock" [ngModel]="contract.deposit" formControlName="deposit" type="text"
+                       name="text-input" placeholder="deposit"
+                       class="form-control">
+              </div>
+              <ng-container *ngFor="let error of validation_messages.number">
+                <small style="padding-left: 180px"
+                       *ngIf="formAddNewContract.get('deposit').hasError(error.type) &&formAddNewContract.get('deposit').touched"
+                       class="text-danger"> {{error.message}}</small>
+              </ng-container>
+            </div>
+            <div class="row form-group">
+              <div class="col col-md-4">
+                <label class=" form-control-label" style="line-height: 70px">Total</label>
+              </div>
+              <div class="col-12 col-md-8 d-flex align-items-center justify-content-center">
+                <input [readOnly]="lock" [ngModel]="contract.total" formControlName="total" type="text"
+                       name="text-input" placeholder="total"
+                       class="form-control">
+              </div>
+              <ng-container *ngFor="let error of validation_messages.number">
+                <small style="padding-left: 180px"
+                       *ngIf="formAddNewContract.get('total').hasError(error.type) &&formAddNewContract.get('total').touched"
+                       class="text-danger"> {{error.message}}</small>
+              </ng-container>
+            </div>
+            <p>Value :{{formAddNewContract.status | json}}</p>
+            <div class="card-footer">
+              <button [disabled]="lock||!formAddNewContract.valid" (click)="updateContract()" data-dismiss="modal"
+                      type="submit"
+                      class="btn btn-primary btn-sm"
+              >
+                <i class="fa fa-dot-circle-o"></i> Submit
+              </button>
+              <button [disabled]="lock" type="reset" class="btn btn-danger btn-sm">
+                <i class="fa fa-ban"></i> Reset
+              </button>
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--END SHOW Crate Customer -->
+

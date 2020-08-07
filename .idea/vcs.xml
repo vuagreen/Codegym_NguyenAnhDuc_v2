@@ -12,8 +12,12 @@
     <mapping directory="$PROJECT_DIR$/Module2/Data/CaseStudyModule2JavaCore" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Module3/Angular8/demo-component/demo-component" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Module3/Lib/nebular" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module3/demo/angular-test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module3/demo/student-management" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/new_spring_boot/Module2_C03_AnhDuc/src/main/resources/templates/lib/CoolAdmin1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/new_spring_boot/Module2_C03_AnhDuc/src/main/resources/templates/lib/ad" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/new_spring_boot/Module2_C03_AnhDuc/src/main/resources/templates/lib/table/charisma1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/new_spring_boot/Session_Cookie/CGDN-SpringBoot-SessionAttribute" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/new_spring_boot/Spring_Sercurity/CGDN-SpringBoot-SpringSecurity" vcs="Git" />
   </component>
 </project>

@@ -1,0 +1,40 @@
+{
+  "students": [
+    {
+      "tenSV": "Nguyen Duc",
+      "tenNhom": "Nhom2",
+      "tenDeTai": "Java",
+      "gvhd": "haitran",
+      "email": "anhduc@gmail.com",
+      "soDienThoai": "0908888173",
+      "id": 1
+    },
+    {
+      "tenSV": "Hung Minh",
+      "tenNhom": "Nhom3",
+      "tenDeTai": "Java",
+      "gvhd": "haitran",
+      "email": "anhduc@gmail.com",
+      "soDienThoai": "0788888173",
+      "id": 2
+    },
+    {
+      "tenSV": "Vinh Vinh",
+      "tenNhom": "Nhom1",
+      "tenDeTai": "PHP",
+      "gvhd": "trungdoan",
+      "email": "vinh@gmail.com",
+      "soDienThoai": "0788888173",
+      "id": 3
+    },
+    {
+      "tenSV": "Minh Minh",
+      "tenNhom": "Nhom3",
+      "tenDeTai": "Java",
+      "gvhd": "haitran",
+      "email": "anhduc@gmail.com",
+      "soDienThoai": "0788888173",
+      "id": 4
+    }
+  ]
+}

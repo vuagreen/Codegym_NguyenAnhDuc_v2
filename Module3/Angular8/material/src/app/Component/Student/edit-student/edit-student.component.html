@@ -1,0 +1,70 @@
+<div class="row " style=" background: -webkit-linear-gradient(left, #0072ff, #00c6ff);">
+  <div class="container contact-form">
+    <div class="contact-image">
+      <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+    </div>
+    <form (ngSubmit)="editStudent()" class="form-group" [formGroup]="editStudentForm">
+      <h3>Edit Student</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input disabled type="text" formControlName="id" class="form-control" placeholder="Student Id"/>
+            <small *ngIf="editStudentForm.controls.id.errors?.required && editStudentForm.controls.id.touched"
+                   class="text-danger">ID Student Không Được Để Trống</small>
+          </div>
+          <div class="form-group">
+            <input type="text" formControlName="tenSV" class="form-control" placeholder="Ten Sinh Vien"/>
+            <small *ngIf="editStudentForm.controls.tenSV.errors?.required && editStudentForm.controls.tenSV.touched"
+                   class="text-danger">Tên Không Được Để Trống</small>
+            <small *ngIf="editStudentForm.controls.tenSV.errors?.pattern && editStudentForm.controls.tenSV.touched"
+                   class="text-danger">Tên Phải Viết Hoa Chữ Cái Đầu</small>
+          </div>
+          <div class="form-group">
+            <input type="email" formControlName="email" class="form-control" placeholder=" Email *"/>
+            <small *ngIf="editStudentForm.controls.email.errors?.required && editStudentForm.controls.email.touched"
+                   class="text-danger">Vui Lòng Nhập Email</small>
+            <small *ngIf="editStudentForm.controls.email.errors?.email && editStudentForm.controls.email.touched"
+                   class="text-danger">Email có định dạng abc@cdf.com</small>
+          </div>
+          <div class="form-group">
+            <select id="tenNhom" formControlName="tenNhom" class="form-control">
+              <option [value]="'Nhom1'" [selected]="true">Nhóm 1</option>
+              <option [value]="'Nhom2'">Nhóm 2</option>
+              <option [value]="'Nhom3'">Nhóm 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" formControlName="tenDeTai" class="form-control" placeholder="Tên Đề Tài *"/>
+            <small
+              *ngIf="editStudentForm.controls.tenDeTai.errors?.required && editStudentForm.controls.tenDeTai.touched"
+              class="text-danger">Vui lòng nhập tên đề tài</small>
+          </div>
+          <div class="form-group">
+            <select id="gvhd" formControlName="gvhd" class="form-control">
+              <option [value]="'tamtran'" [selected]="true">Tam Tran</option>
+              <option [value]="'trungdoan'">Trung Doan</option>
+              <option [value]="'haitran'">Hai Tran</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" formControlName="soDienThoai" class="form-control" placeholder="Số Điện Thoại *"/>
+            <small
+              *ngIf="editStudentForm.controls.soDienThoai.errors?.required && editStudentForm.controls.soDienThoai.touched"
+              class="text-danger">Vui lòng nhập số điện thoại</small>
+            <small
+              *ngIf="editStudentForm.controls.soDienThoai.errors?.pattern && editStudentForm.controls.soDienThoai.touched"
+              class="text-danger">Số điện thoại bắt đầu bằng 090/091 và có 10-11 số</small>
+          </div>
+        </div>
+        <div class="col-md-12 d-flex  justify-content-center align-items-center mt-3">
+          <div class="form-group col-md-6">
+            <button class="btnContact">Submit</button>
+            <button [routerLink]="['']" class="btnContact">Back To Home</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

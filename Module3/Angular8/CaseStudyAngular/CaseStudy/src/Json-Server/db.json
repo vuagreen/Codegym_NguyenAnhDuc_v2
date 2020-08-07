@@ -1,12 +1,13 @@
 {
   "employees": [
     {
+      "empId": "NV-4466",
       "fullName": "Nguyễn Faker",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
       "part": "Kinh Doanh",
-      "dateOfBirth": "1990-07-03",
-      "IdCard": "201647394",
+      "birthday": "1990-07-03",
+      "idCard": "201647394",
       "salary": "123123123",
       "email": "dinhhoa@gmail.com",
       "phoneNumber": "0913123123",
@@ -14,84 +15,38 @@
       "id": 1
     },
     {
+      "empId": "NV-9988",
       "fullName": "Đình Hòa",
       "position": "Lao Công",
       "academicLevel": "Đại Học",
       "part": "Quét Dọn",
-      "dateOfBirth": "1990-06-06",
-      "IdCard": "123123123",
+      "birthday": "1990-06-06",
+      "idCard": "123123123",
       "salary": "10000000000",
       "email": "dinhhoa@example.com",
       "phoneNumber": "0912123123",
       "address": "Đà Nẵng",
       "id": 2
-    },
-    {
-      "fullName": "Đình Hòa Đẹp Trai",
-      "position": "Bảo vệ",
-      "academicLevel": "Đại Học",
-      "part": "Bảo vệ",
-      "dateOfBirth": "1990-06-06",
-      "IdCard": "123123123",
-      "salary": "10000000000",
-      "email": "dinhhoa@example.com",
-      "phoneNumber": "0912123123",
-      "address": "Đà Nẵng",
-      "id": 3
-    },
-    {
-      "fullName": "Hải Sản Bà Rô",
-      "position": "Đà Nẵng",
-      "academicLevel": "Đại Học ",
-      "part": "nhậu",
-      "dateOfBirth": "1990-02-05",
-      "IdCard": "123123123",
-      "salary": "123123",
-      "email": "Baro1@example.com",
-      "phoneNumber": "0901123123",
-      "address": "Sơn Trà",
-      "id": 4
-    },
-    {
-      "fullName": "Lê Đình Quốc",
-      "position": "Rót Nước",
-      "academicLevel": "Tốt nghiệp khóa rót nước",
-      "part": "Hậu Cần",
-      "dateOfBirth": "1989-02-15",
-      "IdCard": "208123432",
-      "salary": "1500000",
-      "email": "kudo2412@gmail.com",
-      "phoneNumber": "0916123567",
-      "address": "Nam Phước",
-      "id": 5
     }
   ],
   "customers": [
     {
-      "fullName": "Xuân Hòa",
-      "code": "KH-0001",
-      "dateOfBirth": "1991-02-27",
-      "IdCard": "221331331",
-      "email": "dinhhoa@gmail.com",
-      "phoneNumber": "0901224445",
-      "address": "Ngũ Hành Sơn - Đà Nẵng",
-      "id": 1
-    },
-    {
-      "fullName": "Hải Sản Bà Rô",
-      "code": "KH-0003",
-      "dateOfBirth": "1990-08-08",
-      "IdCard": "222222222",
-      "email": "dinhhoa@gmail.com",
-      "phoneNumber": "0902222222",
-      "address": "Đà Nẵng",
+      "fullName": "Pham Nha",
+      "cusId": "KH-4466",
+      "typeCustomer": "Member",
+      "birthday": "1990-06-04",
+      "idCard": "123123123",
+      "email": "123123123@example.com",
+      "phoneNumber": "0902312312",
+      "address": "123123123",
       "id": 2
     },
     {
       "fullName": "Hải Sản Năm Đảnh",
-      "code": "KH-0004",
-      "dateOfBirth": "1990-06-05",
-      "IdCard": "221331331",
+      "cusId": "KH-4452",
+      "typeCustomer": "member",
+      "birthday": "1990-06-05",
+      "idCard": "221331331",
       "email": "dinhhoa@gmail.com",
       "phoneNumber": "0901224449",
       "address": "Trần Quang Khải",
@@ -99,265 +54,288 @@
     },
     {
       "fullName": "Đình Hòa",
-      "code": "KH-1234",
-      "dateOfBirth": "1990-06-04",
-      "IdCard": "123123123",
+      "cusId": "KH-4451",
+      "typeCustomer": "member",
+      "birthday": "1990-06-04",
+      "idCard": "123123123",
       "email": "123123123@example.com",
       "phoneNumber": "0902312312",
       "address": "123123123",
       "id": 4
+    },
+    {
+      "fullName": "Nguyễn Anh Đức",
+      "cusId": "KH-4450",
+      "typeCustomer": "silver",
+      "birthday": "2020-07-14",
+      "idCard": "194622541",
+      "email": "duc@gmail.com",
+      "phoneNumber": "0984735454",
+      "address": "316B Chung Cư Xuân phú",
+      "id": 5
+    },
+    {
+      "fullName": "Anh Duc 2",
+      "cusId": "KH-4469",
+      "typeCustomer": "gold",
+      "birthday": "2020-07-14",
+      "idCard": "194611224",
+      "email": "duc2@gmail.com",
+      "phoneNumber": "01666531954",
+      "address": "316B Chung Cư Xuân phú",
+      "id": 6
+    },
+    {
+      "fullName": "Anh Minh",
+      "cusId": "KH-9790",
+      "typeCustomer": "member",
+      "birthday": "2020-07-16",
+      "idCard": "194622565",
+      "email": "minh@gmail.com",
+      "phoneNumber": "01653915968",
+      "address": "316B Chung Cư Xuân phú",
+      "id": 9
+    },
+    {
+      "fullName": "Anh Nam",
+      "cusId": "KH-4466",
+      "typeCustomer": "member",
+      "birthday": "2020-07-11",
+      "idCard": "1945658741",
+      "email": "nam@gmail.com",
+      "phoneNumber": "Văn Thư",
+      "address": "316B Chung Cư Xuân phú",
+      "id": 10
+    },
+    {
+      "fullName": "Anh Hoàng",
+      "cusId": "KH-6769",
+      "typeCustomer": "Gold",
+      "birthday": "2020-07-17",
+      "idCard": "194655254",
+      "email": "hoang@gmail.com",
+      "phoneNumber": "0935465124",
+      "address": "316B Chung Cư Xuân phú",
+      "id": 12
+    },
+    {
+      "fullName": "Nguyễn Anh Đức",
+      "cusId": "KH-4467",
+      "typeCustomer": "Member",
+      "birthday": "2020-07-28T17:00:00.000Z",
+      "idCard": "194611254",
+      "email": "vuagreenr5@gmail.com",
+      "phoneNumber": "0788888173",
+      "address": "316B Chung Cư Xuân phú",
+      "id": 13
     }
   ],
   "services": [
     {
       "id": 1,
       "serviceName": "Villa 02",
-      "code": "DV-0002",
+      "serId": "DV-0002",
       "area": 300,
       "numberOfFloors": 6,
       "maximumNumberOfPeople": 30,
       "rentalCosts": 3,
-      "rentalTypeCode": 2,
+      "rentalTypeCode": 1,
       "status": "Còn Phòng"
     },
     {
       "id": 2,
       "serviceName": "Room 01",
-      "code": "DV-0003",
+      "serId": "DV-0003",
       "area": 20,
       "numberOfFloors": 1,
       "maximumNumberOfPeople": 5,
       "rentalCosts": 7,
-      "rentalTypeCode": 15,
-      "status": "Hết Phòng"
+      "rentalTypeCode": 1,
+      "status": "Đang Sử Dụng"
     },
     {
       "serviceName": "House 01",
-      "code": "DV-0004",
+      "serId": "DV-0004",
       "area": "100123",
       "numberOfFloors": 5,
-      "maximumNumberOfPeople": 20,
       "rentalCosts": 25,
-      "rentalTypeCode": 3,
+      "rentalTypeCode": 1,
       "status": "Còn Phòng",
+      "maximumNumberOfPeople": 20,
       "id": 3
     },
     {
       "id": 4,
       "serviceName": "Villa 02",
-      "code": "DV-0005",
+      "serId": "DV-0005",
       "area": 250,
       "numberOfFloors": 3,
       "maximumNumberOfPeople": 13,
       "rentalCosts": 32,
-      "rentalTypeCode": 7,
-      "status": "Hết Phòng"
+      "rentalTypeCode": 1,
+      "status": "Đang Sử Dụng"
     },
     {
       "serviceName": "Room 02",
-      "code": "DV-0006",
+      "serId": "DV-0006",
       "area": "273",
       "numberOfFloors": 3,
       "maximumNumberOfPeople": 10,
       "rentalCosts": 30,
-      "rentalTypeCode": 18,
+      "rentalTypeCode": 1,
       "status": "Còn Phòng",
       "id": 5
     },
     {
       "serviceName": "new",
-      "code": "DV-1232",
+      "serId": "DV-1232",
       "area": "12",
       "numberOfFloors": "12",
-      "maximumNumberOfPeople": "12",
       "rentalCosts": "12",
-      "rentalTypeCode": "12",
+      "rentalTypeCode": 1,
       "status": "Con",
+      "maximumNumberOfPeople": "12",
       "id": 6
     },
     {
-      "serviceName": "a",
-      "code": "DV-1231",
+      "serviceName": "Home3",
+      "serId": "DV-1231",
       "area": "123",
       "numberOfFloors": "123",
-      "maximumNumberOfPeople": "123",
       "rentalCosts": "12",
-      "rentalTypeCode": "12",
+      "rentalTypeCode": 1,
       "status": "Con",
+      "maximumNumberOfPeople": "123",
       "id": 7
     },
     {
-      "serviceName": "Test",
-      "code": "DV-4343",
-      "area": "434",
-      "numberOfFloors": "343",
-      "maximumNumberOfPeople": "34",
-      "rentalCosts": "43",
-      "rentalTypeCode": "343",
-      "status": "Còn Phòng",
-      "id": 8
+      "serviceName": "Home2",
+      "serId": "DV-9644",
+      "area": 1,
+      "numberOfFloors": 2,
+      "rentalCosts": 2,
+      "rentalTypeCode": 1,
+      "status": "Còn Trống",
+      "maximumNumberOfPeople": 2,
+      "id": 10
     }
   ],
   "contracts": [
     {
-      "NVcode": "Hải Sản Bà Rô",
-      "KHcode": "KH-0004",
-      "DVcode": "DV-0006",
-      "startDate": "1990-06-03",
-      "endDate": "1990-03-11",
-      "deposit": "123",
+      "cusId": {
+        "fullName": "Hải Sản Năm Đảnh",
+        "cusId": "KH-4452",
+        "typeCustomer": "member",
+        "birthday": "1990-06-05",
+        "idCard": "221331331",
+        "email": "dinhhoa@gmail.com",
+        "phoneNumber": "0901224449",
+        "address": "Trần Quang Khải",
+        "id": 3
+      },
+      "empId": {
+        "empId": "NV-9988",
+        "fullName": "Đình Hòa",
+        "position": "Lao Công",
+        "academicLevel": "Đại Học",
+        "part": "Quét Dọn",
+        "birthday": "1990-06-06",
+        "idCard": "123123123",
+        "salary": "10000000000",
+        "email": "dinhhoa@example.com",
+        "phoneNumber": "0912123123",
+        "address": "Đà Nẵng",
+        "id": 2
+      },
+      "serId": {
+        "id": 2,
+        "serviceName": "Room 01",
+        "serId": "DV-0003",
+        "area": 20,
+        "numberOfFloors": 1,
+        "maximumNumberOfPeople": 5,
+        "rentalCosts": 7,
+        "rentalTypeCode": 1,
+        "status": "Đang Sử Dụng"
+      },
+      "startDate": "2020-06-24",
+      "endDate": "2020-06-25",
+      "deposit": "12",
       "total": "12",
-      "id": 9
+      "id": 2
     },
     {
-      "NVcode": "Đình Hòa Đẹp Trai",
-      "KHcode": "KH-1234",
-      "DVcode": "DV-0006",
-      "startDate": "1990-11-08",
-      "endDate": "1990-03-27",
-      "deposit": "321",
-      "total": "32",
-      "id": 10
-    },
-    {
-      "NVcode": "Hòa ",
-      "KHcode": "KH-1231",
-      "DVcode": "DV-0005",
-      "startDate": "1990-02-04",
-      "endDate": "1990-06-04",
+      "cusId": {
+        "fullName": "Nguyễn Anh Đức",
+        "cusId": "KH-4450",
+        "typeCustomer": "silver",
+        "birthday": "2020-07-14",
+        "idCard": "194622541",
+        "email": "duc@gmail.com",
+        "phoneNumber": "0984735454",
+        "address": "316B Chung Cư Xuân phú",
+        "id": 5
+      },
+      "empId": {
+        "empId": "NV-9988",
+        "fullName": "Đình Hòa",
+        "position": "Lao Công",
+        "academicLevel": "Đại Học",
+        "part": "Quét Dọn",
+        "birthday": "1990-06-06",
+        "idCard": "123123123",
+        "salary": "10000000000",
+        "email": "dinhhoa@example.com",
+        "phoneNumber": "0912123123",
+        "address": "Đà Nẵng",
+        "id": 2
+      },
+      "serId": {
+        "serviceName": "Room 02",
+        "serId": "DV-0006",
+        "area": "273",
+        "numberOfFloors": 3,
+        "maximumNumberOfPeople": 10,
+        "rentalCosts": 30,
+        "rentalTypeCode": 1,
+        "status": "Còn Phòng",
+        "id": 5
+      },
+      "startDate": "2020-06-24",
+      "endDate": "2020-06-25",
       "deposit": "123",
-      "total": "23",
-      "id": 11
-    },
-    {
-      "NVcode": "Hòa ",
-      "KHcode": "KH-1234",
-      "DVcode": "DV-0005",
-      "startDate": "1990-01-04",
-      "endDate": "1990-06-03",
-      "deposit": "123",
-      "total": "13",
-      "id": 12
-    },
-    {
-      "NVcode": "Hải Sản Bà Rô",
-      "KHcode": "KH-1234",
-      "DVcode": "DV-0004",
-      "startDate": "1990-06-03",
-      "endDate": "1990-02-15",
-      "deposit": "123",
-      "total": "12",
-      "id": 13
-    },
-    {
-      "NVcode": "Hòa ",
-      "KHcode": "KH-1234",
-      "DVcode": "DV-0006",
-      "startDate": "1990-03-05",
-      "endDate": "1990-04-11",
-      "deposit": "123",
-      "total": "23",
-      "id": 15
-    },
-    {
-      "NVcode": "Hòa ",
-      "KHcode": "KH-0004",
-      "DVcode": "DV-0004",
-      "startDate": "1990-02-06",
-      "endDate": "1990-03-06",
-      "deposit": "123",
-      "total": "2",
-      "id": 16
-    },
-    {
-      "NVcode": "Hải Sản Bà Rô",
-      "KHcode": "KH-0004",
-      "DVcode": "DV-0005",
-      "startDate": "1990-02-14",
-      "endDate": "1990-07-02",
-      "deposit": "667",
-      "total": "6",
-      "id": 17
-    },
-    {
-      "NVcode": "Đình Hòa Đẹp Trai",
-      "KHcode": "KH-1234",
-      "DVcode": "DV-0004",
-      "startDate": "1990-03-06",
-      "endDate": "1990-07-09",
-      "deposit": "545",
-      "total": "5",
-      "id": 18
-    },
-    {
-      "NVcode": "Hòa ",
-      "KHcode": "KH-0004",
-      "DVcode": "DV-0006",
-      "startDate": "1990-04-12",
-      "endDate": "1990-03-13",
-      "deposit": "454",
-      "total": "5",
-      "id": 19
-    },
-    {
-      "NVcode": "Hải Sản Bà Rô",
-      "KHcode": "KH-0004",
-      "DVcode": "DV-0005",
-      "startDate": "1990-03-15",
-      "endDate": "1990-05-03",
-      "deposit": "32",
-      "total": "3",
-      "id": 20
-    },
-    {
-      "NVcode": "Hòa ",
-      "KHcode": "KH-1234",
-      "DVcode": "DV-1231",
-      "startDate": "1990-07-02",
-      "endDate": "1990-10-11",
-      "deposit": "78",
-      "total": "7",
-      "id": 21
-    },
-    {
-      "NVcode": "Lê Đình Quốc",
-      "KHcode": "KH-1234",
-      "DVcode": "DV-4343",
-      "startDate": "1990-02-08",
-      "endDate": "1990-02-08",
-      "deposit": "123213",
-      "total": "10",
-      "id": 22
+      "total": "1234",
+      "id": 3
     }
   ],
   "contractDetail": [
     {
       "HDcode": "HD-1233",
-      "DVcode": "DV-1234",
+      "serId": "DV-1234",
       "amount": "101",
       "id": 1
     },
     {
       "HDcode": "HD-1233",
-      "DVcode": "DV-1234",
+      "serId": "DV-1234",
       "amount": "101",
       "id": 2
     },
     {
       "HDcode": "HD-1233",
-      "DVcode": "DV-1234",
+      "serId": "DV-1234",
       "amount": "101",
       "id": 3
     },
     {
       "id": 4,
       "HDcode": "2",
-      "DVcode": "3",
+      "serId": "3",
       "amount": "103"
     },
     {
       "HDcode": "HD-1112",
-      "DVcode": "DV-1113",
+      "serId": "DV-1113",
       "amount": "123",
       "id": 5
     }
@@ -367,63 +345,63 @@
       "name": "sdsd",
       "age": "13",
       "email": "hfghfgfg@gmail.com",
-      "dateOfBirth": "1990-06-11",
+      "birthday": "1990-06-11",
       "id": 1
     },
     {
       "name": "sdfdfd",
       "age": "15",
       "email": "hfghfgfg@gmail.com",
-      "dateOfBirth": "1990-06-11",
+      "birthday": "1990-06-11",
       "id": 2
     },
     {
       "name": "sdfdfd",
       "age": "15",
       "email": "hfghfgfg@gmail.com",
-      "dateOfBirth": "1990-06-11",
+      "birthday": "1990-06-11",
       "id": 2
     },
     {
       "name": "sdfdfd",
       "age": "15",
       "email": "hfghfgfg@gmail.com",
-      "dateOfBirth": "1990-06-11",
+      "birthday": "1990-06-11",
       "id": 2
     },
     {
       "name": "sdfdfd",
       "age": "15",
       "email": "hfghfgfg@gmail.com",
-      "dateOfBirth": "1990-06-11",
+      "birthday": "1990-06-11",
       "id": 2
     },
     {
       "name": "sdfdfd",
       "age": "15",
       "email": "hfghfgfg@gmail.com",
-      "dateOfBirth": "1990-06-11",
+      "birthday": "1990-06-11",
       "id": 2
     },
     {
       "name": "New",
       "age": "13",
       "email": "info@example.com",
-      "dateOfBirth": "1990-10-10",
+      "birthday": "1990-10-10",
       "id": 3
     },
     {
       "name": "3434",
       "age": "3434",
       "email": "info@example.com",
-      "dateOfBirth": "1990-11-12",
+      "birthday": "1990-11-12",
       "id": 4
     },
     {
       "name": "23",
       "age": "23",
       "email": "info@example.com",
-      "dateOfBirth": "1990-11-19",
+      "birthday": "1990-11-19",
       "id": 5
     }
   ]
