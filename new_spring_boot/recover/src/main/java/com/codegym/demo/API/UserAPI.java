@@ -179,7 +179,7 @@ public class UserAPI {
         return new ResponseEntity<User>(user, HttpStatus.OK);
     }
 
-    @PostMapping("/users")
+    @PostMapping("/login")
     public ResponseEntity<Void> checkLogin(@RequestBody User user) {
         User currentUser = userService.findByEmail(user.getEmail());
 
