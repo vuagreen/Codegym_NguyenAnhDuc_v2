@@ -22,4 +22,8 @@ export class AppComponent {
   onStartClicked(startId: number) {
     this.rating = startId;
   }
+
+  voiceSearch() {
+
+  }
 }

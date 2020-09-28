@@ -1,0 +1,16 @@
+<select (change)="onChangeEvent($event)">
+  <option>Chartdata</option>
+  <option>Tabledata</option>
+</select>
+<div id="chart" (click)="voice()">ChartData</div>
+<div id="table">TableData</div>
+<input type="text" placeholder="Speak out"/>
+<p>RxCompoent.message: {{message}}</p>
+<p><input type="text" value="{{message}}"></p>
+<button
+  [disabled]="service.started$ | async"
+  (click)="listen()"
+>listen
+</button>
+<p>lang: ja</p>
+<p>grammars: none</p>
