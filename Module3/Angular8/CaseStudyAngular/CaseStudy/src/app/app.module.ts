@@ -12,7 +12,7 @@ import {TableContractComponent} from './table-contract/table-contract.component'
 import {HttpClientModule} from '@angular/common/http';
 import {TableContractDetailComponent} from './table-contract-detail/table-contract-detail.component';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
@@ -32,7 +32,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HttpClientModule,
     Ng2SearchPipeModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

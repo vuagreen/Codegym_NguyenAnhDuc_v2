@@ -8,6 +8,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { TimelinesComponent } from './timelines/timelines.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ControlMessagesComponent } from './control-messages/control-messages.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
     TodoComponent,
     SignInComponent,
     TimelinesComponent,
-    NameEditorComponent
+    NameEditorComponent,
+    ControlMessagesComponent
   ],
   imports: [
     BrowserModule,

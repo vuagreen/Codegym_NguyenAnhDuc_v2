@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="recover.css">
+
+</head>
+<body>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog-centered">
+        <div class="modal-recover">
+            <div class="modal-content">
+
+                <div class="card-group" style="margin: 0">
+                    <div class="card" id="card1">
+                        <div class="card-body">
+                            <h5 class="card-title">Quên Mật Khẩu</h5>
+                            <p class="card-text">
+                                Vui lòng cung cấp email đăng nhập hoặc sử dụng câu hỏi bảo mật để lấy lại mật khẩu.
+                            </p>
+                        </div>
+                        <img class="card-img-top"
+                             src="https://frontend.tikicdn.com/_desktop-next/static/img/graphic-map.png" alt="">
+
+                    </div>
+                    <div class="card" id="card2">
+
+                        <div class="card-body">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                       role="tab" aria-controls="pills-home" aria-selected="true"> Email</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                       role="tab" aria-controls="pills-profile" aria-selected="false">Câu Hỏi Bảo
+                                        Mật</a>
+                                </li>
+                            </ul>
+                            <div class="or-seperator2"></div>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                     aria-labelledby="pills-home-tab">
+                                    <form class="">
+                                    <p class="description"> Vui lòng cung cấp email đăng nhập để lấy lại mật khẩu</p>
+                                    <div class="form-group">
+                                        <input type="email" id="inputEmail" class="form-control" placeholder="Nhập Email"
+                                               required="required">
+                                    </div>
+                                        <div class="text-center social-btn">
+                                            <a href="#" class="btn btn-primary btn-lg btn-block">Gửi</a>
+                                        </div>
+                                        </form>
+                                    <form hidden>
+                                    <p class="description"  > Vui lòng nhập mã được gửi về email để lấy lại mật khẩu</p>
+                                    <div class="form-group" >
+                                        <input type="text" class="form-control" placeholder="Nhập mã gửi về email"
+                                             id="inputCode"  required="required">
+                                    </div>  <div class="text-center social-btn">
+                                        <a href="#" class="btn btn-primary btn-lg btn-block">Khôi Phục Mật Khẩu</a>
+                                    </div>
+                                    </form>
+
+                                    <div class="or-seperator"><b>or</b></div>
+                                    <div class="text-center social-btn">
+                                        <div class="text-center social-btn">
+                                            <a href="#" class="btn btn-warning btn-lg btn-block">Đăng Nhập</a>
+                                        </div>
+                                        <a href="#" class="btn btn-primary btn-lg btn-block"><i
+                                                class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
+                                        <a href="#" class="btn btn-info btn-lg btn-block"><i class="fa fa-twitter"></i>
+                                            Sign in with <b>Twitter</b></a>
+                                        <a href="#" class="btn btn-danger btn-lg btn-block"><i class="fa fa-google"></i>
+                                            Sign in with <b>Google</b></a>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                     aria-labelledby="pills-profile-tab">
+                                    <p class="description"> Vui lòng nhập thông tin cá nhân và câu hỏi bảo mật để lấy lại mật khẩu.</p>
+
+                                    <form method="post" class="">
+                                        <div class="form-group">
+                                            <label for="inputEmail2">Email</label>
+                                            <input type="email" class="form-control" placeholder="Nhập Email"
+                                                 id="inputEmail2"  required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPhoneNumber2">Số Điện Thoại</label>
+                                            <input type="text" class="form-control" placeholder="Nhập Số Điện Thoại"
+                                                 id="inputPhoneNumber2"  required="required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputQa2"> Câu Hỏi Bảo Mật</label>
+                                            <select id="inputQa2" class="form-control">
+                                                <option>Chọn Câu Hỏi bảo Mật</option>
+                                                <option>Thành phố bạn sinh ra ?</option>
+                                                <option>Con vật yêu thích của bạn ?</option>
+                                                <option>Tên cha mẹ bạn ?</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAn2"> Câu Trả Lời</label>
+                                            <input type="text" class="form-control" placeholder=" Nhập Câu Trả Lời"
+                                                  id="inputAn2" required="required">
+                                        </div>
+                                        <input type="submit" class="btn btn-primary btn-block" value="Gửi">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

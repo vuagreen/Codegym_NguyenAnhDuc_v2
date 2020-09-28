@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -8,11 +8,13 @@ import * as $ from 'jquery';
 })
 export class SideBarComponent implements OnInit {
 
+
   constructor() {
   }
 
   ngOnInit() {
   }
+
 
   getUrl() {
     return 'url(https://scx2.b-cdn.net/gfx/news/hires/2019/galaxy.jpg)';

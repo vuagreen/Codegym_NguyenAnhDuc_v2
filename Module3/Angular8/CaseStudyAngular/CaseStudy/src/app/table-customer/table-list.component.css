@@ -1,4 +1,6 @@
-
+.form-control-label{
+  font-family: 'Trocchi', serif; font-size: 18px; font-weight: normal; line-height: 48px; margin: 0;
+}
 
 
 .table-responsive {
@@ -190,3 +192,4 @@ table.table .avatar {
   margin-top: 10px;
   font-size: 13px;
 }
+

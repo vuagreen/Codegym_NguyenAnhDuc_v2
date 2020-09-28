@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ContractdetailService} from '../Service/contractdetail.service';
+import {IContractDetail} from '../Model/contractdetail';
 
 @Component({
   selector: 'app-table-contract-detail',
@@ -7,7 +8,7 @@ import {ContractdetailService} from '../Service/contractdetail.service';
   styleUrls: ['./table-contract-detail.component.css']
 })
 export class TableContractDetailComponent implements OnInit {
-  public contractDetails;
+  public contractDetails: IContractDetail[];
 
   constructor(public contractdetailService: ContractdetailService) {
   }
