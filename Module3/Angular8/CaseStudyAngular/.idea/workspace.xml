@@ -1,72 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a21048a-6c80-47e7-be53-2bf30a9430e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/e2e/protractor.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/e2e/src/app.po.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/e2e/tsconfig.e2e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/jenkinsfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/app/app.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/app/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/app/app.server.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/browserslist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/environments/environment.prod.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/environments/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/karma.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/main.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/polyfills.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/tsconfig.server.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/webpack.server.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/CaseStudyAngular.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ThucHanh/src/app/Overview/service/brand.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ThucHanh/src/app/Overview/service/brand.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bar-rating/src/app/home/home.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bar-rating/src/app/home/home.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bar-rating/src/app/home/home.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bar-rating/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/app/service/Action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Data/angular-ssr-starter-SP2/src/app/service/Action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Overview/angular-overview/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Overview/angular-overview/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Overview/angular-overview/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Overview/angular-overview/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ThucHanh/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ThucHanh/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ThucHanh/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ThucHanh/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ThucHanh/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ThucHanh/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ThucHanh/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ThucHanh/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ThucHanh/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../ThucHanh/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bar-rating/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../bar-rating/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bar-rating/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../bar-rating/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bar-rating/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bar-rating/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bar-rating/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bar-rating/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bar-rating/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../bar-rating/src/app/app.module.ts" afterDir="false" />
-    </list>
+    <list default="true" id="6a21048a-6c80-47e7-be53-2bf30a9430e6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -126,7 +61,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,45 +73,18 @@
               <item name="CaseStudyAngular" type="462c0819:PsiDirectoryNode" />
               <item name="CaseStudy" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CaseStudyAngular" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CaseStudyAngular" type="462c0819:PsiDirectoryNode" />
-              <item name="CaseStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CaseStudyAngular" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CaseStudyAngular" type="462c0819:PsiDirectoryNode" />
-              <item name="CaseStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CaseStudyAngular" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CaseStudyAngular" type="462c0819:PsiDirectoryNode" />
-              <item name="CaseStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CaseStudyAngular" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CaseStudyAngular" type="462c0819:PsiDirectoryNode" />
-              <item name="CaseStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Json-Server" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CaseStudy" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -209,11 +116,12 @@
       <updated>1601309761136</updated>
       <workItem from="1601309762228" duration="1249000" />
       <workItem from="1601315786631" duration="4000" />
+      <workItem from="1601316037849" duration="422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1253000" />
+    <option name="totallyTimeSpent" value="1675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="794" y="0" width="1132" height="1047" extended-state="0" />
@@ -228,10 +136,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32995495" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32995495" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32995495" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
